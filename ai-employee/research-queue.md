@@ -14,13 +14,13 @@
   - Research: [Mineral commodity — e.g., copper cathode grade A] — current market price, top suppliers, demand drivers
   - Research: [Investor / fund name] — mining focus, portfolio companies, offtake strategy
 -->
-- Research: [Mining company / mineral prospect] — why it matters: [one line]
+- Research: PIC (Public Investment Corporation, South Africa) — specific mining portfolio companies, offtake interest
+- Research: GIC (Singapore) — mining exposure in recent annual report
+- Research: Saudi PIF mining focus — Ma'aden partnership, EV materials investment
 
 ## Done
 | Date | Topic | Brief saved to |
 |------|-------|----------------|
-| — | — | — |
-
----
-
-*Rules still apply: real, cited sources only; facts separated from guesses; if unsure, it's flagged. No invented company data.*
+| 2026-08-19 | Barrick Gold — copper exposure, offtake needs, decision-makers | `daily/research.md` (Topic 1) |
+| 2026-08-19 | Glencore — cobalt supply contracts 2026 | `daily/research.md` (Topic 2) |
+| 2026-08-19 | SWF mining portfolio (PIC, ADIA, GIC) — broader 2026 picture | `daily/research.md` (Topic 3) |
