@@ -1,22 +1,17 @@
 # 📅 CALENDAR — Meeting Prep Notes
 
-*Generated: Wednesday 2026-08-19, 07:00 EAT*
+*Generated: Wednesday 2026-08-19, 12:41 EAT — LIVE run*
 
-> ⚠️ Google Calendar is **not** connected, and no meetings have been pasted in.
-> **Feed me data in one of two ways:**
-> 1. Connect Google Calendar (MCP) — then say: *"Calendar step. Prep today's meetings…"*
-> 2. Paste your meetings here — I'll build prep: context, 3 talking points, desired outcome.
+> No calendar data this run. (Google Calendar MCP not connected yet.)
+> Paste today's meetings here and I'll prep them: context, 3 talking points, desired outcome.
 
-## Meetings Today: *(none loaded)*
-
+## Meetings Today
 | Time | Meeting | With | Status |
 |------|---------|------|--------|
 | — | — | — | — |
 
 ## Prep Notes
-*(Per meeting: Context → 3 Talking Points → Desired Outcome → Actions Before)*
-
-- None yet — no real meetings to prep.
+- None yet.
 
 ---
-*0 meetings prepped. Awaiting real calendar data.*
+*0 meetings prepped. Connect Calendar or paste meetings to activate this step.*

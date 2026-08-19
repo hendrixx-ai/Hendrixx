@@ -1,12 +1,10 @@
 # 🔬 RESEARCH — Briefing Notes
 
-*Generated: Wednesday 2026-08-19, 07:00 EAT*
+*Generated: Wednesday 2026-08-19, 12:41 EAT — LIVE run*
 
-> ⚠️ No research topic requested yet.
-> **To trigger this step:** *"Research step. Research [company / person / topic]…"*
-> I'll return: who/what they are → why it matters to you → 3 things worth knowing → real, cited sources. Facts separated from guesses.
+> No research topic requested this run.
 
-## Topic / Person / Company: *(none yet)*
+## Topic / Person / Company: *(none)*
 
 ### Overview
 —
@@ -22,8 +20,5 @@
 ### Sources
 —
 
-### ⚠️ Uncertainties / Gaps
-—
-
 ---
-*No briefs yet. Awaiting a research topic.*
+*No briefs this run. Add a topic to `research-queue.md` or say "research X" to activate.*

@@ -1,8 +1,9 @@
 # 🔔 FOLLOW-UP — Nudge Drafts
 
-*Generated: Wednesday 2026-08-19, 07:00 EAT*
+*Generated: Wednesday 2026-08-19, 12:41 EAT — LIVE run*
 
-> Tracked from real threads + notes. Drafts only — you send.
+> No past threads / conversation history loaded this run. (No Gmail MCP connection yet.)
+> When connected: I'd track who's waiting on you and who's waiting on replies.
 
 ## Waiting to Hear From (I sent, waiting on reply)
 | Person | Last Contact | Days Since | Draft Nudge |
@@ -15,4 +16,5 @@
 | — | — | — | — |
 
 ---
-*0 follow-ups due. No conversation history loaded yet — paste threads or connect Gmail and I'll track them.*
+
+*0 follow-ups. Inbox had no inbound messages asking me for a reply.*

@@ -1,22 +1,13 @@
 # ⏸️ NEEDS MY APPROVAL — External Actions Checklist
 
-*Generated: [date]*
+*Generated: Wednesday 2026-08-19, 12:41 EAT — LIVE run*
 
-> Every item here requires **your explicit yes** before anything happens.
-> Check an item off only after you've approved and acted on it.
+> No external actions from this run. (No replies drafted; no meetings booked; no payments.)
 
 ## ⏸️ Awaiting Approval
-- [ ] Send reply to [Person] — draft ready (Gmail Drafts / `daily/inbox.md`)
-- [ ] Book meeting — [what / with whom / proposed time]
-- [ ] Pay invoice #[n] — [amount]
-- [ ] Commit to [proposal] — [details]
-- [ ] *other external action…*
+- [ ] *(none)*
 
 ## ✅ Approved & Done (log)
 | Date | Item | How It Was Done |
 |------|------|-----------------|
 | — | — | — |
-
----
-
-*Nothing external happens without a "yes" on this list.*
