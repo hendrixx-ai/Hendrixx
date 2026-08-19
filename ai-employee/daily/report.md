@@ -1,30 +1,36 @@
 # 📊 DAILY REPORT — End-of-Day Briefing
 
-*Date: Wednesday 2026-08-19 · 12:41 EAT — LIVE run*
+*Date: Wednesday 2026-08-19 · 12:41 EAT — LIVE run (corrected)*
 
 ## At a Glance
 | 📥 Inbox | ✍️ Replies | 📅 Meetings | ✅ Tasks Done | 🔔 Follow-Ups Due | ⚠️ Needs Me |
 |----------|-----------|------------|--------------|------------------|------------|
-| 6 sorted | 0 drafted | 0 prepped | 1 done | 0 | **2** |
+| 6 sorted | 1 drafted | 0 prepped | 2 done | 0 | **1** |
 
 ## What Got Done
-- Inbox sorted live from your screenshot: 0 🔴 Urgent · 0 🟡 Reply · 2 🟢 Task · 4 ⚪ Ignore
-- All 3 starred emails (City ×2, Google) accounted for in tasks
-- Zero invented data — only what was visible in your inbox preview was used
+- Inbox sorted live from your screenshot, then corrected with full email bodies
+- Two City of Des Moines replies to your permit inquiries for **1225 West St, Des Moines, IA 50315** (Aug 17 + Aug 18, both from Monica Vasquez, PDC)
+- **Correction logged:** earlier task said "check Polk County assessor" — full body of Monica's Aug 18 reply says **not** Polk County; use **www.dsm.city/css → Search Public Records → "1225 West"** to see all permits + inspections
+- Thank-you reply drafted in your voice (review in `daily/inbox.md`)
+- Google security alert reviewed as a task (Zapier third-party access)
 
-## Pipeline / Sales Highlights
-- *(None this run — inbox showed operational/admin items, not deals or leads)*
+## Property Deal Highlights (real estate)
+- **Active inquiry:** 1225 West St, Des Moines, IA 50315
+- **Permit history:** not yet pulled — use the city portal above
+- **Contact:** Monica Vasquez, Development Services Technician, City of Des Moines PDC — (515) 283-4200, permits@dmgov.org
 
-## What Needs My Attention (2 tasks)
-1. **Check Polk County assessor site for permits on 1225 West St** — your Aug 18 City email says permits are pulled directly through the county, not the city. Open the Polk County assessor's site and search that address.
-2. **Review Zapier third-party access** to your Google data — Google's Aug 18 security alert flagged this. Verify the Zapier integration is one you actually granted (or revoke it).
+## What Needs My Attention
+1. **Pull permit history** for 1225 West St on www.dsm.city/css (click each permit individually for details)
+2. **Review Zapier access** to Google data (Aug 18 security alert)
+3. **Send the thank-you draft** to Monica — your call
 
 ## Decisions Needed
-- [ ] *(none — both tasks are research/admin, no external action)*
+- [ ] Approve the Monica thank-you draft (one tap)
+- [ ] *(none other)*
 
 ## Notes for Tomorrow
-- Your current inbox leans operational (real estate due diligence + admin), not sales leads. If your pipeline (leads, proposals, clients) lives in a different inbox or system, point me at it and I'll add it as a second source.
+- Your inbox today leaned operational (real estate due diligence + admin). If your pipeline (leads, proposals, client deals) lives in a different inbox or system, point me at it and I'll add it as a second source.
 
 ---
 
-*Honest report — only what actually happened.*
+*Honest report — only what actually happened. (Correction from previous run is logged above so the audit trail is clean.)*
