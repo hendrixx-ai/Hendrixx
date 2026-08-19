@@ -1,34 +1,36 @@
-# Gradle files
-.gradle/
-build/
-
-# Local configuration file (sdk path, etc)
-local.properties
-
-# Log/OS Files
+# OS files
 *.log
+.DS_Store
+Thumbs.db
 
-# Android Studio generated files and folders
-captures/
-.externalNativeBuild/
-.cxx/
-*.aab
-*.apk
-output-metadata.json
-
-# IntelliJ
+# Editor files
 *.iml
 .idea/
-misc.xml
-deploymentTargetDropDown.xml
-render.experimental.xml
+*.swp
+*.swo
+*~
 
-# Keystore files
-*.jks
-*.keystore
+# Claude Code
+.claude/
 
-# Google Services (e.g. APIs or Firebase)
-google-services.json
+# AI Employee (generated / local only)
+ai-employee/.mcp.json
+ai-employee/logs/
 
-# Android Profiling
-*.hprof
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Node (if using Claude Code npm)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python (if using scripts)
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/

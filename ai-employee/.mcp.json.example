@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "gmail": {
+      "type": "http",
+      "url": "https://gmailmcp.googleapis.com/mcp/v1",
+      "oauth": {
+        "clientId": "REPLACE_WITH_YOUR_GOOGLE_OAUTH_CLIENT_ID",
+        "callbackPort": 8080
+      }
+    },
+    "calendar": {
+      "type": "http",
+      "url": "https://calendarmcp.googleapis.com/mcp/v1",
+      "oauth": {
+        "clientId": "REPLACE_WITH_YOUR_GOOGLE_OAUTH_CLIENT_ID",
+        "callbackPort": 8081
+      }
+    }
+  }
+}
