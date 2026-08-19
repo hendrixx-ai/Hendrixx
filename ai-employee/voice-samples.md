@@ -20,7 +20,7 @@
 > Best,
 > Hendrixx
 
-## 2. Follow-up / gentle nudge
+## 2. Follow-up — gentle nudge
 > **Subject:** Re: [previous topic]
 >
 > Hi Maya,
@@ -32,7 +32,7 @@
 > Best,
 > Hendrixx
 
-## 3. Pushing back / declining
+## 3. Pushing back — declining
 > **Subject:** Re: timeline
 >
 > Appreciate the update, but we can't hit the current timeline without slipping quality.
@@ -67,7 +67,7 @@
 
 ---
 
-## 6. Requesting something (info / resource / decision)
+## 6. Requesting something
 > **Subject:** Need: [item]
 >
 > Hi [Name],
@@ -170,7 +170,7 @@
 
 ---
 
-## 14. Prospecting — cold outreach (email)
+## 14. Prospecting — cold outreach (general)
 > **Subject:** Quick question about [their company]
 >
 > Hi [Name],
@@ -221,12 +221,150 @@
 >
 > Best,
 > Hendrixx
+
+---
+
+## ⛏️ MINERAL BUSINESS — Sales, Marketing, Consultation
+
+*Voice for outreach to mining-company owners, operators, and investors.*
+
+## 18. Cold outreach — to a mining company owner
+> **Subject:** [Mineral commodity] supply — for [Mine / Company name]
+>
+> Hi [Name],
+>
+> I've been following [their mine project / recent contract / news]. We
+> supply [mineral, grade, form] to [type of buyer] and I'd like to see if
+> there's a fit for [Mine / Company name].
+>
+> A quick 20-min call would let me understand your specs and confirm we can
+> deliver. I'm free [day/time EAT].
+>
+> Best,
+> Hendrixx
+
+## 19. Cold outreach — to a mining investor
+> **Subject:** Long-term [mineral] supply partner — for [Investor / Fund name]
+>
+> Hi [Name],
+>
+> Given [their portfolio / recent investment in X], I thought you'd want
+> to know about a reliable [mineral, grade] supply line we run — spec'd
+> for [their end-buyer / off-taker profile].
+>
+> Happy to send a one-pager or set up a call. Which works?
+>
+> Best,
+> Hendrixx
+
+## 20. RFQ response (responding to a buyer's Request for Quote)
+> **Subject:** Re: RFQ — [mineral] — [volume / grade]
+>
+> Hi [Name],
+>
+> Got your RFQ. Confirming we can supply:
+> - **Mineral:** [name]
+> - **Grade / spec:** [exact]
+> - **Volume:** [monthly / quarterly]
+> - **Price (indicative):** [range, FOB/CIF as requested]
+> - **Lead time:** [days]
+>
+> Sending formal quote + spec sheet by [date]. Want a sample first?
+>
+> Best,
+> Hendrixx
+
+## 21. Sample offer (offering a physical sample for testing)
+> **Subject:** Free sample — [mineral] — for your testing
+>
+> Hi [Name],
+>
+> Sending you a [X kg] sample of [mineral, grade] so your lab can verify
+> against your spec.
+>
+> Tracking via [DHL / FedEx] — arrives in [3–5 days].
+>
+> Once you confirm grade, I'll send a formal quote for [volume].
+>
+> Best,
+> Hendrixx
+
+## 22. Consultation — asking what the buyer actually needs
+> **Subject:** Quick spec question
+>
+> Hi [Name],
+>
+> Before I quote, want to make sure we match what you actually need:
+> 1. **Mineral:** [name]
+> 2. **Grade / purity:** [spec]
+> 3. **Volume per month:** [target]
+> 4. **Delivery terms:** [FOB / CIF / mine-site]
+> 5. **Start date:** [target]
+>
+> Reply with whatever you have and I'll come back with a quote + lead time.
+>
+> Best,
+> Hendrixx
+
+## 23. Formal quote + terms
+> **Subject:** Quote — [mineral] — [volume / term]
+>
+> Hi [Name],
+>
+> Quote per your RFQ:
+> - **Mineral:** [name]
+> - **Grade:** [exact]
+> - **Volume:** [X] / [month]
+> - **Unit price:** [USD/MT] (FOB [port])
+> - **Payment terms:** [e.g., 30% deposit, balance on BL copy]
+> - **Lead time:** [X weeks from PO]
+> - **Validity:** 30 days
+>
+> Full terms attached. Want to lock it in?
+>
+> Best,
+> Hendrixx
+
+## 24. Shipping / logistics coordination
+> **Subject:** Shipment [BL / AWB] — [mineral] to [destination]
+>
+> Hi [Name],
+>
+> Update on your shipment:
+> - **Vessel / AWB:** [number]
+> - **ETD:** [date]
+> - **ETA [port]:** [date]
+> - **Documents:** BL, COO, SGS, MSDS — sent under separate cover
+>
+> Anything urgent from your side before arrival?
+>
+> Best,
+> Hendrixx
+
+## 25. Bulk-order negotiation
+> **Subject:** Re: [volume] commitment — pricing
+>
+> Hi [Name],
+>
+> On the [X MT / month] commitment — we can move from [old price] to
+> [new price] if you lock in 12 months and pay on BL copy.
+>
+> Not cheaper than that without cutting grade. Worth a call?
+>
+> Best,
+> Hendrixx
+
+---
+
+## Anti-samples — never write like this
 - ❌ "I hope this email finds you well."
 - ❌ "I am writing to you today to..."
 - ❌ "Please kindly revert back at your earliest convenience."
 - ❌ "Just following up on this one last time, thanks in advance!!"
 - ❌ "I apologize for any inconvenience this may have caused."
 - ❌ "This is just a gentle reminder to touch base..."
+- ❌ "We're the world's #1 supplier of…" (without proof — overselling kills trust)
+- ❌ Made-up certifications, mines, or grade claims
 - ❌ More than 5 sentences when 2 will do.
 
-*Rule 2 stands: these are style samples only — never copy names or details into a real draft.*
+*Rule 2 stands: these are style samples only — never copy names, specs, or prices into a real draft.*

@@ -2,61 +2,77 @@
 
 ## Basic Info
 
-- **Name:** Hendrixx
-- **Role / Title:** Manager (Sales & Marketing)
-- **Company / Organization:** hendrixx-ai
-- **Industry:** Business development · Sales · Marketing
+- **Name:** Hendrixx (Evance Ahadi)
+- **Role / Title:** Manager — Mineral Business (Sales, Marketing, Consultation)
+- **Company / Organization:** hendrixx-ai · Mineral Division
+- **Industry:** Mining / Minerals / Commodities · B2B
+- **Target market:** Investors + owners/operators of mining companies (domestic + international)
 
 ## My Role & Responsibilities
 
-I drive sales and marketing — that means:
-- **Sales:** manage the pipeline, follow up on leads, close deals, hit revenue targets
-- **Marketing:** campaigns, outreach, positioning, content that brings in new clients
-- **New client acquisition:** research prospects, pitch, negotiate, onboard
-- **Profit:** every decision runs through "does this grow revenue or cut cost?"
-- **Team:** coordinate the people who execute — sales, marketing, ops
+I run sales, marketing, and consultation for our mineral supply business. That means:
+- **Prospect & qualify:** find mining-company owners and investors who need minerals
+- **Consult:** figure out what each prospect actually requires (spec, volume, grade, timing)
+- **Source & quote:** match their need to our supply, deliver RFQs and samples
+- **Close:** negotiate terms, lock in pricing, coordinate logistics and contracts
+- **Market:** keep our pipeline warm with outreach, content, and relationship work
+- **Report:** keep the team and our leadership informed on pipeline, deals, revenue
 
 ## My Priorities Right Now
 
-1. **Close deals** — push active opportunities over the line and collect revenue
-2. **Generate new leads** — marketing campaigns, outreach, partnerships that fill the pipeline
-3. **Client acquisition** — convert conversations into signed clients
-4. **Profitability** — every dollar spent should come back as more than a dollar earned
-5. **Stay on top of the operation** — inbox, approvals, team follow-ups, no dropped balls
+1. **Build the buyer pipeline** — investors + mining-company owners who need minerals
+2. **Run consultations** — match their specs (volume, grade, delivery) to our supply
+3. **Close deals** — convert qualified prospects into signed orders and repeat business
+4. **Marketing & outreach** — emails, calls, content that keeps us top-of-mind
+5. **Profitability** — every deal must clear cost + overhead, ideally at healthy margin
+
+## What I sell / supply
+
+- Mineral commodities (spec, grade, volume tailored to buyer)
+- Consultation on sourcing, spec matching, logistics, market timing
+- Long-term supply contracts for repeat buyers
+- *(Add specifics in `PRODUCTS.md` once defined — leave a placeholder for now.)*
 
 ## My Communication Style / Voice
 
-- **Tone:** Direct and concise. Professional. No fluff. Get to the value.
-- **Length:** Short — "Hi" / "Thanks" at most. Make the ask in the first sentence.
+- **Tone:** Professional, direct, B2B. Confidence without overselling. Technical where needed, plain English where possible.
+- **Length:** Short. Lead with value, ask with specifics.
 - **Signatures:** "Best, Hendrixx"
-- **Style:** Numbers when possible. Bullets over paragraphs. Focus on outcomes.
+- **Style:** Numbers when possible. Specs, volumes, prices, timelines. Bullets > paragraphs.
 
 ## Key Relationships
 
 | Person | Relationship | Notes |
 |--------|-------------|-------|
-| My team (sales + marketing) | I lead them | Clear targets, weekly status, flag bottlenecks |
-| Prospects / leads | Pipeline | Follow up fast, qualify early, don't chase dead leads |
-| Clients | Existing revenue | Nurture, upsell, referrals — never ignore |
-| Vendors / partners | Enablement | Negotiate terms, hold accountable |
-| My leadership | Report to | Monthly revenue · pipeline value · client count · profit |
+| Mining-company owners / operators | Buyers / prospects | Decision-makers; need spec match + reliability |
+| Investors in mining | Capital + strategic partners | Look for long-term supply contracts and growth |
+| Logistics / freight partners | Enablement | Negotiate rates, hold accountable on delivery |
+| My team (sales + sourcing) | I lead them | Clear targets, weekly pipeline review, flag blockers |
+| My leadership | Report to | Weekly: pipeline value, deals in flight, revenue booked |
 
 ## Things I Care About
 
-- **Pipeline never dry** — always have 3x monthly target in active stages
-- **Follow-ups within 24h** — a warm lead goes cold fast
-- **Every meeting has a next step** — if there's no outcome, it was a waste
-- **Know the numbers** — revenue, cost per acquisition, close rate, margin
-- **No fake anything** — invented data costs real money and trust
+- **Pipeline never dry** — always 3× monthly target in active stages
+- **Spec match matters** — never quote without confirming what the buyer actually needs
+- **Reliability over price** — buyers come back for on-time, on-spec delivery
+- **No fake specs / fake buyers** — invented data costs real money and reputation
 - **Approval stays with me** — nothing external without my explicit yes
 
 ## Working Hours / Time Zone
 
 - **Time zone:** East Africa Time (EAT / UTC+3 — Africa/Dar_es_Salaam)
-- **Typical hours:** 8:00–18:00
-- **Best times for deep work:** Early morning — prospecting, strategy, reviews
-- **Morning routine:** Inbox sorted + pipeline reviewed + meetings prepped before the first outreach call
+- **Typical hours:** 8:00–18:00 (extend for international buyer calls)
+- **Best times for deep work:** Early morning — prospect research, pipeline review
+- **Morning routine:** Inbox sorted + prospect research + outreach drafts before the first call
+
+## Prospect sources *(for research-queue.md)*
+
+- Public mining-company filings (SEC, JSE, ASX) — capex, offtake needs, mine plans
+- Trade press — Mining.com, Mining Weekly, Reuters mining, Bloomberg commodities
+- USGS Mineral Commodity Summaries (annual supply/demand)
+- LME / CME for metals pricing; commodity indexes for minerals
+- LinkedIn / industry directories for decision-makers
 
 ---
 
-*→ Tell your AI Employee: "I've read the update. Adapt to my sales and marketing priorities."*
+*→ Tell your AI Employee: "Read me.md. Adapt to mineral business sales and consultation."*

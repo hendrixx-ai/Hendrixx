@@ -3,13 +3,18 @@
 *The RESEARCH step takes the next open topic from this list. You can drop topics here anytime — the employee picks them up automatically in the next routine run.*
 
 ## How to use
-1. Add a line under **Pending** (one topic per line).
+1. Add a line under **Pending** — one topic per line, most urgent first.
+   Format: `Research: [Company / Person / Mineral] — why it matters: [one line]`
 2. That's it. The next morning routine (or on-demand "Research step") takes the first pending item, writes the brief to `daily/research.md`, and moves the topic to **Done**.
 3. Want it researched right now? Say: *"Research step. Take the next topic from my research queue."*
 
 ## Pending
-<!-- Add topics here, one per line, most urgent first -->
-- Example: Research [company/person/topic] — why it matters: [one line] *(replace with your own topics)*
+<!-- Add mineral-business prospects here. Examples:
+  - Research: [Mining company name] — what minerals they source, recent contracts, decision-makers
+  - Research: [Mineral commodity — e.g., copper cathode grade A] — current market price, top suppliers, demand drivers
+  - Research: [Investor / fund name] — mining focus, portfolio companies, offtake strategy
+-->
+- Research: [Mining company / mineral prospect] — why it matters: [one line]
 
 ## Done
 | Date | Topic | Brief saved to |
@@ -18,4 +23,4 @@
 
 ---
 
-*Rules still apply: real, cited sources only; facts separated from guesses; if unsure, it's flagged.*
+*Rules still apply: real, cited sources only; facts separated from guesses; if unsure, it's flagged. No invented company data.*

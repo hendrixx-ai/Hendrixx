@@ -109,12 +109,12 @@ ai-employee/
 
 ### 1️⃣ INBOX — Sort & Draft
 
-**What it does:** Sorts emails into Urgent / Reply / Task / Ignore, and drafts responses for ones needing a reply. **Sales emails (leads, deals, proposals, client follow-ups) get elevated priority** — flag them as Urgent or Reply before less-time-sensitive items.
+**What it does:** Sorts emails into Urgent / Reply / Task / Ignore, and drafts responses for ones needing a reply. **Mineral-business emails get elevated priority** — RFQs, buyer inquiries, investor outreach, sample/quotes, shipping/contracts, and existing-client follow-ups are Urgent or Reply before everything else.
 
 **Tool:** Gmail (or paste emails into `daily/inbox.md`).
 
 **Prompt to use:**
-> Inbox step. Go through my emails and sort each into Urgent, Reply, Task, or Ignore with a one-line reason. Flag anything sales-related (leads, deals, proposals, clients) as higher priority. For the 'Reply' ones, draft a response in my voice (match voice-samples.md). Do NOT send anything — drafts only. Never invent an email or a sender. Save to daily/inbox.md.
+> Inbox step. Go through my emails and sort each into Urgent, Reply, Task, or Ignore with a one-line reason. Flag mineral-business emails first: RFQs, buyer inquiries, investor responses, sample/quotes, shipping/contracts. For the 'Reply' ones, draft a response in my voice (match voice-samples.md — see the Mineral Business section). Do NOT send anything — drafts only. Never invent an email or a sender. Save to daily/inbox.md.
 
 **Example output format:**
 > 🔴 **Urgent** — Client X asking about deadline → draft ready.
@@ -126,14 +126,14 @@ ai-employee/
 
 ### 2️⃣ RESEARCH — Brief Me
 
-**What it does:** Researches a company, person, topic, or document and hands back a short, useful summary. **Prospect / lead research is the default priority** — if a prospect or deal name is queued, research it first.
+**What it does:** Researches a company, person, mineral commodity, or topic and hands back a short, useful summary. **Prospect research is the default priority** — mining companies, mining investors, mineral buyers.
 
 **Tool:** Web search.
 
-**Topic queue:** If no topic is named, take the next pending item from `research-queue.md` (prioritise prospect/company names), then move it to **Done** with the date. If the queue is empty, skip the step and say so in the report — never invent a topic.
+**Topic queue:** If no topic is named, take the next pending item from `research-queue.md` (prioritise mining-company / investor / mineral-commodity names), then move it to **Done** with the date. If the queue is empty, skip the step and say so in the report — never invent a topic or a company.
 
 **Prompt to use:**
-> Research step. Research [company / person / topic] and give me a short brief: who/what they are, why it matters to me (sales opportunity, partnership, competitor), and 3 things worth knowing before I engage. Use real, cited sources. Separate facts from guesses — never make things up. Save to daily/research.md.
+> Research step. Research [mining company / investor / mineral commodity / person]. Give me a short brief: who they are, what minerals they source or invest in, recent deals or contracts, decision-makers to contact, and 3 things worth knowing before I engage. Use real, cited sources (SEC/JSE/ASX filings, USGS, trade press, company site). Separate facts from guesses — never make things up. Save to daily/research.md.
 
 **Example output format:**
 > **Acme Co** — mid-size SaaS, just raised a round, hiring fast. Relevant because they fit our ideal customer. Talking point: their new product line.
@@ -159,12 +159,12 @@ ai-employee/
 
 ### 4️⃣ TASKS — Action List
 
-**What it does:** Turns emails, meetings, and requests into a clean task list. Does safe ones itself; asks before important/external actions. **Flag anything sales/pipeline/deal/revenue-related** as priority.
+**What it does:** Turns emails, meetings, and requests into a clean task list. Does safe ones itself; asks before important/external actions. **Flag anything deal/pipeline/RFQ/quote/sample/shipping/investor-related** as priority.
 
 **Tool:** A tasks file (or a task app later).
 
 **Prompt to use:**
-> Tasks step. Pull every to-do from my inbox and meetings into a task list. Flag any sales/pipeline/deal/client/money items as high priority. Do the SAFE ones now (drafting, organizing, summarizing) and mark them done. For anything that sends a message, books something, spends money, or affects someone outside — STOP and put it under 'Needs my approval.' Never take an external action without my yes. Save to daily/tasks.md.
+> Tasks step. Pull every to-do from my inbox and meetings into a task list. Flag any deal/pipeline/RFQ/quote/sample/shipping/investor/contract item as high priority. Do the SAFE ones now (drafting, organizing, summarizing, research) and mark them done. For anything that sends a message, books something, spends money, commits a shipment, or affects someone outside — STOP and put it under 'Needs my approval.' Never take an external action without my yes. Save to daily/tasks.md.
 
 **Approval checklist:** Also write every blocked external action to `daily/approvals.md` as a checkbox (`- [ ] …`), with the draft ready / details noted. The boss reviews this list and ticks items off as they approve them. Keep the log of approved items at the bottom of the file.
 
@@ -176,12 +176,12 @@ ai-employee/
 
 ### 5️⃣ FOLLOW-UP — Nudge Drafts
 
-**What it does:** Remembers conversations, spots when a follow-up is due, and drafts a personalized nudge. **Prioritise deal-related and prospect follow-ups** — a warm lead going cold costs money.
+**What it does:** Remembers conversations, spots when a follow-up is due, and drafts a personalized nudge. **Prioritise buyer / investor / RFQ follow-ups** — a warm prospect going cold costs a deal.
 
 **Tool:** Gmail + notes.
 
 **Prompt to use:**
-> Follow-up step. Look at who I'm waiting to hear from or owe a reply. Prioritise any deal/prospect/client follow-ups. For anyone due a follow-up, draft a short, personalized message referencing our last conversation (match voice-samples.md). Drafts only — I send. Only use real past threads; never invent a conversation. Save to daily/follow-up.md.
+> Follow-up step. Look at who I'm waiting to hear from or owe a reply. Prioritise any buyer/investor/RFQ/quote/sample follow-up. For anyone due a follow-up, draft a short, personalized message referencing our last conversation (match voice-samples.md — Mineral Business section). Drafts only — I send. Only use real past threads; never invent a conversation. Save to daily/follow-up.md.
 
 **Example output format:**
 > **Due: Maya** (no reply in 5 days) → gentle nudge drafted.  
@@ -196,7 +196,7 @@ ai-employee/
 **Tool:** reads the daily files.
 
 **Prompt to use:**
-> Report step. Read everything in daily/ and write one short end-of-day report: Emails sorted, Replies drafted, Meetings prepared, Tasks completed, Follow-ups needed, any sales/pipeline highlights (deals moving, new leads, proposals out), and Decisions that need me. Keep it honest — only what actually happened. Save to daily/report.md.
+> Report step. Read everything in daily/ and write one short end-of-day report: Emails sorted, Replies drafted, Meetings prepared, Tasks completed, Follow-ups needed, any pipeline / deal highlights (new buyer inquiries, RFQs out, samples sent, quotes pending, investor interest), and Decisions that need me. Keep it honest — only what actually happened. Save to daily/report.md.
 
 **Example output format:**
 > 📥 12 emails sorted · ✍️ 4 replies drafted · 📅 3 meetings prepped · ✅ 5 tasks done · 🔔 2 follow-ups due · ⚠️ 3 need your approval.

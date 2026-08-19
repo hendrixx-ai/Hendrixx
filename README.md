@@ -10,6 +10,8 @@ Inbox → Research → Calendar → Tasks → Follow-Up → Report
 
 An AI-powered personal assistant that handles the repetitive parts of your day — sorting email, prepping meetings, tracking tasks and follow-ups — while keeping you in control.
 
+**Currently tuned for:** Mineral business sales, marketing, and consultation — targeting investors and mining-company owners. Configurable to any B2B sales context via [me.md](ai-employee/me.md) and [PRODUCTS.md](ai-employee/PRODUCTS.md).
+
 Built for [Claude Code](https://claude.ai) with a simple folder structure and 6 automated workflow steps.
 
 ---
