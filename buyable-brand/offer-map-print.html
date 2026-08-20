@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Buyable Offer Map</title>
+  <style>
+    :root {
+      --cream: #f6f1ea;
+      --ink: #1a1a1a;
+      --rust: #8c3a2f;
+      --line: #d9d0c6;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: #e8e0d6; }
+    body {
+      font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+      color: var(--ink);
+    }
+    .toolbar {
+      max-width: 8.5in;
+      margin: 16px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: 13px;
+    }
+    .toolbar button {
+      background: var(--ink);
+      color: var(--cream);
+      border: 0;
+      padding: 10px 16px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 11px;
+      cursor: pointer;
+    }
+    .page {
+      width: 8.5in;
+      min-height: 11in;
+      margin: 0 auto 32px;
+      background: var(--cream);
+      padding: 0.48in 0.52in 0.4in;
+      box-shadow: 0 12px 40px rgba(0,0,0,.12);
+    }
+    .eyebrow {
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--rust);
+      margin: 0 0 8px;
+    }
+    h1 {
+      font-size: 28px;
+      line-height: 1.15;
+      font-weight: 600;
+      margin: 0 0 8px;
+    }
+    h1 em { font-style: italic; font-weight: 500; }
+    .sub {
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: 12px;
+      line-height: 1.45;
+      margin: 0 0 14px;
+      max-width: 92%;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 14px;
+    }
+    .box {
+      border: 1px solid var(--ink);
+      padding: 8px 10px 10px;
+    }
+    .box.wide { grid-column: 1 / -1; }
+    .num {
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: 9px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--rust);
+      margin: 0 0 3px;
+    }
+    .label {
+      font-size: 14px;
+      margin: 0 0 2px;
+    }
+    .help {
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: 10px;
+      color: #4a4540;
+      margin: 0 0 8px;
+      line-height: 1.35;
+    }
+    .line {
+      border-bottom: 1px solid var(--ink);
+      height: 20px;
+      margin-bottom: 6px;
+    }
+    .line.short { width: 70%; }
+    .checks {
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 14px;
+    }
+    .checks span::before { content: "☐ "; }
+    .formats { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 10.5px; line-height: 1.7; }
+    .sentence {
+      background: #efe7dc;
+      border: 1px solid var(--ink);
+    }
+    .sentence blockquote {
+      margin: 4px 0 8px;
+      font-size: 15px;
+      line-height: 1.45;
+    }
+    .footer {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 12px;
+      margin-top: 10px;
+      border-top: 2px solid var(--ink);
+      padding-top: 8px;
+    }
+    .cta {
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: 10.5px;
+      line-height: 1.45;
+    }
+    .cta strong { font-family: Georgia, serif; font-size: 13px; }
+    .mark {
+      text-align: right;
+      font-size: 12px;
+    }
+    .mark .word { font-style: italic; font-size: 16px; }
+    @media print {
+      body { background: white; }
+      .toolbar { display: none; }
+      .page { box-shadow: none; margin: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <span>The Buyable Offer Map · print or Save as PDF</span>
+    <button type="button" onclick="window.print()">Print / Save PDF</button>
+  </div>
+
+  <article class="page">
+    <p class="eyebrow">The Buyable Brand · Free map</p>
+    <h1>Fill this in and you will have <em>one sentence you could sell this month.</em></h1>
+    <p class="sub">Not a vibe. Not a bio. An offer. If a stranger cannot buy the sentence, it is not finished. Write in ink. First draft is supposed to be ugly.</p>
+
+    <div class="grid">
+      <section class="box">
+        <p class="num">01 · Who</p>
+        <p class="label">I help</p>
+        <p class="help">One beginner. Age-ish + situation + skill they already have. Not “everyone.”</p>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="checks">
+          <span>I can find 100 of them this week</span>
+          <span>They already feel behind</span>
+        </div>
+      </section>
+
+      <section class="box">
+        <p class="num">02 · Result</p>
+        <p class="label">so they can</p>
+        <p class="help">Visible in 14 days. Not “feel confident.” A file, a link, a rewritten bio.</p>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="checks">
+          <span>They can point at it</span>
+          <span>It does not take a year</span>
+        </div>
+      </section>
+
+      <section class="box">
+        <p class="num">03 · Without</p>
+        <p class="label">without</p>
+        <p class="help">The fear that keeps them lurking. 10k followers, guru cosplay, Kajabi, a 40-hour course.</p>
+        <div class="line"></div>
+        <div class="line"></div>
+      </section>
+
+      <section class="box">
+        <p class="num">04 · Format &nbsp;·&nbsp; 05 · Price</p>
+        <p class="formats">
+          ☐ Template pack &nbsp; ☐ Swipe / scripts &nbsp; ☐ Mini-course (&lt;90 min)<br>
+          ☐ Notion system &nbsp; ☐ Weekend kit &nbsp; ☐ Teardown PDF
+        </p>
+        <p class="formats" style="margin-top:8px">
+          ☐ $27 &nbsp; ☐ $47 &nbsp; ☐ $97 &nbsp; ☐ $147 &nbsp; ☐ Other $______
+        </p>
+        <p class="help" style="margin:6px 0 0">From zero? Circle weekend kit or templates. Do not start at $497.</p>
+      </section>
+
+      <section class="box wide sentence">
+        <p class="num">06 · The sentence</p>
+        <blockquote>
+          I help _______________________________<br>
+          get _______________________________<br>
+          without _______________________________.
+        </blockquote>
+        <div class="checks">
+          <span>A stranger knows if it’s for them in 3 seconds</span>
+          <span>They can imagine the file</span>
+          <span>I would say this on a Reel tomorrow</span>
+        </div>
+      </section>
+
+      <section class="box">
+        <p class="num">07 · Bio one-liner</p>
+        <p class="help">Result for who. Without, on purpose.</p>
+        <div class="line"></div>
+        <div class="line"></div>
+        <p class="help">Ex: I make your taste buyable. No audience required.</p>
+      </section>
+
+      <section class="box">
+        <p class="num">08 · First 5 hooks</p>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </section>
+    </div>
+
+    <div class="footer">
+      <div class="cta">
+        <strong>When it passes the smell test</strong><br>
+        Comment <strong>BRAND</strong> on the last Reel, or reply to the email with your sentence and <em>SELLING</em> or <em>DECIDING</em>.<br>
+        Weekend files: First Product in a Weekend — $27.<br>
+        Full install: The Buyable Brand — $147.
+      </div>
+      <div class="mark">
+        <div class="word">Buyable.</div>
+        Stop building a pretty account.<br>Build a buyable one.
+      </div>
+    </div>
+  </article>
+</body>
+</html>
