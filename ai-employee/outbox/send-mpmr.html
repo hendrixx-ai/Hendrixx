@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Send — MPMR Intro (one click)</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:#eef1f5;color:#22262b;padding:32px 16px;line-height:1.55;}
+  .card{max-width:640px;margin:0 auto;background:#fff;border-radius:10px;box-shadow:0 2px 14px rgba(20,28,40,.12);padding:28px;}
+  h1{font-size:19px;color:#1b2a41;margin-bottom:4px;}
+  .sub{color:#6a7381;font-size:13px;margin-bottom:18px;}
+  .btns{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px;}
+  button,a.btn{
+    background:#1b2a41;color:#fff;border:none;border-radius:6px;padding:12px 18px;
+    font-size:14px;cursor:pointer;text-decoration:none;font-weight:600;
+  }
+  .btn:hover,button:hover{background:#b98a2e;}
+  .btn.ghost{background:#fff;color:#1b2a41;border:2px solid #1b2a41;}
+  .btn.ghost:hover{background:#f6efe0;}
+  .meta{background:#f6f8fa;border:1px solid #d8dce2;border-radius:6px;padding:10px 12px;font-size:13px;margin-bottom:14px;}
+  .meta b{color:#1b2a41;}
+  pre{
+    background:#fbfcfd;border:1px solid #d8dce2;border-radius:6px;padding:16px;
+    white-space:pre-wrap;font-family:inherit;font-size:13.5px;
+  }
+  .ok{color:#1a7f37;font-weight:700;margin-bottom:14px;display:none;}
+  .note{font-size:12px;color:#6a7381;margin-top:14px;}
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>📤 MPMR intro — one click from gone</h1>
+  <div class="sub">hendrixx-ai · Mineral Division · Draft 6 (FINAL)</div>
+
+  <div class="btns">
+    <a class="btn" id="mailtoLink" href="#">① Open in my mail app — everything pre-filled</a>
+    <button class="ghost" onclick="copyBody()">② Or copy the body for Gmail web</button>
+  </div>
+  <div class="ok" id="ok">✅ Body copied — paste into gmail.com, add the To/Subject, send.</div>
+
+  <div class="meta">
+    <b>From:</b> evanceahadi@gmail.com &nbsp;·&nbsp; <b>To:</b> info@mpmrcl.com<br>
+    <b>Subject:</b> Doré supplier in Mwanza — refining + supply intro
+  </div>
+
+  <pre id="body">Hi MPMR team,
+
+Hendrixx here — Manager at hendrixx-ai's mineral division, based here in Mwanza. We're a licensed mineral dealer building a regular gold doré supply line from Lake Zone producers, and MPMR is the obvious first door to knock on.
+
+Three questions:
+1. Do you buy doré outright, refine for a fee, or both — and what are the terms?
+2. What are your assay and settlement procedures for a new supplier?
+3. Do you have trader-office space available at the on-site Gold Market, and what does taking one involve?
+
+I can come by Butuja Street this week or next — whichever day suits you.
+
+Best,
+Hendrixx
+
+——
+Hendrixx (Evance Ahadi)
+Manager — Mineral Business (Sales, Marketing, Consultation)
+Licensed Mineral Dealer — Tanzania Mining Commission
+hendrixx-ai · Mineral Division · Mwanza, Tanzania (EAT, UTC+3)
+evanceahadi@gmail.com</pre>
+
+  <div class="note">
+    After sending: tell the AI Employee "MPMR email sent" — it starts the reply clock (checkpoint EOD Tue 2026-08-25 → nudge + walk-in Wed 2026-08-26).
+    Plain-text copy also lives at <b>outbox/2026-08-20-mpmr-intro.txt</b>.
+  </div>
+</div>
+<script>
+  const body = document.getElementById('body').textContent.trim();
+  const subject = "Doré supplier in Mwanza — refining + supply intro";
+  const to = "info@mpmrcl.com";
+  document.getElementById('mailtoLink').href =
+    "mailto:" + encodeURIComponent(to) +
+    "?subject=" + encodeURIComponent(subject) +
+    "&body=" + encodeURIComponent(body);
+  function copyBody(){
+    const b = document.getElementById('body').textContent.trim();
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(b).then(()=>{document.getElementById('ok').style.display='block';});
+    } else {
+      const ta = document.createElement('textarea');
+      ta.value = b; document.body.appendChild(ta); ta.select();
+      document.execCommand('copy'); document.body.removeChild(ta);
+      document.getElementById('ok').style.display='block';
+    }
+  }
+</script>
+</body>
+</html>
