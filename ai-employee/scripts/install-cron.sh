@@ -21,6 +21,24 @@ set -euo pipefail
 cd "$(dirname "$0")/.."   # → ai-employee/
 ROOT="$(pwd)"
 
+# Cron is the supported scheduler for this installer. Fail with a useful
+# explanation instead of an opaque "command not found" on minimal systems.
+if ! command -v crontab >/dev/null 2>&1; then
+  cat >&2 <<EOF
+❌ No crontab command was found on this system.
+
+Install a cron implementation, then rerun this script:
+  Debian/Ubuntu: sudo apt-get update && sudo apt-get install -y cron
+  Fedora/RHEL:   sudo dnf install -y cronie
+  macOS:         cron is normally included; check your PATH
+
+The AI Employee scripts are ready, but scheduling cannot be installed until
+cron is available. Manual test:
+  bash scripts/morning-routine.sh
+EOF
+  exit 1
+fi
+
 ROUTINE="$ROOT/scripts/morning-routine.sh"
 WEEKLY="$ROOT/scripts/weekly-review.sh"
 MONTHLY="$ROOT/scripts/monthly-review.sh"
