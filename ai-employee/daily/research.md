@@ -103,3 +103,34 @@ SWFs are the **long-duration capital** that underwrites multi-decade mine supply
 | Brief on Saudi PIF mining exposure (Ma'aden, EV materials) | `research-queue.md` add |
 
 *Want me to draft any of the cold outreach emails in your voice next? Say which one(s) and I'll prepare drafts for your approval.*
+
+## ⛏️ Topic 4: PIC (Public Investment Corporation, South Africa)
+
+*Pulled from research-queue.md — 2026-08-20. First pending item in the queue.*
+
+### Overview
+South Africa's state-owned asset manager and the continent's biggest — **R2.69 trillion AUM as of March 2024** ([PIC Corporate Plan 2025/26](https://static.pmg.org.za/PIC_Corporate_Plan_2025.pdf)), reported at **more than R3 trillion by September 2025** ([Mining Technology](https://www.mining-technology.com/news/south-africas-pic-increases-stake-sibanye-stillwater/)). Controls **over 10% of the JSE** and invests across listed equities, fixed income, private equity, real estate, and impact investing, with a mandate covering the rest of Africa ([Innovation Bridge profile](https://innovationbridge.info/ibportal/content/public-investment-corporation)).
+
+### Why It Matters to Us
+**Honest framing first: PIC does not buy minerals.** It's a capital source and a kingmaker, not an offtake counterparty. Three angles that *do* matter:
+
+1. **R1.35bn early-stage mining program.** Announced Oct 2025 — minimum 50% into South Africa, with emphasis on **energy-transition minerals, copper and lithium named specifically** ([Mining Technology](https://www.mining-technology.com/news/south-africas-pic-increases-stake-sibanye-stillwater/)). Juniors funded by this program will need supply-chain and sourcing help as they scale — that's our consultation lane.
+2. **Mining equities are working for them.** Listed equities portfolio **+22.5% to R999bn** (FY ended March 2025); **precious-metals and mining shares +42.5%** ([Reuters, Oct 2025](https://www.reuters.com/sustainability/climate-energy/south-african-state-investor-pic-benefits-mining-stock-rally-green-bets-slump-2025-10-03/)). Capital stays friendly to mining = portfolio companies keep spending.
+3. **Kingmaker stakes.** Largest shareholder in **Sibanye-Stillwater at 20.42%** (PGMs + gold) after buying an additional 2.35% ([Mining Technology](https://www.mining-technology.com/news/south-africas-pic-increases-stake-sibanye-stillwater/)). PIC-backed JSE names (AngloGold Ashanti, Gold Fields, Harmony all heavy in the resources index it holds via trackers/funds — [Satrix RESI composition](https://satrix.co.za/products/product-details?id=27)) are realistic counterparties for us; PIC's positioning tells us which ones have patient capital behind them.
+
+### 3 Things Worth Knowing Before Engaging
+1. **Mostly passive/listed exposure.** ~87% of the portfolio is listed asset classes ([PIC Corporate Plan](https://static.pmg.org.za/PIC_Corporate_Plan_2025.pdf)) — direct deal conversations happen through the Unlisted Investments / private equity side, not the index funds.
+2. **SA-first mandate with an Africa window.** The R1.35bn program is ≥50% South Africa — the remainder plus the Africa mandate is where a Tanzania-based supplier could be relevant, but the split is not broken out publicly.
+3. **ESG gates everything.** Investments are scored on an ESG matrix against returns ([PIC Corporate Plan](https://static.pmg.org.za/PIC_Corporate_Plan_2025.pdf)) — any pitch to PIC-adjacent entities needs certification/traceability answers ready (currently placeholders in our PRODUCTS.md).
+
+### Sources
+- [Reuters — South African state investor PIC benefits from mining stock rally](https://www.reuters.com/sustainability/climate-energy/south-african-state-investor-pic-benefits-mining-stock-rally-green-bets-slump-2025-10-03/) (Oct 3, 2025)
+- [Mining Technology — PIC increases stake in Sibanye-Stillwater; R1.35bn early-stage mining plan](https://www.mining-technology.com/news/south-africas-pic-increases-stake-sibanye-stillwater/) (Oct 2025)
+- [PIC Corporate Plan 2025/26–2027/28 (PDF)](https://static.pmg.org.za/PIC_Corporate_Plan_2025.pdf)
+- [Innovation Bridge — Public Investment Corporation profile](https://innovationbridge.info/ibportal/content/public-investment-corporation)
+- [Satrix RESI — index composition (resources weights)](https://satrix.co.za/products/product-details?id=27)
+
+### ⚠️ Uncertainties / Gaps
+- **No verified human contact** for the early-stage mining program — needs LinkedIn / annual-report digging before any outreach goes out.
+- The R3tn AUM figure comes from trade press (Mining Technology); their USD conversion in the same article was garbled — treat currency conversions carefully.
+- How the non-SA half of the R1.35bn will be deployed is **not disclosed** — flag, don't assume.

@@ -1,7 +1,7 @@
 # 📥 INBOX — Email Sort & Drafts
 
 *Generated: Wednesday 2026-08-19, 12:41 EAT — LIVE run, updated with full email bodies*
-*Updated: Thursday 2026-08-20 — Draft 3 added (formal decline of a meeting request, per /toneformal)*
+*Updated: Thursday 2026-08-20 — Draft 3 added (formal decline of a meeting request, per /toneformal) + casual variants (per /tonecasual) + Drafts 4–5 (capability cover note, PIC outreach). Research run: Topic 4 (PIC) done.*
 
 ## Sorted Emails
 
@@ -148,5 +148,99 @@ per the /toneformal standing instruction. Two variants below.*
 2. **Only offer Variant A's alternatives if genuinely true** — do not offer a delegate who has not agreed, per Rule 2.
 3. **Send-time note:** declining is an external action — this stays a draft until you approve it (Rule 1).
 
+##### Casual variants (added 2026-08-20, per /tonecasual — matches voice-samples §12 exactly)
+
+**Casual A — decline + alternative:**
+
+> **Subject:** Re: [Meeting name] — [date]
+>
+> Hi [Name],
+>
+> Can't make [date] — [reason, or keep it vague: "conflict that day"].
+>
+> [Alt day] at [time] or [alt day] at [time] both work for me. Same agenda.
+>
+> If neither fits, [colleague] can jump in for me, or just send the agenda and I'll get you written answers within a day.
+>
+> Best,
+> Hendrixx
+
+**Casual B — decline only:**
+
+> **Subject:** Re: [Meeting name] — [date]
+>
+> Hi [Name],
+>
+> Have to pass on this one — [one-line reason]. Don't want to hold up your timeline.
+>
+> [Colleague] can sit in, or fire over any questions and I'll reply by [date].
+>
+> Best,
+> Hendrixx
+
+*Pick formal or casual per recipient — investors and funds get formal; people you already work with get casual.*
+
 ---
-*0 sent · **3 drafts ready** (2 replies + 1 correspondence template) · 2 tasks open · 3 ignored.*
+
+### ➡️ Draft 4 — Capability-statement cover note (casual — goes with the PDF)
+
+*Pairs with `client/capability-statement.html` printed to PDF. Use after a first
+call or intro, or as the follow-up to an outreach thread.*
+
+> **Subject:** Quick intro + our one-pager
+>
+> Hi [Name],
+>
+> [Good talking at / since — where you met, if applicable.] One page attached —
+> what we supply, how we work, what we stand on.
+>
+> Short version:
+> - **Minerals:** [from PRODUCTS.md — form, grade, volumes]
+> - **How we're different:** no quote goes out until your spec is confirmed — spec match first, always
+> - **Next step:** 20-min call to check fit? Tue or Thu EAT works for me
+>
+> Best,
+> Hendrixx
+>
+> **Attachment:** Hendrixx-Capability-Statement-[Client]-[YYYY-MM-DD].pdf
+
+*⚠️ Same gate as everything else: fill specs from PRODUCTS.md, attach the
+finalized PDF, and it waits for your yes (Rule 1).*
+
+---
+
+### ➡️ Draft 5 — PIC intro (early-stage mining program angle)
+
+*From today's research run (Topic 4). Kept in house voice — direct but not
+chill, because it's a state fund. **No verified human contact exists for this
+yet** — see checklist.*
+
+> **Subject:** East Africa supply partner — for PIC-backed mining juniors
+>
+> Dear [Name — verify first: PIC early-stage mining program lead],
+>
+> Hendrixx here — Manager at hendrixx-ai's mineral division, based in Mwanza,
+> Tanzania (EAT).
+>
+> Saw the R1.35bn early-stage mining commitment with its copper and lithium
+> focus. Juniors in that portfolio will hit the same wall as they scale:
+> sourcing spec-matched supply they can actually trust. That's our lane —
+> consultation on spec matching, sourcing, and logistics, plus supply itself
+> once the spec is confirmed.
+>
+> Two questions:
+> 1. Does the program (or its portfolio companies) buy in East Africa —
+>    Tanzania, Zambia, DRC corridor?
+> 2. If yes, worth a 20-min call to see if we're useful? Tue/Thu EAT.
+>
+> Best,
+> Hendrixx
+
+#### ⚠️ Before sending — do this first:
+
+1. **Find a real recipient.** No verified contact for the early-stage mining program exists in my research — LinkedIn: "PIC early-stage mining", "PIC unlisted investments mining", or the annual report's deal team. Do not send to a generic inbox and hope.
+2. **Sanity-check the angle** — PIC invests ≥50% of that program in South Africa. Decide if direct intro (this draft) beats targeting PIC-backed portfolio companies one by one (probably slower, maybe better odds).
+3. **All specs stay placeholders** until PRODUCTS.md is filled (Rule 2).
+
+---
+*0 sent · **5 drafts ready** (2 replies + 1 decline template + 2 outreach) · 2 tasks open · 3 ignored.*

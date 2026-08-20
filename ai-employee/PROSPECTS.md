@@ -13,6 +13,26 @@
 
 ## Active prospects
 
+### Barrick Mining Corp
+- **Type:** Mining-company operator (gold + copper major — NYSE GOLD / TSX ABX)
+- **Contact:** [Unverified — commercial/marketing side for copper offtake; HQ leads in `daily/research.md` Topic 1]
+- **What they need:** Copper offtake capacity ahead of Lumwana Super Pit first concentrate (**March 2028**) and Reko Diq — contracting conversations running ~12–18 months ahead, i.e. the 2027 window
+- **Stage:** 🔍 Researched
+- **Last action:** 2026-08-19 — research brief done (Topic 1); cold outreach drafted (`daily/inbox.md` Draft 2). **Not sent.**
+- **Next step:** Fill PRODUCTS.md specs → verify procurement recipient on LinkedIn → send draft (needs explicit approval)
+- **Source:** research-queue + trade press (mining.com, Mining Beacon, Barrick Q1 2026 deck)
+- **Notes:** CEO Mark Hill (appointed Feb 2026). Draft carries placeholder specs — Rule 2, nothing invented.
+
+### Public Investment Corporation (PIC)
+- **Type:** Investor (SA state asset manager, R3tn+ AUM)
+- **Contact:** [Unverified — early-stage mining program lead]
+- **What they need:** Not a mineral buyer. R1.35bn early-stage mining program (copper + lithium emphasis, ≥50% South Africa). Play = PIC-funded juniors needing supply + sourcing consultation in East Africa.
+- **Stage:** 🔍 Researched
+- **Last action:** 2026-08-20 — research brief done (Topic 4); intro outreach drafted (`daily/inbox.md` Draft 5). **Not sent.**
+- **Next step:** Decide angle (direct intro vs. targeting PIC-backed portfolio companies) + verify a real human before anything moves
+- **Source:** research-queue + Reuters / Mining Technology / PIC Corporate Plan
+- **Notes:** Largest holder of Sibanye-Stillwater (20.42%). ~87% of portfolio is listed/passive — direct conversations live on the unlisted-investments side.
+
 ### [Company / Investor name]
 - **Type:** Mining-company owner · Operator · Investor · Trader
 - **Contact:** [Name, title]
@@ -32,7 +52,7 @@
 
 | Stage | Count | $ value (estimated) |
 |-------|------:|-------------------:|
-| 🔍 Researched | — | — |
+| 🔍 Researched | 2 (Barrick, PIC) | — *(can't estimate honestly until PRODUCTS.md exists)* |
 | ✉️ Contacted | — | — |
 | 🧪 Sample sent | — | — |
 | 📄 Quoted | — | — |

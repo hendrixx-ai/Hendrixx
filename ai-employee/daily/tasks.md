@@ -20,7 +20,10 @@
 | 🟢 High | Pull permit history for 1225 West St via www.dsm.city/css → Search Public Records → "1225 West" | 🆕 Open (corrected) | Email Aug 18 |
 | 🟢 High | Review Zapier third-party access to Google | 🆕 Open | Email Aug 18 |
 | 🟡 Low | Send thank-you reply to Monica | 🆕 Draft ready | Email Aug 18 |
+| 🔴 Blocker | **Fill PRODUCTS.md** — blocks Barrick send (Draft 2), capability statement, cover note (Draft 4) | 🆕 Open | Drafts 2–4 |
+| 🟡 Medium | Verify Barrick copper-offtake recipient via LinkedIn (no confirmed contact yet) | 🆕 Open | Research Topic 1 |
+| 🟡 Medium | Pick PIC angle: direct intro (Draft 5) vs PIC-backed portfolio companies; then verify a real contact | 🆕 Open | Research Topic 4 |
 
 ---
 
-*1 external action queued (send draft). 2 tasks open (research/admin).*
+*1 external action queued (send draft). 5 tasks open (research/admin + 1 blocker).*
