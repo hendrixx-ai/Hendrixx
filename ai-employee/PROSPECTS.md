@@ -13,15 +13,15 @@
 
 ## Active prospects
 
-### Barrick Mining Corp — ⚠️ FIT FLAGGED (2026-08-20)
+### Barrick Mining Corp — ❌ SHELVED as buyer (verdict 2026-08-20, Topic 6)
 - **Type:** Mining-company operator (gold + copper major — NYSE GOLD / TSX ABX)
 - **Contact:** [Unverified — commercial/marketing side for copper offtake; HQ leads in `daily/research.md` Topic 1]
 - **What they need:** Copper offtake (Lumwana/Reko Diq). **Problem: we supply GOLD doré — Barrick is a gold *producer*, not a gold buyer.** The copper pitch in Draft 2 no longer matches our product.
 - **Stage:** 🔍 Researched — **fit now uncertain; do not send Draft 2 as-is**
 - **Last action:** 2026-08-20 — product mismatch flagged after boss confirmed gold-only supply
-- **Next step:** Either (a) shelve Barrick as a buyer prospect, or (b) verify whether a real angle exists on their Tanzania gold operations side (e.g. ASM/supply-chain programs) via research queue before any outreach
+- **Next step:** None as a buyer. Topic 6 verdict: no third-party doré purchase; $573M/yr local-procurement program is goods/services, not minerals (outside our lane); ASM angle unverified — no pitch. Revisit only if boss pivots to services supply.
 - **Source:** research-queue + trade press (mining.com, Mining Beacon, Barrick Q1 2026 deck)
-- **Notes:** Topic 1 research (copper focus) stays valid as market intel. Gold producers ≠ our buyers — refiners and traders are.
+- **Notes:** Topic 1 (copper) = market intel. Twiga HQ is in Mwanza — ecosystem neighbor, not a customer. Watch-list: Lake Victoria Gold (Barrick-backed junior, Geita) — contractor ecosystem, not a buyer either.
 
 ### Mwanza Precious Metals Refinery (MPMR) — 🎯 best fit found so far
 - **Type:** Refinery / doré counterparty (state STAMICO JV with Dubai's Lozera Co)
@@ -70,7 +70,7 @@
 
 | Stage | Count | $ value (estimated) |
 |-------|------:|-------------------:|
-| 🔍 Researched | 4 (MPMR 🎯, BoT channel, Barrick ⚠️, PIC ⚠️) | — *(can't estimate honestly until PRODUCTS.md numbers are final)* |
+| 🔍 Researched | 3 active (MPMR 🎯, BoT channel, PIC ⚠️) + 1 shelved (Barrick ❌) | — *(values live in deals, not estimates)* |
 | ✉️ Contacted | — | — |
 | 🧪 Sample sent | — | — |
 | 📄 Quoted | — | — |

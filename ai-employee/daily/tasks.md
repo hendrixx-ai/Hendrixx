@@ -25,7 +25,7 @@
 | 🟢 High | **Send Draft 6 to MPMR** (info@mpmrcl.com — verified) | 🟡 Boss sends from own inbox — text FINAL, checklist cleared | Topic 5 / Draft 6 |
 | 🟢 High | Get BoT gold-programme supplier-onboarding requirements — **8-question call script ready** (calendar.md Prep 1) | 🆕 Script ready — needs the call | Topic 5 |
 | 🟡 Medium | Re-target prospect list at gold BUYERS — **done 2026-08-20: MPMR + BoT lane identified (Topic 5)**; UAE export lane researched, lower priority (~9–9.3% cost stack) | ✅ Done | Research Topic 5 |
-| 🟡 Medium | Verify Barrick copper-offtake recipient via LinkedIn — *deprioritized: copper pitch shelved; only if Barrick-Tanzania gold-side angle verifies* | 🟡 On hold | Research Topic 1 |
+| 🟡 Medium | Barrick angle check (buyer? ASM? procurement?) | ✅ Closed 2026-08-20 — Topic 6: **shelved as buyer**; Draft 2 stays DO-NOT-SEND | Research Topic 6 |
 | 🟡 Medium | Pick PIC angle: direct intro (Draft 5) vs portfolio companies; run gold-fit check first, then verify a real contact | 🆕 Open | Research Topic 4 |
 
 ---

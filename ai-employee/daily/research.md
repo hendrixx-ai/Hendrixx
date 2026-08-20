@@ -174,3 +174,33 @@ Tanzania is Africa's 4th-largest gold producer — **60 t produced in 2024** (up
 - **BoT onboarding process for a new supplier** — exact KYC/eligibility not in these sources; needs a call or the BoT guidelines doc.
 - Whether MPMR **buys doré outright or only refines for a fee** — site emphasizes refining services + market offices; confirm in the intro call (Draft 6).
 - UAE-specific refinery counterparties (Emirates Gold, DMCC-tier) not individually verified here — only do this research if the export lane ever beats the domestic one on margin.
+
+## ⛏️ Topic 6: Barrick–Tanzania (Twiga) — is there any angle for a gold doré supplier?
+
+*Pulled from research-queue.md — 2026-08-20. The question: keep Barrick as a prospect, or shelve.*
+
+### Overview
+Twiga Minerals Corporation — est. January 2020, **84% Barrick / 16% Government of Tanzania**, 50/50 economic-benefit split after capital recoupment — runs North Mara (Mara region) and Bulyanhulu (Shinyanga), HQ'd in **Mwanza** ([TanzaniaInvest](https://www.tanzaniainvest.com/twiga-minerals), [SME.org](https://me.smenet.org/barrick-gold-reaches-deal-with-tanzania-over-acacia-mining/)). It's a **Tier One complex — 500,000+ oz/year** (547,000 oz in 2022; North Mara ~270–300 koz, Bulyanhulu ~300–330 koz) ([Bus-Ex](https://www.bus-ex.com/article/twiga-minerals-corporation-setting-gold-standard-africa), [Africa Gold Suppliers](https://www.africagoldsuppliers.com/gold-mines-in-tanzania/)). Twiga contributes **51% of Tanzania's extractive-industry government revenue** and has injected **$4.24bn+ into the economy since 2019** ($888M in 2024 alone) ([Mining Weekly, Oct 2024](https://www.miningweekly.com/article/barrick-tanzania-govt-joint-venture-producing-bulk-of-countrys-mining-revenue-2024-10-07), [Mining Weekly, Jan 2025](https://www.miningweekly.com/article/barrick-notes-its-425bn-investment-into-tanzania-so-far-2025-01-24)).
+
+### The verdict on our three questions
+
+**1. Do they buy third-party doré? NO — confirmed.** Nothing in any source shows Twiga/Barrick purchasing gold from outside its own mines. They're a producer at 500koz+/yr scale — our earlier flag stands. **Shelve Barrick as a buyer.**
+
+**2. Local procurement angle? Real — but it's not gold.** Barrick spent **$573M with Tanzanian suppliers in 2024 (~83% of in-country spend), 75% of supplier payments to indigenous Tanzanian companies** — beating their own 61% target ([Mining Weekly, Jan 2025](https://www.miningweekly.com/article/barrick-notes-its-425bn-investment-into-tanzania-so-far-2025-01-24)). Named partners are services/equipment firms — security (NgMSS), catering (AKO), energy (CSI), drilling (Byrnecut), explosives (Orica) ([Bus-Ex](https://www.bus-ex.com/article/twiga-minerals-corporation-setting-gold-standard-africa)). **This is a goods-and-services supply chain, not a minerals one** — outside our lane unless the boss deliberately pivots. Parked as a noted option, not a plan.
+
+**3. ASM engagement angle? Unverified — do not pitch it.** Community programs ($15.8M since 2019, water/health/education, 96% Tanzanian workforce) are verified ([Barrick PR](https://www.barrick.com/English/news/news-details/2025/barrick-twiga-partnership-drives-sustainable-value-creation-in-tanzania-economy/default.aspx)), but **no current ASM formalization or third-party gold-buying program surfaced in this research.** Rule 2: no pitch built on an unverified program.
+
+### One genuinely useful side-finding 🔎
+**Lake Victoria Gold (LVG)** — Vancouver junior, Barrick is a **direct equity investor**; Imwelo project (Geita region, fully permitted, EPCM formalized July 2026) + Tembo adjacent to Bulyanhulu ([Newswire, Jul 2026](https://www.newswire.ca/news-releases/tanzania-s-next-gold-mine-has-its-team-its-financing-and-its-permits-now-it-just-has-to-build-877088886.html)). Juniors like this still **produce** gold rather than buy it — but their contractors, and the ecosystem growth around them, feed the same Mwanza/Geita corridor we operate in. Watch-list material, not a prospect.
+
+### Sources
+- [TanzaniaInvest — Twiga Minerals profile](https://www.tanzaniainvest.com/twiga-minerals) · [SME — Twiga formation, Mwanza HQ](https://me.smenet.org/barrick-gold-reaches-deal-with-tanzania-over-acacia-mining/)
+- [Mining Weekly — $4.24bn invested; $573M local supplier spend, 75% indigenous](https://www.miningweekly.com/article/barrick-notes-its-425bn-investment-into-tanzania-so-far-2025-01-24) (Jan 2025)
+- [Mining Weekly — Twiga = 51% of extractive revenue](https://www.miningweekly.com/article/barrick-tanzania-govt-joint-venture-producing-bulk-of-countrys-mining-revenue-2024-10-07) (Oct 2024)
+- [Barrick PR — Twiga Tier One status, workforce, community spend](https://www.barrick.com/English/news/news-details/2025/barrick-twiga-partnership-drives-sustainable-value-creation-in-tanzania-economy/default.aspx)
+- [Bus-Ex — Twiga Complex detail, named suppliers](https://www.bus-ex.com/article/twiga-minerals-corporation-setting-gold-standard-africa)
+- [Newswire — Lake Victoria Gold / Imwelo / Barrick equity stake](https://www.newswire.ca/news-releases/tanzania-s-next-gold-mine-has-its-team-its-financing-and-its-permits-now-it-just-has-to-build-877088886.html) (Jul 2026)
+
+### ⚠️ Uncertainties / Gaps
+- ASM engagement: absence of evidence ≠ evidence of absence — a deeper dig (Barrick sustainability reports, Twiga community docs) could still surface something. Low priority given verdict #1.
+- LVG relationship with Barrick beyond equity: not explored — watch-list only.
