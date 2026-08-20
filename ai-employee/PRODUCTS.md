@@ -34,7 +34,7 @@
 - **Origin / source:** **[need — where sourced, how aggregated]**
 - **Lead time:** **[need — weeks from PO]**
 - **Pricing model:** **[need — fixed / LBMA-linked / negotiable]**
-- **Typical buyer:** **[need — refiners, traders, others]**
+- **Typical buyer:** local refineries (e.g. MPMR Mwanza) · BoT Domestic Gold Purchase Programme (refined gold, world price, 24h settlement — Topic 5) · export buyers (UAE main destination) — confirmed lanes 2026-08-20; exact UAE counterparties unverified
 - **Certifications:** **[need — licenses, assay, inspection]**
 - **Shipping terms:** FOB / CIF — negotiable per deal ✅ · Port: **[need]**
 

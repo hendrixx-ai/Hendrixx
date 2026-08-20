@@ -244,4 +244,43 @@ yet** — see checklist.*
 4. **All specs stay placeholders** until PRODUCTS.md numbers are final (Rule 2).
 
 ---
-*0 sent · **5 drafts ready** (2 replies + 1 decline template + 2 outreach) · 2 tasks open · 3 ignored.*
+
+### ➡️ Draft 6 — To MPMR (info@mpmrcl.com) — doré supplier intro, local
+
+*First draft with a **verified public contact** (from MPMR's own site — Topic 5).
+It's 3 km from Mwanza airport; we're in the same city. Local, direct, no fluff.*
+
+> **Subject:** Doré supplier in Mwanza — refining + supply intro
+>
+> Hi MPMR team,
+>
+> Hendrixx here — Manager at hendrixx-ai's mineral division, based here in Mwanza.
+> We're building a regular gold doré supply line from the Lake Zone artisanal
+> producers, and MPMR is the obvious first door to knock on.
+>
+> Three questions:
+> 1. Do you buy doré outright, refine for a fee, or both — and what are the terms?
+> 2. What are your assay and settlement procedures for a new supplier?
+> 3. Do you have trader-office space available at the on-site Gold Market, and
+>    what does taking one involve?
+>
+> I can come by Butuja Street this week or next — whichever day suits you.
+>
+> Best,
+> Hendrixx
+>
+> ——
+> Hendrixx (Evance Ahadi)
+> Manager — Mineral Business (Sales, Marketing, Consultation)
+> hendrixx-ai · Mineral Division · Mwanza, Tanzania (EAT, UTC+3)
+> [direct line] · [email]
+
+#### ⚠️ Before sending — 2 min:
+
+1. **Add direct line + email** at the signature.
+2. **Know your licence answer.** They'll ask what licence we hold (broker / dealer). If we don't have the answer clean, confirm with the Mining Commission portal (madini.go.tz) first — see Topic 5.
+3. **Don't promise volumes** — PRODUCTS.md numbers are still open. Volume talk waits for the meeting.
+4. **Send-time note:** still an external action — waits for the boss's yes (Rule 1).
+
+---
+*0 sent · **6 drafts ready** (2 replies + 1 decline template + 3 outreach) · 2 tasks open · 3 ignored.*

@@ -134,3 +134,43 @@ South Africa's state-owned asset manager and the continent's biggest — **R2.69
 - **No verified human contact** for the early-stage mining program — needs LinkedIn / annual-report digging before any outreach goes out.
 - The R3tn AUM figure comes from trade press (Mining Technology); their USD conversion in the same article was garbled — treat currency conversions carefully.
 - How the non-SA half of the R1.35bn will be deployed is **not disclosed** — flag, don't assume.
+
+## ⛏️ Topic 5: Who buys gold doré — East Africa / Gulf (from a Mwanza base)
+
+*Pulled from research-queue.md — 2026-08-20. This was the pipeline's #1 need after the boss confirmed gold doré as our product.*
+
+### Overview
+Tanzania is Africa's 4th-largest gold producer — **60 t produced in 2024** (up from 55 t in 2023), gold worth **USD 3.4bn exported in 2024 → USD 4.6bn in 2025 (+37.4%)** ([TanzaniaInvest mining](https://www.tanzaniainvest.com/mining), [Kitomari](http://ardenkitomaritz.blogspot.com/2025/02/tanzania-boosts-gold-reserves-with.html)). The market has three real buyer lanes for a Mwanza-based doré supplier — and the best one is walking distance.
+
+### The three buyer lanes
+
+**Lane 1 — Bank of Tanzania (the big one).** The Domestic Gold Purchase Programme relaunched April 2023, went structured Oct 2024, and by **10 June 2026 had accumulated 27.5 t of gold** — roughly **USD 3.68bn over 18 months** ([Pan African Visions](https://panafricanvisions.com/2026/06/beyond-the-bullion-what-tanzanias-27-5-tonne-gold-reserve-really-means-economically/), [Crypto Briefing](https://cryptobriefing.com/tanzania-central-bank-buys-28-tons-gold-reserves/)). Terms that matter to us:
+- Pays **world market price**, in TZS, **full payment within 24h of refining**, and covers refining costs ([Kitomari](http://ardenkitomaritz.blogspot.com/2025/02/tanzania-boosts-gold-reserves-with.html))
+- **20% set-aside is law**: exporters must offer ≥20% of gold to BoT (Mining Act s.59) ([TanzaniaInvest](https://www.tanzaniainvest.com/mining/central-bank-gold-purchase-miners), [Rive law firm](https://www.rive.co.tz/buying-smelting-and-exporting-gold-in-tanzania-what-the-law-actually-requires/))
+- Selling into the domestic/refining route cuts royalty **6% → 4%**, kills the 1% inspection fee, VAT zero-rated ([Kitomari](http://ardenkitomaritz.blogspot.com/2025/02/tanzania-boosts-gold-reserves-with.html), [ATI study](https://www.addistaxinitiative.net/sites/default/files/resources/ATI%20Study%20Illicit%20Gold%20Flows%20and%20Tax%20Evasion%20in%20Eight%20ATI%20Partner%20Countries.pdf))
+- 4,000+ new bank accounts opened by miners/traders in the program ([Africa.com](https://www.africa.com/top-10-news/tanzanias-central-bank-expands-gold-reserves)) — it's genuinely open to small players, not just the four refiners BoT signed 20% agreements with in June 2025 ([TanzaniaInvest](https://www.tanzaniainvest.com/mining/central-bank-gold-purchase-miners))
+
+**Lane 2 — Mwanza Precious Metals Refinery (MPMR) — 3 km from the airport, in our city.** STAMICO (state) JV with Dubai's Lozera Co, opened June 2021 by the President ([The Citizen](https://www.thecitizen.co.tz/tanzania/news/national/president-samia-launches-gold-refinery-in-mwanza-3435676)). Refines **480 kg/day to 999.9** (electrolytic) + 60 kg/day silver, running since Jan 2022; hosts a **Ministry of Minerals Gold Market on-site with trader offices, Mining Commission offices, and banks** ([MPMR site](https://mpmrcl.com/reffacilities.html), [STAMICO](https://stamico.co.tz/pages/joint-venture-partnership)). Public contact: **info@mpmrcl.com**, Butuja Street, Ilemela. For us: refining partner (doré → refined → BoT lane at 4% royalty) and/or direct doré counterparty. Tanzania's total refining capacity is now ~450 t/year — "nearly half of Africa's production" ([TanzaniaInvest](https://www.tanzaniainvest.com/mining)). Also in-region: **Geita Gold Refinery** — RMI-certified, on the LBMA path ([TanzaniaInvest](https://www.tanzaniainvest.com/mining)).
+
+**Lane 3 — Export (UAE-centered).** The majority of regional ASM gold ends up in the **UAE**, the main declared destination for Tanzanian gold ([ATI study](https://www.addistaxinitiative.net/sites/default/files/resources/ATI%20Study%20Illicit%20Gold%20Flows%20and%20Tax%20Evasion%20in%20Eight%20ATI%20Partner%20Countries.pdf)). But the economics stack against raw-doré export for a small supplier: royalty 6% + withholding 2% + inspection ~1% + levies ≈ **9–9.3% off the top** ([Africa Gold Suppliers guide](https://www.africagoldsuppliers.com/tanzania-gold-market/)), plus the 20% BoT set-aside and per-consignment export permitting. Domestic refining + BoT sale is the cheaper loop — export becomes the margin play once volumes justify it.
+
+### 3 Things Worth Knowing Before Engaging
+1. **The licence ladder decides everything.** Broker licence (buy from miners at licensed stations, sell to dealers — citizens/local cos only, annual, no export) → Dealer licence (buy + sell + export permits; corporate applicants need ≥25% Tanzanian ownership + a Tanzanian director; export = Form MTF.13 + TMAA assay + Certificate of Origin + royalty receipts + 20% set-aside evidence) ([Rive](https://www.rive.co.tz/buying-smelting-and-exporting-gold-in-tanzania-what-the-law-actually-requires/)). 548 dealer + 1,290 broker licences were live in 2024 ([ATI study](https://www.addistaxinitiative.net/sites/default/files/resources/ATI%20Study%20Illicit%20Gold%20Flows%20and%20Tax%20Evasion%20in%20Eight%20ATI%20Partner%20Countries.pdf)). **Which one hendrixx-ai holds is the #1 open question for the boss.**
+2. **ASM is the supply pool.** 38% of Tanzania's gold officially came from ASM in 2021/22, with 43 mineral markets + 109 buying centers formalizing the trade ([ATI study](https://www.addistaxinitiative.net/sites/default/files/resources/ATI%20Study%20Illicit%20Gold%20Flows%20and%20Tax%20Evasion%20in%20Eight%20ATI%20Partner%20Countries.pdf)) — that's where a Mwanza aggregator sources.
+3. **Financing exists.** TZS 250bn (~USD 100M) loan-guarantee scheme for mineral buyers ([Kitomari](http://ardenkitomaritz.blogspot.com/2025/02/tanzania-boosts-gold-reserves-with.html)); Mining Commission + CRDB financing program for small-scale miners ([TanzaniaInvest](https://www.tanzaniainvest.com/mining/central-bank-gold-purchase-miners)).
+
+### Sources
+- [Pan African Visions — Tanzania's 27.5t reserve, program mechanics](https://panafricanvisions.com/2026/06/beyond-the-bullion-what-tanzanias-27-5-tonne-gold-reserve-really-means-economically/) (Jun 2026)
+- [Crypto Briefing — 28t / $3.68bn over 18 months](https://cryptobriefing.com/tanzania-central-bank-buys-28-tons-gold-reserves/) (Jul 2026)
+- [TanzaniaInvest — BoT 20% agreements with four firms; 5t by Jun 2025](https://www.tanzaniainvest.com/mining/central-bank-gold-purchase-miners) (Jun 2025)
+- [Kitomari Banking & Finance Blog — program terms, royalties, incentives](http://ardenkitomaritz.blogspot.com/2025/02/tanzania-boosts-gold-reserves-with.html) (Feb 2025)
+- [MPMR — facilities, contact, on-site Gold Market](https://mpmrcl.com/reffacilities.html) · [STAMICO JV page](https://stamico.co.tz/pages/joint-venture-partnership) · [The Citizen — launch](https://www.thecitizen.co.tz/tanzania/news/national/president-samia-launches-gold-refinery-in-mwanza-3435676)
+- [Rive (law firm) — licence ladder, export process](https://www.rive.co.tz/buying-smelting-and-exporting-gold-in-tanzania-what-the-law-actually-requires/) (May 2026)
+- [ATI — Illicit Gold Flows study (UAE destination, ASM share, licence counts)](https://www.addistaxinitiative.net/sites/default/files/resources/ATI%20Study%20Illicit%20Gold%20Flows%20and%20Tax%20Evasion%20in%20Eight%20ATI%20Partner%20Countries.pdf) (Oct 2025)
+- [Africa Gold Suppliers — export cost stack](https://www.africagoldsuppliers.com/tanzania-gold-market/) · [TanzaniaInvest — sector figures](https://www.tanzaniainvest.com/mining)
+
+### ⚠️ Uncertainties / Gaps
+- **MPMR capacity figures conflict**: 480 kg/day (company site + STAMICO) vs 960 kg/day (TanzaniaInvest 2026). Don't quote capacity to anyone without checking with MPMR directly.
+- **BoT onboarding process for a new supplier** — exact KYC/eligibility not in these sources; needs a call or the BoT guidelines doc.
+- Whether MPMR **buys doré outright or only refines for a fee** — site emphasizes refining services + market offices; confirm in the intro call (Draft 6).
+- UAE-specific refinery counterparties (Emirates Gold, DMCC-tier) not individually verified here — only do this research if the export lane ever beats the domestic one on margin.

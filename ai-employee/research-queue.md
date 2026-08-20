@@ -16,7 +16,6 @@
 -->
 - Research: GIC (Singapore) — mining exposure in recent annual report
 - Research: Saudi PIF mining focus — Ma'aden partnership, EV materials investment
-- Research: **Who buys gold doré in East Africa / Gulf — refineries, traders, institutional buyers that a Mwanza-based supplier can actually sell to** — this is now the pipeline's #1 need (gold confirmed as our product 2026-08-20)
 - Research: Barrick Tanzania operations (Twiga/North Mara/Bulyanhulu) — any verified local procurement or ASM engagement angle for a gold supply/consultation partner — else shelve Barrick as a buyer
 
 ## Done
@@ -26,3 +25,4 @@
 | 2026-08-19 | Glencore — cobalt supply contracts 2026 | `daily/research.md` (Topic 2) |
 | 2026-08-19 | SWF mining portfolio (PIC, ADIA, GIC) — broader 2026 picture | `daily/research.md` (Topic 3) |
 | 2026-08-20 | PIC — mining portfolio specifics, R1.35bn early-stage program, offtake relevance | `daily/research.md` (Topic 4) |
+| 2026-08-20 | **Gold doré buyers — East Africa/Gulf: BoT program, MPMR Mwanza, UAE export lane, licence ladder** | `daily/research.md` (Topic 5) |
