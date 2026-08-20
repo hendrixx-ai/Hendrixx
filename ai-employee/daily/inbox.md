@@ -1,6 +1,7 @@
 # 📥 INBOX — Email Sort & Drafts
 
 *Generated: Wednesday 2026-08-19, 12:41 EAT — LIVE run, updated with full email bodies*
+*Updated: Thursday 2026-08-20 — Draft 3 added (formal decline of a meeting request, per /toneformal)*
 
 ## Sorted Emails
 
@@ -92,4 +93,60 @@
 4. **Check `voice-samples.md` § 18** for the cold outreach template this is based on.
 
 ---
-*0 sent · **2 drafts ready** · 2 tasks open · 3 ignored.*
+
+### ➡️ Draft 3 — Declining a meeting request (formal correspondence)
+
+*No meeting request is pending in the live inbox, so this is a fill-in-ready
+template, not a reply to a real sender (Rule 2 — no invented people or
+meetings). Based on `voice-samples.md` § 12, elevated to a formal register
+per the /toneformal standing instruction. Two variants below.*
+
+#### Variant A — Decline + alternative (recommended default)
+
+> **Subject:** Re: [Meeting name] — [proposed date]
+>
+> Dear [Name],
+>
+> Thank you for the invitation to [meeting purpose] on [date] at [time].
+> I am unable to attend — [reason: prior commitment / site visit / travel].
+>
+> To keep this moving, one of the following:
+>
+> - I am available [alt day] at [time] or [alt day] at [time] (EAT) — same agenda works for me.
+> - If neither suits, [colleague name, title] can attend in my place and brief me the same day.
+> - Alternatively, send the agenda ahead and I will respond in writing within one business day.
+>
+> Please confirm what works best on your side.
+>
+> Best,
+> Hendrixx
+>
+> ——
+> Hendrixx (Evance Ahadi)
+> Manager — Mineral Business (Sales, Marketing, Consultation)
+> hendrixx-ai · Mineral Division · Mwanza, Tanzania (EAT, UTC+3)
+> [direct line] · [email]
+
+#### Variant B — Decline only (no reschedule, e.g., the meeting isn't needed)
+
+> **Subject:** Re: [Meeting name] — [proposed date]
+>
+> Dear [Name],
+>
+> Thank you for the invitation. I have to decline this one — [one-line reason],
+> and I do not want to hold up your timeline.
+>
+> [Name, title] will attend in my place, or send your questions and I will
+> reply in writing by [date].
+>
+> Best,
+> Hendrixx
+
+#### ⚠️ Before sending — fill these in (2 min):
+
+1. **Replace every bracketed field** — recipient name, meeting name/date/time, reason, alternative slots (all times in EAT unless the recipient is international).
+2. **Only offer Variant A's alternatives if genuinely true** — do not offer a delegate who has not agreed, per Rule 2.
+3. **Send-time note:** declining is an external action — this stays a draft until you approve it (Rule 1).
+
+---
+*0 sent · **3 drafts ready** (2 replies + 1 correspondence template) · 2 tasks open · 3 ignored.*

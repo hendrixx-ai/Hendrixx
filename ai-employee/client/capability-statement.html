@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capability Statement — hendrixx-ai · Mineral Division</title>
+<style>
+  :root{
+    --navy:#1b2a41;
+    --charcoal:#23282e;
+    --slate:#4a5361;
+    --amber:#b98a2e;
+    --amber-soft:#f6efe0;
+    --line:#d8dce2;
+    --paper:#ffffff;
+    --ink:#22262b;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{background:#e9ebef;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);
+    font-size:10.5pt;
+    line-height:1.5;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+  .page{
+    background:var(--paper);
+    width:210mm;
+    min-height:297mm;
+    margin:10mm auto;
+    padding:16mm 16mm 14mm 16mm;
+    position:relative;
+    box-shadow:0 2px 18px rgba(20,28,40,.18);
+  }
+  /* ---------- header ---------- */
+  .masthead{
+    border-bottom:3px solid var(--navy);
+    padding-bottom:12px;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:24px;
+  }
+  .wordmark{
+    font-family:Georgia,"Times New Roman",serif;
+    color:var(--navy);
+  }
+  .wordmark .brand{font-size:24pt;letter-spacing:.5px;font-weight:700;}
+  .wordmark .division{font-size:11pt;letter-spacing:2.5px;text-transform:uppercase;color:var(--amber);margin-top:2px;}
+  .doc-meta{text-align:right;font-size:8.5pt;color:var(--slate);line-height:1.6;white-space:nowrap;}
+  .doc-meta .doc-type{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:12.5pt;color:var(--charcoal);letter-spacing:1px;text-transform:uppercase;font-weight:700;
+  }
+  .tagline{
+    margin-top:10px;font-size:10pt;color:var(--slate);font-style:italic;
+    font-family:Georgia,"Times New Roman",serif;
+  }
+  /* ---------- placeholders ---------- */
+  .ph{
+    background:var(--amber-soft);
+    border-bottom:1px dotted var(--amber);
+    padding:0 3px;
+    color:#7a5a14;
+    font-style:normal;white-space:nowrap;
+  }
+  /* ---------- sections ---------- */
+  h2{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:12pt;color:var(--navy);
+    text-transform:uppercase;letter-spacing:1.2px;
+    border-bottom:1px solid var(--line);
+    padding-bottom:3px;
+    margin:18px 0 8px 0;
+  }
+  h2 .num{color:var(--amber);margin-right:6px;}
+  p{margin-bottom:7px;}
+  .lead{font-size:10.8pt;}
+  ul{margin:0 0 8px 18px;}
+  li{margin-bottom:3px;}
+  .two-col{display:flex;gap:22px;}
+  .two-col > div{flex:1;}
+  /* ---------- cards ---------- */
+  .services{display:flex;gap:12px;margin:6px 0 2px 0;}
+  .card{
+    flex:1;border:1px solid var(--line);border-top:3px solid var(--navy);
+    padding:9px 11px;background:#fbfcfd;
+  }
+  .card h3{
+    font-size:10pt;color:var(--navy);margin-bottom:4px;
+    font-family:Georgia,"Times New Roman",serif;
+  }
+  .card p{font-size:9pt;color:var(--slate);margin:0;}
+  /* ---------- table ---------- */
+  table{width:100%;border-collapse:collapse;font-size:9.3pt;margin:4px 0 2px 0;}
+  th{
+    background:var(--navy);color:#fff;text-align:left;
+    padding:5px 8px;font-weight:600;font-size:8.8pt;
+    letter-spacing:.4px;text-transform:uppercase;
+  }
+  td{border-bottom:1px solid var(--line);padding:5px 8px;vertical-align:top;}
+  tr:nth-child(even) td{background:#f6f8fa;}
+  .note{font-size:8.3pt;color:var(--slate);font-style:italic;margin-top:3px;}
+  /* ---------- steps ---------- */
+  .steps{display:flex;gap:0;margin:6px 0 2px 0;}
+  .step{flex:1;padding:0 10px;border-left:1px solid var(--line);}
+  .step:first-child{border-left:none;padding-left:0;}
+  .step .n{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:15pt;color:var(--amber);font-weight:700;display:block;line-height:1.1;
+  }
+  .step h4{font-size:9.3pt;color:var(--navy);margin:2px 0 3px 0;}
+  .step p{font-size:8.6pt;color:var(--slate);margin:0;}
+  /* ---------- principles ---------- */
+  .principles li{margin-bottom:5px;}
+  .principles b{color:var(--navy);}
+  /* ---------- footer ---------- */
+  .footer{
+    margin-top:20px;border-top:2px solid var(--navy);
+    padding-top:8px;display:flex;justify-content:space-between;gap:20px;
+    font-size:8.3pt;color:var(--slate);
+  }
+  .footer .contact{line-height:1.7;}
+  .footer .contact b{color:var(--navy);}
+  .confid{max-width:95mm;text-align:right;font-style:italic;}
+  /* ---------- toolbar (screen only) ---------- */
+  .toolbar{
+    position:fixed;top:14px;right:14px;z-index:9;
+  }
+  .toolbar button{
+    background:var(--navy);color:#fff;border:none;
+    padding:9px 16px;font-size:10pt;border-radius:4px;cursor:pointer;
+    font-family:inherit;box-shadow:0 2px 8px rgba(0,0,0,.25);
+  }
+  .toolbar button:hover{background:var(--amber);}
+  .toolbar .hint{
+    background:#fff;color:var(--slate);font-size:8pt;padding:6px 10px;
+    border-radius:4px;margin-top:6px;max-width:210px;box-shadow:0 2px 8px rgba(0,0,0,.12);
+  }
+  /* ---------- print ---------- */
+  @page{size:A4;margin:0;}
+  @media print{
+    html{background:#fff;}
+    .page{margin:0;box-shadow:none;width:auto;min-height:auto;}
+    .toolbar{display:none;}
+    h2{-webkit-print-color-adjust:exact;}
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar no-print">
+  <button onclick="window.print()">Print / Save as PDF</button>
+  <div class="hint">Highlight-marked fields are placeholders — fill from <b>PRODUCTS.md</b> before sending to a client.</div>
+</div>
+
+<div class="page">
+
+  <!-- ============ MASTHEAD ============ -->
+  <div class="masthead">
+    <div class="wordmark">
+      <div class="brand">hendrixx-ai</div>
+      <div class="division">Mineral Division</div>
+    </div>
+    <div class="doc-meta">
+      <div class="doc-type">Capability Statement</div>
+      <div>Prepared for: <span class="ph">[Client company]</span></div>
+      <div>Date: <span class="ph">[DD Month YYYY]</span> · Ref: <span class="ph">[HMD-CS-001]</span></div>
+    </div>
+  </div>
+  <div class="tagline">Mineral supply and consultation — spec-matched, delivered on time, on spec.</div>
+
+  <!-- ============ 1. OVERVIEW ============ -->
+  <h2><span class="num">1.</span>Company Overview</h2>
+  <p class="lead">
+    hendrixx-ai · Mineral Division is a mineral supply and consultation business based in
+    Mwanza, Tanzania, serving investors, mine owners, and operators in the B2B minerals market.
+    We match each buyer's confirmed specification — mineral, form, grade, volume, and delivery
+    window — to vetted supply, and we manage the engagement from first consultation through
+    contracting and delivery. Our working hours are East Africa Time (EAT, UTC+3), extended
+    for international buyer calls.
+  </p>
+
+  <!-- ============ 2. SERVICES ============ -->
+  <h2><span class="num">2.</span>Core Services</h2>
+  <div class="services">
+    <div class="card">
+      <h3>Mineral Commodity Supply</h3>
+      <p>Spec-matched supply of mineral commodities with confirmed grade, volume, and lead time — quoted per buyer requirement.</p>
+    </div>
+    <div class="card">
+      <h3>Consultation</h3>
+      <p>Spec matching, sourcing strategy, logistics coordination, and market timing advisory for buyers and investors.</p>
+    </div>
+    <div class="card">
+      <h3>Long-Term Supply Contracts</h3>
+      <p>Structured repeat-supply agreements for ongoing offtake, with agreed terms on spec, cadence, and pricing model.</p>
+    </div>
+  </div>
+
+  <!-- ============ 3. SUPPLY CAPABILITY ============ -->
+  <h2><span class="num">3.</span>Supply Capability</h2>
+  <table>
+    <thead>
+      <tr>
+        <th style="width:19%">Mineral</th>
+        <th style="width:15%">Form</th>
+        <th style="width:17%">Grade / Purity</th>
+        <th style="width:16%">Standard Volume</th>
+        <th style="width:15%">Lead Time</th>
+        <th style="width:18%">Terms</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="ph">[Mineral 1 — from PRODUCTS.md]</span></td>
+        <td><span class="ph">[ore / concentrate / cathode]</span></td>
+        <td><span class="ph">[grade %]</span></td>
+        <td><span class="ph">[MT / month]</span></td>
+        <td><span class="ph">[x–y weeks]</span></td>
+        <td><span class="ph">[FOB / CIF / DDP — port]</span></td>
+      </tr>
+      <tr>
+        <td><span class="ph">[Mineral 2 — from PRODUCTS.md]</span></td>
+        <td><span class="ph">[form]</span></td>
+        <td><span class="ph">[grade %]</span></td>
+        <td><span class="ph">[MT / month]</span></td>
+        <td><span class="ph">[x–y weeks]</span></td>
+        <td><span class="ph">[terms]</span></td>
+      </tr>
+      <tr>
+        <td><span class="ph">[Mineral 3 — from PRODUCTS.md]</span></td>
+        <td><span class="ph">[form]</span></td>
+        <td><span class="ph">[grade %]</span></td>
+        <td><span class="ph">[MT / month]</span></td>
+        <td><span class="ph">[x–y weeks]</span></td>
+        <td><span class="ph">[terms]</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="note">
+    Pricing model — fixed or index-linked (LME/CME) — and certifications
+    (<span class="ph">[ISO / SGS / REACH / conflict-free]</span>) confirmed per quotation.
+    Final specifications are validated in writing before any quote is issued.
+  </p>
+
+  <!-- ============ 4. HOW WE WORK ============ -->
+  <h2><span class="num">4.</span>How We Work</h2>
+  <div class="steps">
+    <div class="step">
+      <span class="n">01</span>
+      <h4>Consultation</h4>
+      <p>Confirm what the buyer actually requires — spec, volume, grade, timing.</p>
+    </div>
+    <div class="step">
+      <span class="n">02</span>
+      <h4>Spec Match</h4>
+      <p>Map the requirement against verified supply. No match, no quote.</p>
+    </div>
+    <div class="step">
+      <span class="n">03</span>
+      <h4>RFQ &amp; Sample</h4>
+      <p>Deliver the RFQ and samples for buyer validation.</p>
+    </div>
+    <div class="step">
+      <span class="n">04</span>
+      <h4>Quote &amp; Contract</h4>
+      <p>Agree terms, pricing, and logistics; sign the order.</p>
+    </div>
+    <div class="step">
+      <span class="n">05</span>
+      <h4>Delivery &amp; Review</h4>
+      <p>Coordinate delivery, verify spec, and review for repeat supply.</p>
+    </div>
+  </div>
+
+  <!-- ============ 5. STANDARDS ============ -->
+  <h2><span class="num">5.</span>Standards &amp; Principles</h2>
+  <div class="two-col">
+    <div>
+      <ul class="principles">
+        <li><b>Spec match first.</b> We do not quote without a confirmed buyer specification — invented data costs real money and reputation.</li>
+        <li><b>Reliability over price.</b> Buyers return for on-time, on-spec delivery; we hold that standard on every order.</li>
+      </ul>
+    </div>
+    <div>
+      <ul class="principles">
+        <li><b>Verified information only.</b> Every figure we present is sourced and confirmable; anything unverified is flagged, never guessed.</li>
+        <li><b>Quality assurance.</b> Independent inspection (<span class="ph">[SGS / other — confirm]</span>) available per shipment on request.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============ 6. ENGAGEMENT ============ -->
+  <h2><span class="num">6.</span>Engagement Models</h2>
+  <ul>
+    <li><b>Per-deal supply</b> — single-order delivery against a confirmed RFQ.</li>
+    <li><b>Long-term supply contract</b> — scheduled offtake with agreed cadence and pricing model.</li>
+    <li><b>Consultation engagement</b> — <span class="ph">[retainer / per-deal / advisory — from PRODUCTS.md]</span> covering sourcing strategy, spec matching, and market timing.</li>
+  </ul>
+
+  <!-- ============ FOOTER ============ -->
+  <div class="footer">
+    <div class="contact">
+      <b>Hendrixx (Evance Ahadi)</b> — Manager, Mineral Business (Sales, Marketing, Consultation)<br>
+      hendrixx-ai · Mineral Division · Mwanza, Tanzania (EAT, UTC+3)<br>
+      <span class="ph">[direct line]</span> · <span class="ph">[email]</span> · <span class="ph">[company website]</span>
+    </div>
+    <div class="confid">
+      This document is confidential and prepared solely for <span class="ph">[Client company]</span>.
+      Specifications and volumes are confirmed per quotation and subject to written agreement.
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
