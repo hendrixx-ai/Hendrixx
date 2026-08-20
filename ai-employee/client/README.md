@@ -16,7 +16,7 @@ hand it over after a first call.
 1. **Open `capability-statement.html` in any browser.** It renders as an A4 page.
 2. **All product specs are in** (confirmed 2026-08-20 — gold doré, 80–85% Au, 20–100 kg/deal, 1–2 weeks, LBMA-linked, TMAA + SGS, Dar es Salaam).
 3. **Set the client fields** — "Prepared for", date, reference number.
-4. **Complete the contact block** — direct line (currently skipped), email, website.
+4. **Contact block** — email locked in (evanceahadi@gmail.com); website placeholder remains; phone line deliberately skipped.
 5. Optional: add the dealer-licence number to the footer for extra credibility.
 6. **Click "Print / Save as PDF"** (top-right) → save as
    `Hendrixx-Capability-Statement-[Client]-[YYYY-MM-DD].pdf`.

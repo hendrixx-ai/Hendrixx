@@ -81,8 +81,7 @@
 > Hendrixx
 >
 > ——
-> hendrixx-ai · Mineral Division
-> Best, Hendrixx · Direct line: [+ add yours]
+> hendrixx-ai · Mineral Division · evanceahadi@gmail.com
 >
 
 #### ⚠️ Before sending — fill these in (5 min):
@@ -125,7 +124,7 @@ per the /toneformal standing instruction. Two variants below.*
 > Hendrixx (Evance Ahadi)
 > Manager — Mineral Business (Sales, Marketing, Consultation)
 > hendrixx-ai · Mineral Division · Mwanza, Tanzania (EAT, UTC+3)
-> [direct line] · [email]
+> evanceahadi@gmail.com
 
 #### Variant B — Decline only (no reschedule, e.g., the meeting isn't needed)
 

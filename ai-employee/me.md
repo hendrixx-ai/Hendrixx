@@ -5,6 +5,7 @@
 - **Name:** Hendrixx (Evance Ahadi)
 - **Role / Title:** Manager — Mineral Business (Sales, Marketing, Consultation)
 - **Company / Organization:** hendrixx-ai · Mineral Division
+- **Business email:** evanceahadi@gmail.com *(all correspondence — confirmed 2026-08-20)*
 - **Industry:** Mining / Minerals / Commodities · B2B
 - **Target market:** Investors + owners/operators of mining companies (domestic + international)
 
