@@ -20,7 +20,7 @@
 | 🟢 High | Pull permit history for 1225 West St via www.dsm.city/css → Search Public Records → "1225 West" | 🆕 Open (corrected) | Email Aug 18 |
 | 🟢 High | Review Zapier third-party access to Google | 🆕 Open | Email Aug 18 |
 | 🟡 Low | Send thank-you reply to Monica | 🆕 Draft ready | Email Aug 18 |
-| 🔴 Blocker | **Fill PRODUCTS.md exact numbers** — gold + form + FOB/CIF confirmed 2026-08-20 ✅; still need: fineness range, volume band, lead time, port, certs, pricing model | 🟡 Half-open | Boss answers 2026-08-20 |
+| 🔴 Blocker | **Fill PRODUCTS.md exact numbers** — fineness 80–85% Au · 20–100 kg/deal · 1–2 wks · Dar es Salaam · LBMA-linked · TMAA+SGS | ✅ Resolved 2026-08-20 — file complete, capability statement unblocked | Boss answers 2026-08-20 |
 | 🔴 High | **Confirm which licence hendrixx-ai holds/needs — broker vs dealer** | ✅ Resolved 2026-08-20 — **Dealer licence confirmed by boss** (buy/sell/export). Optional: record licence number in me.md for docs | Topic 5 research |
 | 🟢 High | **Send Draft 6 to MPMR** (info@mpmrcl.com — verified) | 🟡 Boss sends from own inbox — text FINAL, checklist cleared | Topic 5 / Draft 6 |
 | 🟢 High | Get BoT gold-programme supplier-onboarding requirements — **8-question call script ready** (calendar.md Prep 1) | 🆕 Script ready — needs the call | Topic 5 |

@@ -31,7 +31,7 @@ I run sales, marketing, and consultation for our mineral supply business. That m
 - Mineral commodities (spec, grade, volume tailored to buyer)
 - Consultation on sourcing, spec matching, logistics, market timing
 - Long-term supply contracts for repeat buyers
-- *(Add specifics in `PRODUCTS.md` once defined — leave a placeholder for now.)*
+- *(Full specs now defined in `PRODUCTS.md` — gold doré, 80–85% Au, 20–100 kg/deal, 1–2 wks, LBMA-linked, Dar es Salaam.)*
 
 ## My Communication Style / Voice
 
