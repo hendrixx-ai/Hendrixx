@@ -16,6 +16,8 @@
 -->
 - Research: GIC (Singapore) — mining exposure in recent annual report
 - Research: Saudi PIF mining focus — Ma'aden partnership, EV materials investment
+- Research: **Who buys gold doré in East Africa / Gulf — refineries, traders, institutional buyers that a Mwanza-based supplier can actually sell to** — this is now the pipeline's #1 need (gold confirmed as our product 2026-08-20)
+- Research: Barrick Tanzania operations (Twiga/North Mara/Bulyanhulu) — any verified local procurement or ASM engagement angle for a gold supply/consultation partner — else shelve Barrick as a buyer
 
 ## Done
 | Date | Topic | Brief saved to |

@@ -14,9 +14,9 @@ hand it over after a first call.
 ### How to finalize (10 min)
 
 1. **Open `capability-statement.html` in any browser.** It renders as an A4 page.
-2. **Fill every amber-highlighted placeholder** with real values pulled from
-   `PRODUCTS.md` — minerals, forms, grades, volumes, lead times, shipping terms,
-   certifications, inspection provider, engagement models.
+2. **Gold is filled in** (confirmed 2026-08-20). Fill the remaining amber placeholders
+   with real values pulled from `PRODUCTS.md` — fineness range, typical volume band,
+   lead time, port, certifications, inspection provider, engagement models.
 3. **Set the client fields** — "Prepared for", date, reference number.
 4. **Complete the contact block** — direct line, email, website.
 5. **Click "Print / Save as PDF"** (top-right) → save as

@@ -1,7 +1,7 @@
 # 📥 INBOX — Email Sort & Drafts
 
 *Generated: Wednesday 2026-08-19, 12:41 EAT — LIVE run, updated with full email bodies*
-*Updated: Thursday 2026-08-20 — Draft 3 added (formal decline of a meeting request, per /toneformal) + casual variants (per /tonecasual) + Drafts 4–5 (capability cover note, PIC outreach). Research run: Topic 4 (PIC) done.*
+*Updated: Thursday 2026-08-20 — Draft 3 + casual variants + Drafts 4–5 · PRODUCTS.md partially filled (gold confirmed) → Draft 2 flagged DO-NOT-SEND (copper pitch ≠ gold product), Draft 5 fit-check added. Research: Topic 4 (PIC) done; gold-buyer research queued.*
 
 ## Sorted Emails
 
@@ -238,9 +238,10 @@ yet** — see checklist.*
 
 #### ⚠️ Before sending — do this first:
 
-1. **Find a real recipient.** No verified contact for the early-stage mining program exists in my research — LinkedIn: "PIC early-stage mining", "PIC unlisted investments mining", or the annual report's deal team. Do not send to a generic inbox and hope.
-2. **Sanity-check the angle** — PIC invests ≥50% of that program in South Africa. Decide if direct intro (this draft) beats targeting PIC-backed portfolio companies one by one (probably slower, maybe better odds).
-3. **All specs stay placeholders** until PRODUCTS.md is filled (Rule 2).
+1. **Fit check first (2026-08-20):** the pitch leans on their copper/lithium early-stage program — but **we supply gold**. Confirm there's a real reason PIC (or its portfolio companies) would need a gold supplier/consultant before this goes anywhere.
+2. **Find a real recipient.** No verified contact for the early-stage mining program exists in my research — LinkedIn: "PIC early-stage mining", "PIC unlisted investments mining", or the annual report's deal team. Do not send to a generic inbox and hope.
+3. **Sanity-check the angle** — PIC invests ≥50% of that program in South Africa. Decide if direct intro (this draft) beats targeting PIC-backed portfolio companies one by one (probably slower, maybe better odds).
+4. **All specs stay placeholders** until PRODUCTS.md numbers are final (Rule 2).
 
 ---
 *0 sent · **5 drafts ready** (2 replies + 1 decline template + 2 outreach) · 2 tasks open · 3 ignored.*

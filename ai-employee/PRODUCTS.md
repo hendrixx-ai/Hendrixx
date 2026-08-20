@@ -2,42 +2,57 @@
 
 *Reference for the AI Employee so it quotes accurately and never invents specs.*
 
-> ⚠️ **Fill this in with your real products.** Until you do, the employee
-> will flag any "spec / volume / price" question back to you rather than guess.
+> **Status (2026-08-20): core product confirmed by the boss — GOLD, doré / refined
+> metal.** Exact numbers still marked **[need]**. Nothing gets quoted to a buyer
+> until those blanks are filled. Rule 2 stands.
 
 ---
 
-## Mineral 1: [Name]
+## Confirmed vs. still needed
 
-- **Form:** (e.g., ore, concentrate, cathode, refined, lump, fines)
-- **Grade / purity:** (e.g., 99.95% Cu cathode, 65% Fe concentrate)
-- **Standard volumes:** (e.g., 500 MT / month, 5,000 MT / quarter)
-- **Origin / source:** (country, mine, region)
-- **Lead time:** (e.g., 4–6 weeks from PO)
-- **Pricing model:** (fixed / index-linked to LME / negotiable)
-- **Typical buyer:** (smelters, traders, refiners, manufacturers)
-- **Certifications:** (e.g., ISO, SGS, REACH, conflict-free)
-- **Shipping terms:** (FOB, CIF, DDP — and which ports)
+| Field | Status | Value |
+|-------|--------|-------|
+| Mineral | ✅ Confirmed | Gold |
+| Form | ✅ Confirmed | Doré / refined metal |
+| Standard volumes | 🟡 Partial | "Varies per deal" — **[need a typical band, e.g. kg/month]** |
+| Shipping terms | ✅ Confirmed | FOB / CIF — negotiable per deal |
+| Grade / purity | ❌ **[need]** | e.g. fineness range % Au |
+| Lead time | ❌ **[need]** | weeks from PO |
+| Origin / sourcing | ❌ **[need]** | regions, ASM vs licensed, aggregation model |
+| Pricing model | ❌ **[need]** | LBMA-linked / fixed / negotiable |
+| Port(s) | ❌ **[need]** | e.g. Dar es Salaam / other |
+| Certifications & inspection | ❌ **[need]** | export license, assay (TMAA/other), SGS? |
+| Typical buyer profile | ❌ **[need]** | refiners / traders / banks — who exactly |
 
-## Mineral 2: [Name]
+---
 
-- …
-- …
+## Mineral 1: Gold
 
-## Mineral 3: [Name]
+- **Form:** Doré / refined metal ✅
+- **Grade / purity:** **[need — typical fineness range]**
+- **Standard volumes:** per-deal; typical band **[need]**
+- **Origin / source:** **[need — where sourced, how aggregated]**
+- **Lead time:** **[need — weeks from PO]**
+- **Pricing model:** **[need — fixed / LBMA-linked / negotiable]**
+- **Typical buyer:** **[need — refiners, traders, others]**
+- **Certifications:** **[need — licenses, assay, inspection]**
+- **Shipping terms:** FOB / CIF — negotiable per deal ✅ · Port: **[need]**
 
-- …
+## Future minerals
+*(Add a block per mineral when supply is actually confirmed — gold first, no promises on the rest.)*
 
 ---
 
 ## Consultation services
 
-- **What we offer:** (e.g., spec matching, sourcing, market timing, logistics)
-- **Engagement model:** (e.g., retainer, per-deal, advisory)
-- **Typical client:** (e.g., mid-tier miners, junior explorers, investors)
+- **What we offer:** spec matching, sourcing, logistics coordination, market timing *(consistent with me.md — refine when you want)*
+- **Engagement model:** **[need — retainer / per-deal / advisory]**
+- **Typical client:** **[need]**
 
 ---
 
 *Rule 2 still stands: never invent specs, prices, or volumes for a buyer.
-When you fill this in, the employee will pull exact numbers from here
-instead of guessing.*
+**Critical consequence of the gold confirmation (2026-08-20):** gold PRODUCERS
+(e.g. Barrick, AngloGold, Geita) are generally NOT our buyers — they sell gold.
+Our buyers are refiners, traders, and institutional gold purchasers. Prospect
+targeting must reflect this.*
