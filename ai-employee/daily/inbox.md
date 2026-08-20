@@ -285,4 +285,27 @@ Rule 3). Copy-paste text below.*
 4. ~~External action approval~~ — Rule 1 satisfied: **you send it yourself**. Tell me when it's gone and I'll start the follow-up clock + move MPMR to ✉️ Contacted.
 
 ---
-*0 sent · **6 drafts ready** (2 replies + 1 decline template + 3 outreach) · 2 tasks open · 3 ignored.*
+
+### ➡️ Draft 7 — To MPMR — 3-business-day nudge (PRE-STAGED — only if no reply by EOD Tue 2026-08-25)
+
+*Only fires if Draft 6 gets silence. Doubles as walk-in heads-up — they're 3 km away.*
+
+> **To:** info@mpmrcl.com
+> **Subject:** Re: Doré supplier in Mwanza — refining + supply intro
+>
+> Hi MPMR team,
+>
+> Following up on my note from last Thursday — still keen to talk refining terms
+> and Gold Market trader offices.
+>
+> I'm based here in Mwanza, so easiest is I just come by Butuja Street. I'll plan
+> for Wednesday afternoon unless someone replies first with a time that works.
+>
+> Best,
+> Hendrixx
+>
+> ——
+> hendrixx-ai · Mineral Division · evanceahadi@gmail.com
+
+---
+*0 sent · **7 drafts ready** (2 replies + 1 decline template + 4 outreach) · 2 tasks open · 3 ignored. MPMR clock running — checkpoint EOD Tue 2026-08-25.*

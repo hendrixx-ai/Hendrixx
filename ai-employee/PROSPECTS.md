@@ -27,9 +27,9 @@
 - **Type:** Refinery / doré counterparty (state STAMICO JV with Dubai's Lozera Co)
 - **Contact:** info@mpmrcl.com (public, from their site) · Butuja Street, Ilemela, Mwanza — 3 km from the airport
 - **What they need:** Doré to refine (480 kg/day capacity, 999.9 electrolytic) — either fee-for-service for us or outright purchase. On-site Ministry of Minerals Gold Market with trader offices.
-- **Stage:** 🔍 Researched → ✉️ Contacted *(pending boss's send — Draft 6 FINAL & approved 2026-08-20)*
-- **Last action:** 2026-08-20 — Draft 6 finalized with dealer-licence line + contact; boss sends from his own inbox
-- **Next step:** Boss sends → reply or walk-in within 3 business days (Prep 2) → confirm: buy outright vs refine-for-fee, fee schedule, trader-office terms
+- **Stage:** ✉️ Contacted — 2026-08-20 *(boss fired Draft 6 from his inbox — flag me if it didn't go)*
+- **Last action:** 2026-08-20 — intro email sent to info@mpmrcl.com
+- **Next step:** No reply by EOD Tue 2026-08-25 → Draft 7 nudge + walk-in Wed 2026-08-26 (Prep 2). In the meeting: buy outright vs refine-for-fee, fee schedule, trader-office terms, BoT-counterparty status
 - **Source:** Topic 5 research (MPMR site, STAMICO, The Citizen)
 - **Notes:** Key to unlocking the BoT lane — refine here, sell to BoT at world price with royalty at 4% instead of 6%. Capacity figures conflict in sources (480 vs 960 kg/day) — don't quote capacity without asking them.
 
@@ -70,7 +70,8 @@
 
 | Stage | Count | $ value (estimated) |
 |-------|------:|-------------------:|
-| 🔍 Researched | 3 active (MPMR 🎯, BoT channel, PIC ⚠️) + 1 shelved (Barrick ❌) | — *(values live in deals, not estimates)* |
+| ✉️ Contacted | 1 (MPMR 🎯 — sent 2026-08-20) | — |
+| 🔍 Researched | 2 (BoT channel, PIC ⚠️) + 1 shelved (Barrick ❌) | — |
 | ✉️ Contacted | — | — |
 | 🧪 Sample sent | — | — |
 | 📄 Quoted | — | — |

@@ -8,7 +8,7 @@
 ## Waiting to Hear From (I sent, waiting on reply)
 | Person | Last Contact | Days Since | Draft Nudge |
 |--------|-------------|-----------|-------------|
-| MPMR (info@mpmrcl.com) | *[pending — boss sends Draft 6 from his own inbox; confirm date]* | — | On the shelf: if no reply in 3 business days, walk in — they're local (Prep 2, calendar.md) |
+| MPMR (info@mpmrcl.com) | **2026-08-20 (Thu)** — Draft 6 fired from boss's inbox | 0 | No reply by **EOD Tue 2026-08-25** → send Draft 7 nudge + walk in **Wed 2026-08-26** (Prep 2, calendar.md) |
 
 ## I Owe a Reply (They sent, I need to respond)
 | Person | Last Contact | Days Since | Draft Reply |
