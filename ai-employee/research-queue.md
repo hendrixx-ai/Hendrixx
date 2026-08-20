@@ -24,3 +24,5 @@
 | 2026-08-19 | Barrick Gold — copper exposure, offtake needs, decision-makers | `daily/research.md` (Topic 1) |
 | 2026-08-19 | Glencore — cobalt supply contracts 2026 | `daily/research.md` (Topic 2) |
 | 2026-08-19 | SWF mining portfolio (PIC, ADIA, GIC) — broader 2026 picture | `daily/research.md` (Topic 3) |
+| 2026-08-20 | Dar es Salaam vertical comparison (HVAC vs dental vs med spa) for $2,500/mo AI phone + booking service — cost of front-desk role, leak when empty, ranking | `research/2026-08-20-dar-es-salaam-vertical-comparison.md` |
+| 2026-08-20 | 50 med & spa businesses in Dar es Salaam — name + likely after-hours call handling needs (size, reviews, activity) | `research/2026-08-20-dar-es-salaam-med-spa-50.md` |
