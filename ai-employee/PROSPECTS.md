@@ -27,9 +27,9 @@
 - **Type:** Refinery / doré counterparty (state STAMICO JV with Dubai's Lozera Co)
 - **Contact:** info@mpmrcl.com (public, from their site) · Butuja Street, Ilemela, Mwanza — 3 km from the airport
 - **What they need:** Doré to refine (480 kg/day capacity, 999.9 electrolytic) — either fee-for-service for us or outright purchase. On-site Ministry of Minerals Gold Market with trader offices.
-- **Stage:** 🔍 Researched
-- **Last action:** 2026-08-20 — research brief done (Topic 5); intro email drafted (Draft 6). **Not sent.**
-- **Next step:** Approve/send Draft 6 → intro call → confirm: buy doré outright vs refine-for-fee, their fee schedule, trader-office terms
+- **Stage:** 🔍 Researched → ✉️ Contacted *(pending boss's send — Draft 6 FINAL & approved 2026-08-20)*
+- **Last action:** 2026-08-20 — Draft 6 finalized with dealer-licence line + contact; boss sends from his own inbox
+- **Next step:** Boss sends → reply or walk-in within 3 business days (Prep 2) → confirm: buy outright vs refine-for-fee, fee schedule, trader-office terms
 - **Source:** Topic 5 research (MPMR site, STAMICO, The Citizen)
 - **Notes:** Key to unlocking the BoT lane — refine here, sell to BoT at world price with royalty at 4% instead of 6%. Capacity figures conflict in sources (480 vs 960 kg/day) — don't quote capacity without asking them.
 

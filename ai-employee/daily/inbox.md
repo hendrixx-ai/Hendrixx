@@ -245,18 +245,20 @@ yet** — see checklist.*
 
 ---
 
-### ➡️ Draft 6 — To MPMR (info@mpmrcl.com) — doré supplier intro, local
+### ➡️ Draft 6 — To MPMR (info@mpmrcl.com) — doré supplier intro, local ✅ FINAL — approved 2026-08-20
 
-*First draft with a **verified public contact** (from MPMR's own site — Topic 5).
-It's 3 km from Mwanza airport; we're in the same city. Local, direct, no fluff.*
+*Boss approved: dealer licence confirmed, email signature set (no phone line by
+choice). Boss sends it himself from his own inbox (no email connection here —
+Rule 3). Copy-paste text below.*
 
+> **To:** info@mpmrcl.com
 > **Subject:** Doré supplier in Mwanza — refining + supply intro
 >
 > Hi MPMR team,
 >
 > Hendrixx here — Manager at hendrixx-ai's mineral division, based here in Mwanza.
-> We're building a regular gold doré supply line from the Lake Zone artisanal
-> producers, and MPMR is the obvious first door to knock on.
+> We're a licensed mineral dealer building a regular gold doré supply line from
+> Lake Zone producers, and MPMR is the obvious first door to knock on.
 >
 > Three questions:
 > 1. Do you buy doré outright, refine for a fee, or both — and what are the terms?
@@ -272,15 +274,16 @@ It's 3 km from Mwanza airport; we're in the same city. Local, direct, no fluff.*
 > ——
 > Hendrixx (Evance Ahadi)
 > Manager — Mineral Business (Sales, Marketing, Consultation)
+> Licensed Mineral Dealer — Tanzania Mining Commission
 > hendrixx-ai · Mineral Division · Mwanza, Tanzania (EAT, UTC+3)
-> [direct line] · [email]
+> evanceahadi@gmail.com
 
-#### ⚠️ Before sending — 2 min:
+#### ✅ Pre-send checklist — resolved 2026-08-20:
 
-1. **Add direct line + email** at the signature.
-2. **Know your licence answer.** They'll ask what licence we hold (broker / dealer). If we don't have the answer clean, confirm with the Mining Commission portal (madini.go.tz) first — see Topic 5.
-3. **Don't promise volumes** — PRODUCTS.md numbers are still open. Volume talk waits for the meeting.
-4. **Send-time note:** still an external action — waits for the boss's yes (Rule 1).
+1. ~~Add direct line + email~~ — email set (evanceahadi@gmail.com); phone line deliberately skipped.
+2. ~~Licence answer~~ — **Dealer licence confirmed by the boss.** (Optional: add the licence number to the signature line if you want it there.)
+3. ~~Don't promise volumes~~ — none promised. Volume talk waits for the meeting.
+4. ~~External action approval~~ — Rule 1 satisfied: **you send it yourself**. Tell me when it's gone and I'll start the follow-up clock + move MPMR to ✉️ Contacted.
 
 ---
 *0 sent · **6 drafts ready** (2 replies + 1 decline template + 3 outreach) · 2 tasks open · 3 ignored.*
