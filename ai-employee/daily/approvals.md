@@ -3,11 +3,11 @@
 *Generated: Wednesday 2026-08-19, 12:41 EAT — LIVE run*
 
 ## ⏸️ Awaiting Approval
-
-- [ ] *(none pending — all logged as done)*
+- [ ] **Send thank-you to Monica Vasquez** (City of Des Moines PDC) — draft ready in `daily/inbox.md`
+- [ ] **Send cold outreach to Barrick Mining** (copper offtake, Lumwana/Reko Diq 2027) — needs the bracketed `[fill from PRODUCTS.md]` fields filled in and recipient verified before sending
+- [ ] *(none other)*
 
 ## ✅ Approved & Done (log)
-
 | Date | Item | How It Was Done |
 |------|------|-----------------|
-| 2026-08-20 | Tailored cold outreach to Esper Salon & Spa (Oyster Bay) | Esper-specific email drafted in `research/2026-08-20-med-spa-outreach-email-draft.md`. Prospect moved ✉️ Contacted in `PROSPECTS.md`. ⏳ Day-5 follow-up queued — user will ask to send it.
+| — | — | — |
