@@ -10,8 +10,13 @@ Thumbs.db
 *.swo
 *~
 
-# Claude Code
-.claude/
+# Claude Code — local/stateful files only (agents + commands are shared and tracked)
+.claude/settings.local.json
+.claude/.mcp.json
+.claude/output/
+.claude/history.jsonl
+.claude/shell-snapshots/
+.claude/todos/
 
 # AI Employee (generated / local only)
 ai-employee/.mcp.json
