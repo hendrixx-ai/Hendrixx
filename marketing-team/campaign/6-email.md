@@ -1,6 +1,6 @@
 # 6️⃣ EMAIL — Sequences (Drafts Only — WhatsApp-First)
 
-**Status:** ✅ Drafted — ⏸️ awaiting boss approval
+**Status:** ✅ **Approved by boss — 2026-08-23.** Drafts released; boss loads auto-replies/sends manually per checklist.
 **Written by:** the Email Agent (`.claude/agents/email.md`)
 **Reads:** `2-positioning.md` + `3-copy.md` (approved)
 **Feeds:** Send — from the **boss's own tool** (WhatsApp Business / email)
