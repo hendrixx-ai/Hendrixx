@@ -1,6 +1,6 @@
 # 1️⃣ RESEARCH — Find a Product to Flip & Dropship
 
-**Status:** ✅ Drafted — ⏸️ awaiting boss approval
+**Status:** ✅ **Approved by boss — 2026-08-23.** Decision: **Hybrid track** (local flip first → fund dropship later), budget **TSh 500k–2M**. Phase-1 category: A2 solar/power accessories (phones A1 = capped side lane). See `../product.md`.
 **Written by:** the Research Agent (`.claude/agents/research.md`)
 **Reads:** `../product.md` (directive: *product not yet chosen — research proposes candidates*)
 **Feeds:** `2-positioning.md`

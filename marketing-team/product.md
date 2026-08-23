@@ -1,47 +1,48 @@
 # 📦 PRODUCT — What We're Marketing
 
-> ⚠️ **Every agent reads this first.** Fill it in before running the campaign.
-> Anything in `[TODO]` is unknown — agents will flag it back to you, never guess.
-> The sections below are pre-seeded with the mineral-business context from
-> `../ai-employee/me.md` — **replace them with the product for THIS campaign.**
+> **Boss decision 2026-08-23:** Hybrid track — local flip/retail first (cash flow), fund a global
+> dropship store later. Starting budget: **TSh 500k–2M (~$200–800)**. Research: `campaign/1-research.md` (approved).
 
 ---
 
 ## 1. The Product
 
-- **What it is:** Mineral commodity supply + sourcing consultation (spec matching, volume/grade sourcing, logistics, long-term contracts) — full specs in `../ai-employee/PRODUCTS.md`
-- **What the buyer actually gets:** [TODO: e.g., signed supply agreement / consultation engagement / sample + quote]
-- **Stage:** [TODO: pre-launch / live / relaunch]
-- **Price / terms:** [TODO — real numbers only; leave blank rather than guess]
+**Phase 1 — NOW (the campaign's focus): verified power & phone gear, sold locally.**
+
+- **What it is:** Pico-solar lights with phone charging, power banks, and fast-moving phone accessories — hand-tested stock with a written warranty, sold via WhatsApp / Instagram / Jiji in **Kahama + Dar es Salaam**, paid by M-Pesa/Tigo Pesa or **cash on delivery**.
+- **Why this category:** duty/VAT-exempt (solar), proven demand from power cuts, and a known quality/fake gap we can own with warranty + testing (all sourced in `campaign/1-research.md`).
+- **Side lane (opportunistic, capped):** 1–3 UK-used smartphone flips from the same buying trips when the price spread is clearly right. Never the main bet at this budget.
+- **Phase 2 — LATER (profit-funded, not part of this campaign yet):** global dropship store (candidate niches B1–B3 in research §6). Positioning for Phase 2 happens when Phase 1 pays for it.
+- **What the buyer gets:** a unit tested in front of them, a written warranty `[TERM — BOSS TO SET]`, delivery/meetup, pay-on-delivery.
+- **Stage:** Pre-launch. **Price/terms:** `[TODO — set from real supplier quotes at sourcing; nothing invented here]`
 
 ## 2. Who It's For
 
-- **Primary buyer:** Investors and mining-company owners who need minerals delivered to spec, volume, and schedule
-- **Their trigger moment:** [TODO: e.g., RFQ deadline, a supply gap, a new contract tender]
-- **What they've already tried:** [TODO: incumbent suppliers, traders, doing it manually]
-- **Where they spend time:** [TODO: LinkedIn, trade shows, WhatsApp groups, industry press]
+- **Primary buyer:** People in Kahama & Dar whose day stops when power or phone battery dies — households hit by blackouts, boda riders, kiosk and small-shop owners who need light + charged phone to earn.
+- **Their trigger moment:** A power cut or dead battery in the middle of a working day; replacing a fake solar unit that died early.
+- **What they've already tried:** Cheap solar lights/power banks from the market — many got fakes with no warranty.
+- **Where they spend time:** Jiji, Instagram, WhatsApp groups, local markets. Language: **Swahili-first, English second.**
 
 ## 3. The Offer (for this campaign)
 
-- **What they get:** [TODO]
-- **Risk reversal / reason to act now:** [TODO — only what's actually on the table]
+- **What they get:** Tested-in-front-of-you power/phone gear + written warranty + delivery, **pay only when it's in your hands**.
+- **Risk reversal:** Cash on delivery / M-Pesa on confirmation + test-before-you-pay + warranty `[TERM — BOSS TO SET]`.
 
 ## 4. Brand Voice
 
-*(From `../ai-employee/me.md` — adjust for this campaign if needed.)*
-
-- **Tone:** Professional, direct, B2B. Confidence without overselling. Technical where needed, plain English where possible.
-- **Length:** Short. Lead with value, ask with specifics.
-- **Words we use / avoid:** [TODO]
-- **Sign-off:** "Best, Hendrixx"
+- **Tone:** Direct, practical, honest. Confidence without hype — a person you can trust, not a supermarket.
+- **Language:** Swahili-first for customers, English where natural. Short sentences. Say what the thing does, what it costs, how you get it.
+- **Banned:** "superstar quality", fake urgency, invented specs, "cheapest in Tanzania".
+- **Sign-off:** "Best, Hendrixx" / "Karibu tena."
 
 ## 5. Proof We Actually Have ✅
 
 *(Only real, verifiable items. Agents may ONLY make claims listed here.)*
 
-- [TODO: years in operation, real clients (with permission), certifications, throughput, past deliveries]
+- **Starting capital confirmed:** TSh 500k–2M (boss, 2026-08-23)
+- [TODO — boss fills: supplier contacts (Kariakoo?), any stock already owned, any past customers, TBS/quality checks available]
 
 ## 6. Claims Policy
 
-- **Can say:** only what's in §5 or what gets sourced in `campaign/1-research.md`
-- **Can never say (until the boss adds proof):** revenue figures, client counts, ROI/ROAS, testimonials, "the leading…" market position
+- **Can say:** market facts sourced in `campaign/1-research.md`; product truths that are checked before sale (tested unit, warranty as actually set, COD).
+- **Can never say (until boss adds proof):** revenue/units sold, "leading/cheapest seller", income guarantees ("profit guaranteed"), warranty terms not yet set, any performance numbers — **there are none yet, by rule.**
