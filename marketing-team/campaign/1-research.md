@@ -113,3 +113,41 @@ All external claims above trace to: jiji.co.tz (live listings, 2026-08-23) · uc
 ## ⏸️ Approval Gate
 
 Per the assembly line, **the Positioning Agent does not run until the boss approves this research and picks the product.** Shortlist is a menu: say the word (e.g., "A2" or "hybrid, start solar"), give the budget, and the next step fills `product.md` and runs positioning.
+
+---
+
+## 9. 🛒 ADDENDUM — Sourcing Brief for the First Stock Buy (Phase 1)
+
+*Added 2026-08-23 after boss's "press go." Purpose: turn GO-LIVE Phase 1 into a shopping list with real reference numbers. Sourced facts only; TZ retail quotes still come from the boss on the ground.*
+
+### 9.1 Two buying lanes
+
+| Lane | What | Pros | Cons |
+|---|---|---|---|
+| **L1 — Buy local (Kariakoo/verified TZ wholesalers)** | Physical stock purchase in Dar | No import compliance; instant; small quantities; inspect before paying | Higher unit cost than FOB; requires Dar trip or trusted agent |
+| **L2 — Direct import (Alibaba et al.)** | Order ex-factory | Cheapest unit cost | PVoC/CoC compliance, shipping weeks, MOQs, quality risk sight-unseen |
+
+**Recommendation for TSh 500k–2M: start L1.** Import compliance alone (CoC Route A ≈ 0.5% FOB, min ≈ $250 [3](https://seller.alibaba.com/blogs/2026/southeast-asia/apparel/tbs-tanzania-pvoc-certification-guide-alibaba-b2b)) eats too much of a first order this size. Test L2 later with cash flow, not startup capital. Note: PVoC applies from **USD 1,000 FOB**; below-$5,000 consignments may opt for destination inspection with TBS [1](https://verigates.bureauveritas.com/sites/verigates/files/2023-11/TANZANIA%20(PVoC)%20Rev%2014.7.pdf) — and since May 2025 shipments without CoC face a **15% CIF penalty** [3](https://seller.alibaba.com/blogs/2026/southeast-asia/apparel/tbs-tanzania-pvoc-certification-guide-alibaba-b2b).
+
+### 9.2 Real reference prices (sourced — for negotiation anchoring, not promises)
+
+- **Alibaba FOB, solar light + phone charging:** budget units **$1.32–4.89, MOQ 1–100** (multiple live listings, e.g. $1.86–4.31 MOQ 10 night-market lanterns; $3.50–4.55 MOQ 20 inflatable/camping; $4.49–4.89 MOQ 10) [2](https://www.alibaba.com/showroom/portable-solar-lantern-with-mobile-phone-charger.html), [3](https://www.alibaba.com/showroom/solar-lantern-and-phone-charger.html) — so a landed Kariakoo price far above this needs justifying.
+- **Branded lane:** d.light S200 (lantern + phone charger) retails **$29.99** at the official store [4](https://store.dlight.com/products/d-light-s200-portable-solar-lantern-and-mobile-phone-charger-for-camping); **Sun King** sells wholesale through African distributors (e.g. Wigmore Wholesale for Nigeria/Ghana/Africa) [2](https://wigmorewholesale.com/sun-king) — contact for TZ terms.
+- **The strategic choice:** branded units (built-in trust, thinner margin, our warranty adds less) vs curated generics (margin + **our testing & 3-month warranty ARE the differentiator** — matches positioning). Positioning says: curated generics, a premium brand unit or two as a trust anchor.
+
+### 9.3 Compliance checklist (sourced)
+
+- Solar imports: duty/VAT-exempt per energypedia (§3.4 — dated; confirm current TRA treatment when buying).
+- **Power banks / phone accessories are NOT solar** — duty/VAT treatment unverified ⚠️ — ask the supplier/agent for the landed cost including taxes before committing.
+- Imported goods labelling: English and/or Swahili required [1](https://verigates.bureauveritas.com/sites/verigates/files/2023-11/TANZANIA%20(PVoC)%20Rev%2014.7.pdf).
+
+### 9.4 Suggested first-buy structure (framework — boss pastes real quotes)
+
+| SKU lane | Share of stock budget | Notes |
+|---|---|---|
+| Solar lanterns **with phone charging** (2 models max) | ~50% | Hero SKU; test in front of buyers |
+| Power banks (1 model) | ~25% | ⚠️ verify duty/VAT first |
+| Phone accessories (cables, chargers) | ~15% | Fast movers; small tickets |
+| Optional: 1–2 brand-name units | ~10% | Trust anchors for display/demo |
+
+**Bring back per SKU: unit cost · quantity · supplier warranty (if any) · landed extras (tax/delivery)** → the team fills every `[TODO]` price in copy/sequences/stickers and computes real margins from real numbers only.

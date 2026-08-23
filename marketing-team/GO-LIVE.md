@@ -7,7 +7,7 @@
 
 ## Phase 1 — Sourcing ⏸️ *(spending gate — your yes, your money)*
 
-1. Get real supplier quotes (Kariakoo/Dar pipeline or verified wholesalers) for: solar lights **with phone charging**, power banks, phone accessories. *(Optional side lane: 1–3 UK-used phones only if the spread is clearly right.)*
+1. Get real supplier quotes — **sourcing brief with real reference prices: `campaign/1-research.md` §9** (Kariakoo/verified TZ wholesalers for solar lights **with phone charging**, power banks, accessories; verify power-bank duty first). *(Optional side lane: 1–3 UK-used phones only if the spread is clearly right.)*
 2. Check current TRA treatment before committing phones (research flagged the duty data as dated).
 3. Pick SKUs within the budget framework: **stock 60–70% · print ~5% · ads 10–20% · buffer 10–15%** (`campaign/5-ads.md` §1).
 4. **Buy.** Log every purchase (date, item, qty, unit cost) — this opens your order log.

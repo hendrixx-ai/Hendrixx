@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+<meta charset="UTF-8">
+<title>Hendrixx Power — Kadi ya Warranty (print 90×54mm)</title>
+<style>
+  :root{
+    --amber:#F6A821; --navy:#10233F; --green:#1E8E3E;
+    --paper:#FAFAF7; --charcoal:#202124;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;}
+  body{background:#e8e8e8;padding:24px;}
+  .sheet{max-width:210mm;margin:0 auto;}
+  h2{font-size:13px;color:#333;margin:14px 0 8px;}
+  .card{
+    width:90mm;height:54mm;background:var(--paper);color:var(--charcoal);
+    border:1px dashed #999;position:relative;overflow:hidden;
+    page-break-inside:avoid;display:inline-block;margin:3mm;
+  }
+  /* ---------- FRONT ---------- */
+  .front{background:var(--navy);color:#fff;}
+  .front .brand{font-size:15pt;font-weight:bold;letter-spacing:0.5px;margin:6mm 6mm 0 6mm;}
+  .front .brand span{color:var(--amber);}
+  .front .warranty{
+    font-size:22pt;font-weight:bold;color:var(--amber);margin:2mm 6mm;
+  }
+  .front .sub{font-size:8pt;margin:0 6mm;color:#d9e2ef;}
+  .front .tagline{
+    position:absolute;bottom:16mm;left:6mm;right:6mm;
+    font-size:9pt;font-weight:bold;color:#fff;
+  }
+  .front .contact{
+    position:absolute;bottom:4mm;left:6mm;right:6mm;
+    background:var(--amber);color:var(--navy);font-weight:bold;
+    font-size:9.5pt;padding:1.2mm 2mm;border-radius:1mm;text-align:center;
+  }
+  /* ---------- BACK ---------- */
+  .back{font-size:6.6pt;}
+  .back .inner{padding:3.5mm 5mm;}
+  .back h3{font-size:7.5pt;color:var(--navy);margin-bottom:1.5mm;}
+  .back p{margin-bottom:2mm;line-height:1.45;}
+  .back .fields div{margin-bottom:1.6mm;}
+  .back .fields b{display:inline-block;width:26mm;}
+  .back .dots{display:inline-block;width:46mm;border-bottom:1px dotted #666;}
+  .back .foot{position:absolute;bottom:3mm;left:5mm;right:5mm;font-size:6pt;color:#555;
+    border-top:1px solid #ccc;padding-top:1mm;display:flex;justify-content:space-between;}
+  .ok{color:var(--green);font-weight:bold;}
+  @media print{
+    body{background:#fff;padding:0;}
+    h2,.note{display:none;}
+    .card{margin:0;border:1px solid #ccc;}
+    @page{size:A4;margin:10mm;}
+  }
+  .note{font-size:11px;color:#666;max-width:210mm;margin:6px auto;line-height:1.5;}
+</style>
+</head>
+<body>
+<div class="sheet">
+  <h2>MBELE (Front) — kata kwenye mistari, 90×54mm</h2>
+
+  <!-- FRONT -->
+  <div class="card front">
+    <div class="brand">HENDRIXX <span>POWER</span></div>
+    <div class="warranty">WARRANTY — MIEZI 3</div>
+    <div class="sub">Repair au Replace · Hitilafu za utengenezwa</div>
+    <div class="tagline">✓ Imepimwa &nbsp;·&nbsp; Pima Kwanza, Lipa Baadaye</div>
+    <div class="contact">WhatsApp: +255 617 691 659</div>
+  </div>
+
+  <h2>NYUMA (Back)</h2>
+
+  <!-- BACK -->
+  <div class="card back">
+    <div class="inner">
+      <h3>Masharti ya Dhamana (Warranty Terms)</h3>
+      <p>Dhamana hii inashughulikia <span class="ok">hitilafu za utengenezwa</span> kwa muda wa <b>miezi 3 (3 months)</b> kutoka siku ya kununua: <span class="ok">tunarekebisha au tunabadilisha</span>. Haijumuishwi uharibifu wa maji, ajali, au matumizi mabaya.</p>
+      <div class="fields">
+        <div><b>Bidhaa (Product):</b><span class="dots"></span></div>
+        <div><b>Serial / Model:</b><span class="dots"></span></div>
+        <div><b>Tarehe (Date):</b><span class="dots"></span></div>
+        <div><b>Jina la Mnunuzi:</b><span class="dots"></span></div>
+        <div><b>Sahihi (Signature):</b><span class="dots"></span></div>
+      </div>
+      <div class="foot"><span>Hendrixx Power · Kahama &amp; Dar es Salaam</span><span>+255 617 691 659</span></div>
+    </div>
+  </div>
+
+  <p class="note"> Maelekezo: Print kwenye A4 (card stock ikiwepo) → kata kadi 90×54mm. Mbele na Nyuma zinachapishwa separate, kisha wanatanishwa (laminate ikiwepo inaongeza maisha ya kadi). Kadi hii ni "proof asset" ya kampeni — kila unit inaondoka na kadi yake. </p>
+</div>
+</body>
+</html>
