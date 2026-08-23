@@ -1,6 +1,6 @@
 # 🎯 PROSPECTS DASHBOARD — Pipeline at a Glance
 
-*Auto-updated by `bash scripts/dashboard.sh` — last run: 2026-08-23 11:34 EAT*
+*Auto-updated by `bash scripts/dashboard.sh` — last run: 2026-08-23 15:36 EAT*
 
 ---
 
@@ -8,7 +8,7 @@
 
 | Metric | Count |
 |--------|------:|
-| Prospects tracked | **2** |
+| Prospects tracked | **12** |
 | Drafts awaiting approval | **6** |
 | Sent this week | 0 |
 | Replies received | 0 |
@@ -22,6 +22,16 @@
 |----------|-------|-------|
 | [Company / Investor name] |  |  |
 | [Next prospect] |  |  |
+| Esper Salon & Spa |  |  |
+| Allure Aesthetics Skin & Hair Clinic |  |  |
+| Butterfly Aesthetics & Wellness Center |  |  |
+| Magdy Luxe Salon & Spa |  |  |
+| The Touch Spa |  |  |
+| Heavens Beauty & Spa |  |  |
+| Tanzania Medi Spa |  |  |
+| Healing Beauty Spa |  |  |
+| Violet's Massage |  |  |
+| Dashing Diva Beauty Lounge |  |  |
 
 ---
 
