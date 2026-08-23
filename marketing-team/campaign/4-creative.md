@@ -1,6 +1,6 @@
 # 4️⃣ CREATIVE — Concepts, Visual Direction & Asset Briefs
 
-**Status:** ✅ Drafted — ⏸️ awaiting boss approval
+**Status:** ✅ **Approved by boss — 2026-08-23.** Lead concept PIMA + supporting Split/Karatasi; briefs released to Ads Agent.
 **Written by:** the Creative Agent (`.claude/agents/creative.md`)
 **Reads:** `2-positioning.md` + `3-copy.md` (both approved)
 **Feeds:** `5-ads.md` (Ads Agent)
