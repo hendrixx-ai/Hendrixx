@@ -10,8 +10,9 @@ Thumbs.db
 *.swo
 *~
 
-# Claude Code
-.claude/
+# Claude Code (keep project agent definitions, ignore local state)
+**/.claude/*
+!**/.claude/agents/
 
 # AI Employee (generated / local only)
 ai-employee/.mcp.json

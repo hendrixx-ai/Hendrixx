@@ -1,8 +1,10 @@
-# 🤖 Hendrixx AI Employee
+# 🤖 Hendrixx AI — Employee + Marketing Team
 
 **One assistant that runs your busywork — you stay the boss.**
+**One product → one AI team → one complete campaign.**
 
-Inbox → Research → Calendar → Tasks → Follow-Up → Report
+- 🤖 **AI Employee** (`ai-employee/`): Inbox → Research → Calendar → Tasks → Follow-Up → Report
+- 📣 **AI Marketing Team** (`marketing-team/`): Research → Positioning → Copy → Creative → Ads → Email → Analytics
 
 ---
 
@@ -13,6 +15,8 @@ An AI-powered personal assistant that handles the repetitive parts of your day �
 **Currently tuned for:** Mineral business sales, marketing, and consultation — targeting investors and mining-company owners. Configurable to any B2B sales context via [me.md](ai-employee/me.md) and [PRODUCTS.md](ai-employee/PRODUCTS.md).
 
 Built for [Claude Code](https://claude.ai) with a simple folder structure and 6 automated workflow steps.
+
+**New: the 📣 AI Marketing Team** ([`marketing-team/`](marketing-team)) — 7 AI specialists that turn ONE product into a complete campaign: research → positioning → copy → creative → ads → email → analytics. Same rules: you approve anything that publishes, sends, or spends. [Jump to the section](#-the-ai-marketing-team).
 
 ---
 
@@ -217,9 +221,49 @@ bash scripts/monthly-review.sh    # test the monthly review right now
 
 ---
 
+## 📣 The AI Marketing Team
+
+**One Product → One AI Team → One Complete Campaign.** Seven AI specialists in [`marketing-team/`](marketing-team) pass work down an assembly line — each reads the numbered `campaign/` file before it and writes its own, so the campaign builds itself one approval at a time.
+
+```
+RESEARCH → POSITIONING → COPY → CREATIVE → ADS → EMAIL → ANALYTICS
+```
+
+| Agent | Reads | Produces |
+|-------|-------|----------|
+| 1️⃣ Research | `product.md` | Competitors, trends, pain points — cited sources or labeled ASSUMPTION |
+| 2️⃣ Positioning | `1-research` | Audience, unique angle, offer, the ONE core message |
+| 3️⃣ Copy | `2-positioning` | Hooks, headlines, landing page, ad copy — options to pick from |
+| 4️⃣ Creative | `2 + 3` | 3 concepts, visual direction, asset briefs a designer/Canva can execute |
+| 5️⃣ Ads | `3 + 4` | Campaign + targeting + test + budget **plan** — YOU launch |
+| 6️⃣ Email | `2 + 3` | Welcome/nurture/promo/cart sequences — drafts only, YOU send |
+| 7️⃣ Analytics | data YOU paste | What's working, what's not, the one highest-leverage fix |
+
+### Quick start
+
+```bash
+cd marketing-team
+# Fill in product.md (product, audience, offer, brand voice)
+claude
+```
+
+> "run the campaign"
+
+The team **pauses for your approval after each agent.** Single stations work too: `research step`, `copy step`, `ads step`… and `what needs my approval?` shows the checklist in `campaign/approvals.md`. Analytics runs whenever you paste real numbers.
+
+### The rules (same house rules as the Employee)
+
+1. **Never invents numbers** — no fake performance, revenue, ROAS, market size, or testimonials. Sourced facts and assumptions stay clearly separated; no real data → it says so.
+2. **Draft and plan only** — you approve anything that publishes, sends, or spends. The agents never launch ads, send email, or spend money.
+3. **Honest about integrations** — Canva, Mailchimp/Klaviyo, Meta/Google Ads are "not connected" until YOU connect them. Until then, everything runs from files.
+
+Full orchestrator: [`marketing-team/CLAUDE.md`](marketing-team/CLAUDE.md) · Rebuild from scratch: [`marketing-team/MASTER-PROMPT.md`](marketing-team/MASTER-PROMPT.md)
+
+---
+
 ## 🔧 For Developers
 
-This repo contains the full AI Employee system as a structured skill for Claude Code. The `CLAUDE.md` file is the core — it defines the agent's persona, rules, and complete workflow instructions.
+This repo contains the full AI Employee system **and** the AI Marketing Team as structured skills for Claude Code. The `CLAUDE.md` files are the core — they define each system's persona, rules, and complete workflow instructions.
 
 To extend:
 - Add new steps by creating new files in `daily/` and adding prompts to `CLAUDE.md`
