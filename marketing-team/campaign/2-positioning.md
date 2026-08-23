@@ -1,6 +1,6 @@
 # 2️⃣ POSITIONING — Audience, Angle, Offer & ONE Core Message
 
-**Status:** ✅ Drafted — ⏸️ awaiting boss approval
+**Status:** ✅ **Approved by boss — 2026-08-23.** Delegated tweaks made: warranty = **3 months, repair-or-replace** (manufacturing faults; excludes water damage/misuse); name **"Hendrixx Power"** confirmed. Brand: "Hendrixx Power — Pima Kwanza, Lipa Baadaye."
 **Written by:** the Positioning Agent (`.claude/agents/positioning.md`)
 **Reads:** `1-research.md` (approved) + `../product.md`
 **Feeds:** `3-copy.md`, `4-creative.md`, `6-email.md`

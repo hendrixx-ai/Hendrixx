@@ -26,7 +26,7 @@
 ## 3. The Offer (for this campaign)
 
 - **What they get:** Tested-in-front-of-you power/phone gear + written warranty + delivery, **pay only when it's in your hands**.
-- **Risk reversal:** Cash on delivery / M-Pesa on confirmation + test-before-you-pay + warranty `[TERM — BOSS TO SET]`.
+- **Risk reversal:** Cash on delivery / M-Pesa on confirmation + test-before-you-pay + **written warranty: 3 months, repair-or-replace** *(set by boss delegation 2026-08-23; covers manufacturing faults, excludes water damage/misuse)*.
 
 ## 4. Brand Voice
 
