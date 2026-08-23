@@ -1,6 +1,6 @@
 # 5️⃣ ADS — Campaign Plan (For the Boss to Run)
 
-**Status:** ✅ Drafted — ⏸️ awaiting boss approval
+**Status:** ✅ **Approved by boss — 2026-08-23.** Plan released; launch checklist is boss-run. Ad launch stays a pending gate in `approvals.md` until the boss personally presses go.
 **Written by:** the Ads Agent (`.claude/agents/ads.md`)
 **Reads:** `3-copy.md` + `4-creative.md` (approved) + `2-positioning.md`
 **Feeds:** Launch — by the **BOSS only**
