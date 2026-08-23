@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080"><rect width="1080" height="1080" fill="#10233F"/>
+<circle cx="540" cy="470" r="290" fill="#16304F"/>
+<rect x="380" y="330" width="320" height="220" rx="28" fill="none" stroke="#F6A821" stroke-width="18"/>
+<rect x="704" y="396" width="34" height="88" rx="10" fill="#F6A821"/>
+<rect x="416" y="366" width="60" height="148" rx="10" fill="#FFC65C"/>
+<rect x="496" y="366" width="60" height="148" rx="10" fill="#FFC65C" opacity="0.55"/>
+<rect x="576" y="366" width="60" height="148" rx="10" fill="#FFC65C" opacity="0.3"/>
+<text x="540" y="680" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="60" font-weight="bold" fill="#F6A821">100%</text>
+<text x="540" y="940" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="bold" fill="#fff">POWER</text></svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500"><rect width="500" height="500" rx="90" fill="#10233F"/>
+<circle cx="250" cy="200" r="62" fill="#F6A821"/>
+<line x1="250" y1="90" x2="250" y2="118" stroke="#F6A821" stroke-width="14" stroke-linecap="round"/>
+<line x1="164" y1="126" x2="184" y2="146" stroke="#F6A821" stroke-width="14" stroke-linecap="round"/>
+<line x1="336" y1="126" x2="316" y2="146" stroke="#F6A821" stroke-width="14" stroke-linecap="round"/>
+<line x1="120" y1="200" x2="148" y2="200" stroke="#F6A821" stroke-width="14" stroke-linecap="round"/>
+<line x1="380" y1="200" x2="352" y2="200" stroke="#F6A821" stroke-width="14" stroke-linecap="round"/>
+<rect x="222" y="268" width="56" height="24" rx="8" fill="#F6A821"/>
+<text x="250" y="392" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="bold" fill="#fff">HENDRIXX</text>
+<text x="250" y="448" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="bold" fill="#F6A821">POWER</text></svg>

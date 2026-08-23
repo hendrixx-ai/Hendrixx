@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920"><defs><linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#10233F"/><stop offset="1" stop-color="#0A1526"/></linearGradient>
+<linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F6A821"/><stop offset="1" stop-color="#FFC65C"/></linearGradient>
+<radialGradient id="glow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#FFC65C" stop-opacity="0.55"/><stop offset="1" stop-color="#FFC65C" stop-opacity="0"/></radialGradient></defs>
+<rect width="1080" height="960" fill="url(#g1)"/>
+<text x="540" y="600" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="82" font-weight="bold" fill="#FAFAF7">Stima imekatika…</text>
+<text x="540" y="700" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="46" fill="#9FB2CC">giza. simu inakufa. kazi inasimama.</text>
+<rect y="960" width="1080" height="680" fill="url(#g2)"/>
+<ellipse cx="540" cy="980" rx="480" ry="300" fill="url(#glow)"/>
+<circle cx="540" cy="1010" r="86" fill="#FFC65C" stroke="#10233F" stroke-width="10"/>
+<rect x="512" y="1108" width="56" height="26" rx="8" fill="#10233F"/>
+<text x="540" y="1310" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="92" font-weight="bold" fill="#10233F">Wewe uko tayari ✓</text>
+<text x="540" y="1400" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="46" fill="#3A2B05">Taa ya solar inayochaja simu pia</text>
+<g><rect x="660" y="90" width="330" height="112" rx="56" fill="#1E8E3E"/>
+<text x="825" y="163" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="bold" fill="#fff">✓ IMEPIMWA</text></g><rect x="0" y="1640" width="1080" height="280" fill="#0B1A2F"/>
+<rect x="0" y="1640" width="1080" height="8" fill="#F6A821"/>
+<text x="540" y="1758" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="54" fill="#FAFAF7">Tuma <tspan font-weight="bold" fill="#FFC65C">MWANGA</tspan> kwenye WhatsApp</text>
+<text x="540" y="1858" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="84" font-weight="bold" fill="#F6A821">+255 617 691 659</text></svg>

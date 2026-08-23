@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080"><rect width="1920" height="1080" fill="#10233F"/>
+<defs><radialGradient id="bg" cx="0.82" cy="0.4" r="0.5"><stop offset="0" stop-color="#F6A821" stop-opacity="0.35"/><stop offset="1" stop-color="#F6A821" stop-opacity="0"/></radialGradient></defs>
+<rect width="1920" height="1080" fill="url(#bg)"/>
+<circle cx="1560" cy="420" r="120" fill="#F6A821"/><rect x="1506" y="552" width="108" height="42" rx="12" fill="#F6A821"/>
+<rect x="120" y="330" width="16" height="430" fill="#F6A821"/>
+<text x="190" y="470" font-family="Arial, Helvetica, sans-serif" font-size="150" font-weight="bold" fill="#fff">HENDRIXX</text>
+<text x="190" y="620" font-family="Arial, Helvetica, sans-serif" font-size="150" font-weight="bold" fill="#F6A821">POWER</text>
+<text x="192" y="710" font-family="Arial, Helvetica, sans-serif" font-size="50" fill="#D9E2EF">Taa za solar · Power banks · Vifaa vya simu — zilizopimwa</text>
+<text x="192" y="800" font-family="Arial, Helvetica, sans-serif" font-size="54" font-weight="bold" fill="#FFC65C">Kahama &amp; Dar · WhatsApp +255 617 691 659</text></svg>

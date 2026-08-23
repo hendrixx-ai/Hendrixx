@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080"><rect width="1080" height="1080" fill="#10233F"/>
+<circle cx="540" cy="470" r="290" fill="#16304F"/>
+<circle cx="540" cy="440" r="180" fill="#1E8E3E"/>
+<polyline points="450,440 516,506 640,376" fill="none" stroke="#fff" stroke-width="36" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="540" y="700" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="bold" fill="#FAFAF7">MIEZI 3</text>
+<text x="540" y="940" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="bold" fill="#fff">WARRANTY</text></svg>
