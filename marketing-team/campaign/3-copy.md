@@ -1,6 +1,6 @@
 # 3️⃣ COPY — Hooks, Headlines, WhatsApp/Jiji Posts & Ad Variants
 
-**Status:** ✅ Drafted — ⏸️ awaiting boss approval
+**Status:** ✅ **Approved by boss — 2026-08-23.** WhatsApp number provided: **+255 617 691 659** (now in all assets). All hooks/headlines/variants released to Creative Agent.
 **Written by:** the Copy Agent (`.claude/agents/copy.md`)
 **Reads:** `2-positioning.md` (approved) + `../product.md`
 **Feeds:** `4-creative.md`, `5-ads.md`, `6-email.md`
@@ -75,7 +75,7 @@
 > — Hendrixx
 
 **6b. Status captions (rotate):**
-- "Stima ikikatika — wewe uko tayari? ✅ Imepimwa · ✅ Warranty miezi 3 · ✅ Lipa unapopokea. WhatsApp: [namba]"
+- "Stima ikikatika — wewe uko tayari? ✅ Imepimwa · ✅ Warranty miezi 3 · ✅ Lipa unapopokea. WhatsApp: +255 617 691 659"
 - "Fake solar imekuumia mara ngapi? Zetu zina warranty ya maandishi. Pima kwanza, lipa baadaye. 🔆"
 - "Simu isife kwenye blackout 😤 Power banks + taa za solar — Kahama & Dar. Delivery ipo."
 
@@ -94,7 +94,7 @@
 > 🔋 Power banks na vifaa vya simu vipo pia
 > 📍 Kahama & Dar es Salaam — delivery au tunakutana
 > 🏪 Maduka: bei ya jumla ndogo inapatikana
-> Bei: **[TODO — baada ya sourcing]** · WhatsApp: [namba]
+> Bei: **[TODO — baada ya sourcing]** · WhatsApp: +255 617 691 659
 > *(Hakuna namba za kujivuna hapa — tunaanza sasa. Proof yako: unapima kitu mbele yako kabla ya kulipa.)*
 
 ## 8. Instagram Caption (post/reel)
@@ -102,7 +102,7 @@
 > Stima ikikatika, maisha yako isimame. 🔆
 > Taa za solar + power banks — **zilizopimwa mbele yako, warranty ya miezi 3, unalipa unapopokea.**
 > Kahama & Dar. Delivery ipo. Maduka: bei ya jumla.
-> Tuma MWANGA kwenye WhatsApp (bio). 👇
+> Tuma MWANGA kwenye WhatsApp bio: +255 617 691 659. 👇
 > #Kahama #DarEsSalaam #Tanzania #Solar #PowerBank #Simu
 
 ## 9. Landing Page (one-pager — doubles as Jiji profile / link-in-bio)
