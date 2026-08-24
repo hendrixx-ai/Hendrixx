@@ -1,0 +1,44 @@
+{
+  "_comment": "Pick ONE provider per project. Remove the other block before saving as .mcp.json.",
+  "_see_also": [
+    "GOOGLE-CONSOLE-GUIDE.md  — for the gmail / calendar block",
+    "MICROSOFT-CONSOLE-GUIDE.md — for the outlook / calendar block"
+  ],
+
+  "mcpServers": {
+    "_option_a_gmail_google_calendar": {
+      "_comment": "Official Google Workspace MCP servers. Requires OAuth client from Google Cloud Console.",
+      "_disable": false,
+      "gmail": {
+        "type": "http",
+        "url": "https://gmailmcp.googleapis.com/mcp/v1",
+        "oauth": {
+          "clientId": "REPLACE_WITH_YOUR_GOOGLE_OAUTH_CLIENT_ID",
+          "callbackPort": 8080
+        }
+      },
+      "calendar": {
+        "type": "http",
+        "url": "https://calendarmcp.googleapis.com/mcp/v1",
+        "oauth": {
+          "clientId": "REPLACE_WITH_YOUR_GOOGLE_OAUTH_CLIENT_ID",
+          "callbackPort": 8081
+        }
+      }
+    },
+
+    "_option_b_outlook_microsoft_calendar": {
+      "_comment": "Personal Outlook.com via Salah Awad's 'Outlook Personal' MCP server (Microsoft Graph API). Self-hosted — npx. Requires Azure AD app registration with 'personal Microsoft accounts' support.",
+      "_disable": true,
+      "outlook": {
+        "command": "npx",
+        "args": ["-y", "@salah-awad/outlook-personal-mcp"],
+        "env": {
+          "MS_CLIENT_ID": "REPLACE_WITH_YOUR_AZURE_AD_APP_CLIENT_ID",
+          "MS_TENANT_ID": "common",
+          "MS_REDIRECT_URI": "http://localhost:3000/oauth/callback"
+        }
+      }
+    }
+  }
+}
