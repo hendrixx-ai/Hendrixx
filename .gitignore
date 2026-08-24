@@ -12,6 +12,10 @@ Thumbs.db
 
 # Claude Code
 .claude/
+# ...but the ecommerce team's agent definitions ARE meant to be shared
+!ecommerce-team/.claude/
+ecommerce-team/.claude/*
+!ecommerce-team/.claude/agents/
 
 # AI Employee (generated / local only)
 ai-employee/.mcp.json

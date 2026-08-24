@@ -217,6 +217,12 @@ bash scripts/monthly-review.sh    # test the monthly review right now
 
 ---
 
+## 🛒 Also in This Repo: AI Ecommerce Team
+
+**One product → 7 AI agents → a complete store launch kit.** Research → Offer → Product Page → Creative → Ads → Email → Analytics — each agent builds on the last, you approve everything that publishes, sends, or spends. See [`ecommerce-team/`](ecommerce-team/).
+
+---
+
 ## 🔧 For Developers
 
 This repo contains the full AI Employee system as a structured skill for Claude Code. The `CLAUDE.md` file is the core — it defines the agent's persona, rules, and complete workflow instructions.
