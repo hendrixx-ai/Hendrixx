@@ -95,8 +95,8 @@ function approvalDecision(body) {
   const item = awaiting[idx];
   const date = store.fmtDate();
   const how = decision === 'approve'
-    ? (note ? `Approved via Console. ${note} — send from Gmail, then log the sent time.` : 'Approved via Console — send from Gmail, then log the sent time.')
-    : `Declined via Console${note ? `. ${note}` : ''} — draft stays on file, do not send.`;
+    ? (note ? `Approved via Console — ${note}. Next: send from Gmail, then log the sent time.` : 'Approved via Console — send from Gmail, then log the sent time.')
+    : `Declined via Console${note ? ` — ${note}` : ''} — draft stays on file, do not send.`;
 
   const lines = md.split('\n');
   lines[item.lineNo] = null;                       // remove from awaiting
