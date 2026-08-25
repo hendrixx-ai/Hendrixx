@@ -356,6 +356,90 @@
 
 ---
 
+## 📬 FOLLOW-UP / BUMP SCRIPTS
+
+*Used by the CRM bump system (see `crm/SEQUENCES.md`). Short, specific, never spammy.*
+
+## 26. Bump 1 — Gentle nudge (+7 days silence)
+> **Subject:** Re: [original subject line]
+>
+> Hi [Name],
+>
+> Wanted to make sure this didn't get buried — any thoughts on
+> the [project / spec / quote]?
+>
+> Happy to jump on a 5-min call if useful.
+>
+> Best,
+> Hendrixx
+
+## 27. Bump 2 — Value-add / different angle (+14 days silence)
+> **Subject:** [different angle — a question, a resource, market data]
+>
+> Hi [Name],
+>
+> Saw [X in the news / a spec change / a pricing move] — made me think
+> of your [project].
+>
+> [One-line question tied to their stated need.]
+>
+> Best,
+> Hendrixx
+
+## 28. Bump 3 — Last-touch close-out (+21 days silence)
+> **Subject:** Closing the loop
+>
+> Hi [Name],
+>
+> Don't want to keep pinging. Closing the loop on this one — if
+> timing's not right, no worries; we can revisit when it is.
+>
+> Best,
+> Hendrixx
+
+## 29. Re-engage after stalled conversation
+> Hi [Name],
+>
+> Picking this back up — what's the best next move from your side?
+> [Open call / Send sample / Schedule call.]
+>
+> Best,
+> Hendrixx
+
+## 30. Meeting recap + next step
+> **Subject:** Great call — next step
+>
+> Hi [Name],
+>
+> Good chat today. Here's what I heard as your priority: [one line].
+>
+> **Next:** I'll send over [docs / proposal / timeline] by [date].
+> **You:** review + let me know if [specific question].
+>
+> Best,
+> Hendrixx
+
+## 31. Still-reviewing nudge (after quote)
+> Hi [Name],
+>
+> Quick check — still reviewing the [proposal]? Anything to adjust
+> on spec, volume, or terms?
+>
+> Best,
+> Hendrixx
+
+## 32. Closing the file (no reply after quote)
+> Hi [Name],
+>
+> Sounds like timing isn't right — I'll close this out for now.
+>
+> Door's always open if this comes back. No hard feelings.
+>
+> Best,
+> Hendrixx
+
+---
+
 ## Anti-samples — never write like this
 - ❌ "I hope this email finds you well."
 - ❌ "I am writing to you today to..."

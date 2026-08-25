@@ -1,62 +1,54 @@
-# 📅 CALENDAR — Meeting Prep Notes *(DEMO OUTPUT)*
+# 📅 CALENDAR — Meeting Prep Notes
 
-*Generated: Wednesday 2026-08-19, 07:00 EAT · ⚠️ Demo run — fictional meetings*
+*Generated: Tuesday 2026-08-25, 15:24 EAT · ⚠️ Demo run — fictional meetings*
 
-## Meeting 1: Pricing Call — Acme Co
-- **Time:** 10:00–10:45 EAT
-- **With:** Diana (Acme sales rep)
-- **Type:** Video call
+## Meeting 1: Pricing call — Acme Co — Diana (sales rep)
+- **Time:** 10:00 EAT
+- **With:** Acme Co — Diana (sales rep)
 
 ### Context
-Acme is comparing our quote with two competitors and asked for better terms on volume (thread, Aug 17). We offered to bring volume pricing to a call. Related research: Acme fits our ideal customer profile — mid-size SaaS, recently raised, hiring fast.
+Prospect match — **Esper Salon & Spa** (✉️ Contacted): 24/7 call + booking coverage (answer when chair-side, after 19:30, Sundays). Next step on file: ⏳ Wait 5 days for reply; if silence → send Day-5 follow-up. Track response.. Prospect match — **Allure Aesthetics Skin & Hair Clinic** (🔍 Researched): Consultation bookings, missed-call recovery for high-ticket treatments ($70–150/session laser). Next step on file: ✉️ Send cold outreach email — target within 2 weeks. Prospect match — **Butterfly Aesthetics & Wellness Center** (🔍 Researched): Consultation intake, booking scheduling, after-hours call handling. Next step on file: ✉️ Send cold outreach email — target within 2 weeks. Prospect match — **Magdy Luxe Salon & Spa** (🔍 Researched): Weekday evening + weekend call coverage; appointment booking. Next step on file: ✉️ Send cold outreach email — target within 2 weeks. Prospect match — **The Touch Spa** (🔍 Researched): Call + WhatsApp booking coverage for busy weekend windows. Next step on file: ✉️ Send cold outreach email — target within 3 weeks. Prospect match — **Tanzania Medi Spa** (🔍 Researched): Promotion-response call volume, package booking coordination. Next step on file: ✉️ Send cold outreach email — target within 3 weeks. Prospect match — **Healing Beauty Spa** (🔍 Researched): After-hours bookings (closes 20:30); WhatsApp call routing. Next step on file: ✉️ Send cold outreach email — target within 3 weeks. Prospect match — **Violet's Massage** (🔍 Researched): Call answering during sessions (therapist can't answer), same-day late bookings. Next step on file: ✉️ Send cold outreach email — target within 3 weeks. Prospect match — **Dashing Diva Beauty Lounge** (🔍 Researched): Call + booking for premium hotel-adjacent clientele. Next step on file: ✉️ Send cold outreach email — target within 3 weeks. From the calendar note: They replied re: pricing — see thread in `threads.md`
 
 ### 3 Talking Points
-1. Their new product line — why it's a fit for our solution
-2. Our case study (similar client, ~similar size) with measurable results
-3. Volume pricing terms — what we can actually offer (pull numbers before the call)
+1. They replied re: pricing — see thread in `threads.md`
+2. Our spec / terms — what we can actually offer (numbers ready)
+3. Next step — one concrete action with a date
 
 ### Desired Outcome
-Lock in a 3-month pilot (or written LOI) before Friday's board deadline on their side.
-
-### Actions Before
-- Pull volume-pricing numbers and a one-page case study
-- Confirm who else joins from their side
+Agree one concrete next step with a date before the call ends.
 
 ---
 
-## Meeting 2: Weekly Team Sync
-- **Time:** 14:00–14:30 EAT
+## Meeting 2: Weekly team sync — Team
+- **Time:** 14:00 EAT
 - **With:** Team
-- **Type:** Standup-style
 
 ### Context
-Standard Wednesday status. Project B is blocked (see yesterday's thread); Q4 offsite needs a decision this week.
+From the calendar note: Standard Wednesday status
 
 ### 3 Talking Points
-1. Project A — on track, demo Thursday
-2. Project B — blocker owner + unblock plan
-3. Q4 offsite — venue options + Friday deposit deadline
+1. Standard Wednesday status
+2. Our spec / terms — what we can actually offer (numbers ready)
+3. Next step — one concrete action with a date
 
 ### Desired Outcome
-Every project has a named owner + date; offsite decision made or explicitly delegated.
+Agree one concrete next step with a date before the call ends.
 
 ---
 
-## Meeting 3: Vendor Demo — Lakeview Events
-- **Time:** 16:00–16:30 EAT
-- **With:** Lakeview Events (venue/platform)
-- **Type:** Video demo
+## Meeting 3: Vendor demo — Lakeview Events (venue)
+- **Time:** 16:00 EAT
+- **With:** Lakeview Events (venue)
 
 ### Context
-Following the offsite venue enquiry (email, 07:30). Sep 18–19 availability; 30% deposit to hold.
+From the calendar note: Q4 offsite platform demo
 
 ### 3 Talking Points
-1. Capacity + layout for ~40 people, breakout rooms
-2. Deposit + cancellation terms
-3. AV, catering, and agenda support included?
+1. Q4 offsite platform demo
+2. Our spec / terms — what we can actually offer (numbers ready)
+3. Next step — one concrete action with a date
 
 ### Desired Outcome
-Shortlist decision: yes/no before Friday deposit deadline.
+Agree one concrete next step with a date before the call ends.
 
-### Actions Before
-- Confirm headcount + budget with the team at 14:00 sync
+---

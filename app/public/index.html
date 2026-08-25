@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hendrixx — AI Employee Console</title>
+<link rel="stylesheet" href="/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="logo">🤖</span>
+    <div>
+      <h1>Hendrixx <span class="accent">AI Employee</span> Console</h1>
+      <p class="tagline">Safe work is automatic · external actions need your yes</p>
+    </div>
+  </div>
+  <div class="topbar-right">
+    <span id="clock" class="clock"></span>
+    <span class="pill pill-live" title="No Gmail/Calendar connected — this console manages files & approvals; you send from Gmail">🔌 no external tools</span>
+  </div>
+</header>
+
+<nav class="tabs" id="tabs">
+  <button data-tab="dashboard" class="active">📊 Dashboard</button>
+  <button data-tab="pipeline">🎯 Pipeline</button>
+  <button data-tab="approvals">⏸️ Approvals <span id="approvalCount" class="badge"></span></button>
+  <button data-tab="workflow">🔄 Workflow</button>
+  <button data-tab="files">📁 Files</button>
+</nav>
+
+<main>
+
+<!-- ═══════════ DASHBOARD ═══════════ -->
+<section id="tab-dashboard" class="tab active">
+  <div class="cards" id="metricCards"></div>
+
+  <div class="grid-2">
+    <div class="panel">
+      <h2>Pipeline <span class="sub">from PROSPECTS.md</span></h2>
+      <div class="kanban" id="kanban"></div>
+    </div>
+    <div>
+      <div class="panel">
+        <h2>⏰ Aging alerts <span class="sub">stage timeboxes from crm/PIPELINE.md</span></h2>
+        <div id="agingList"></div>
+      </div>
+      <div class="panel">
+        <h2>🔬 Research queue <span class="sub">next topics the employee picks up</span></h2>
+        <div id="queuePreview"></div>
+        <form id="queueForm" class="inline-form">
+          <input type="text" id="queueTopic" placeholder="Add a topic — e.g. Research: Ivanhoe Mines — copper expansion" required>
+          <button type="submit" class="btn btn-ghost">Add</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>📋 Last daily report <span class="sub" id="reportDate"></span></h2>
+    <div id="reportGlance" class="glance"></div>
+  </div>
+</section>
+
+<!-- ═══════════ PIPELINE ═══════════ -->
+<section id="tab-pipeline" class="tab">
+  <div class="panel">
+    <div class="panel-head">
+      <h2>🎯 Prospects <span class="sub" id="prospectCount"></span></h2>
+      <button class="btn" id="addProspectBtn">＋ Add prospect</button>
+    </div>
+    <form id="prospectForm" class="prospect-form hidden">
+      <div class="form-grid">
+        <label>Name <input name="name" required placeholder="Company / Investor name"></label>
+        <label>Type <input name="type" placeholder="Mining-company owner · Investor · Med spa…"></label>
+        <label>Contact <input name="contact" placeholder="Name, title, email/phone"></label>
+        <label>What they need <input name="needs" placeholder="spec / volume / timing"></label>
+        <label>Stage
+          <select name="stage" id="newProspectStage"></select>
+        </label>
+        <label>Next step <input name="nextStep" placeholder="✉️ Send cold outreach — target within 2 weeks"></label>
+        <label>Source <input name="source" placeholder="LinkedIn / trade press / referral"></label>
+        <label>Notes <input name="notes" placeholder="decision-maker, deadline, objection…"></label>
+      </div>
+      <div class="form-actions">
+        <span class="warn-note">Rule 2: real prospects only — never invent a company, contact, or deal.</span>
+        <button type="submit" class="btn btn-primary">Save to PROSPECTS.md</button>
+      </div>
+    </form>
+    <div id="prospectList"></div>
+  </div>
+</section>
+
+<!-- ═══════════ APPROVALS ═══════════ -->
+<section id="tab-approvals" class="tab">
+  <div class="panel intro">
+    <h2>⏸️ Needs my approval <span class="sub">from daily/approvals.md</span></h2>
+    <p>Every item below is an <strong>external action</strong> — sending, booking, paying. Approving records your yes in the log; the actual send still happens from your Gmail (this console never sends anything). Work the <a href="#" id="checklistLink">7-point checklist</a> first.</p>
+  </div>
+  <div id="approvalList"></div>
+  <div class="panel">
+    <h2>✅ Approved &amp; Done <span class="sub">audit log</span></h2>
+    <div id="approvalLog"></div>
+  </div>
+</section>
+
+<!-- ═══════════ WORKFLOW ═══════════ -->
+<section id="tab-workflow" class="tab">
+  <div class="panel">
+    <div class="panel-head">
+      <h2>🔄 Morning routine <span class="sub">INBOX → RESEARCH → CALENDAR → TASKS → FOLLOW-UP → REPORT → DIGEST</span></h2>
+      <div class="mode-switch" id="modeSwitch">
+        <button data-mode="demo" class="active" title="Reads demo/input, writes demo/output — the real daily/ files stay untouched">🧪 Demo</button>
+        <button data-mode="live" title="Reads what you paste, writes the real daily/ workflow files">⚡ Live</button>
+      </div>
+    </div>
+    <p class="mode-note" id="modeNote"></p>
+    <div class="run-actions">
+      <button class="btn btn-primary" id="runRoutineBtn">▶ Run full morning routine</button>
+      <span class="sub">Rules engine — no Gmail/Calendar/web connected. Inputs are pasted in; outputs are drafts only (Rule 1: nothing external without your yes).</span>
+    </div>
+  </div>
+
+  <div class="steps" id="stepCards"></div>
+
+  <div class="panel">
+    <h2>🧾 Run log</h2>
+    <pre id="runLog" class="runlog">No runs yet this session.</pre>
+    <div id="runFiles" class="run-files"></div>
+  </div>
+</section>
+
+<!-- ═══════════ FILES ═══════════ -->
+<section id="tab-files" class="tab">
+  <div class="files-layout">
+    <aside class="panel file-list" id="fileList"></aside>
+    <div class="panel file-view">
+      <div class="panel-head">
+        <h2 id="fileName">Select a file</h2>
+        <button class="btn btn-ghost" id="refreshFileBtn">↻ Refresh</button>
+      </div>
+      <div id="fileContent" class="markdown"></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <span>Hendrixx Console · the repo is the database · <code>node app/server.js</code></span>
+  <span class="sub">Rules 1–4 from ai-employee/CLAUDE.md apply to this console too.</span>
+</footer>
+
+<!-- Checklist modal -->
+<div class="modal hidden" id="checklistModal">
+  <div class="modal-box">
+    <div class="panel-head">
+      <h2>🛡️ The 7 checks before you tick ☐ → ☑</h2>
+      <button class="btn btn-ghost" id="closeModalBtn">✕ Close</button>
+    </div>
+    <ol class="checklist">
+      <li><strong>Source verified</strong> — every name, number, spec is from real data. No invented facts.</li>
+      <li><strong>Recipient verified</strong> — real person, current role, right desk.</li>
+      <li><strong>Voice match</strong> — short, direct, "Best, Hendrixx". No AI tells.</li>
+      <li><strong>Ask is clear</strong> — one thing they can say yes/no to, concrete time window.</li>
+      <li><strong>Timing is honest</strong> — only claim what's actually ready (offtake, samples, decks).</li>
+      <li><strong>Security</strong> — no credentials, no confidential data, right sender account.</li>
+      <li><strong>Permission</strong> — you're authorised to send this in Hendrixx's voice.</li>
+    </ol>
+    <p class="sub">All 7 pass → tick. 5–6 pass → fix first. ≤4 → do not send. <em>(Full version: APPROVALS-CHECKLIST.md)</em></p>
+  </div>
+</div>
+
+<div id="toast" class="toast hidden"></div>
+
+<script src="/app.js"></script>
+</body>
+</html>
