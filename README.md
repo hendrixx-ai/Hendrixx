@@ -217,6 +217,24 @@ bash scripts/monthly-review.sh    # test the monthly review right now
 
 ---
 
+## 🖥️ Web Console (Dashboard + Workflow Runner + Approvals)
+
+The whole system also runs as a zero-dependency web app — no install, no build:
+
+```bash
+node app/server.js     # → http://localhost:3000
+```
+
+- **Dashboard** — pipeline kanban, aging alerts vs stage timeboxes, research queue, last report at a glance
+- **Pipeline** — move prospect stages (rewrites `PROSPECTS.md` + rolls up the summary), add prospects
+- **Approvals** — the external-action checklist with the 7-point gate; approve/decline writes to the audit log
+- **Workflow** — runs the 6-step morning routine as a transparent rules engine. **Demo mode** replays the demo data end-to-end; **Live mode** writes the real `daily/` files from what you paste in
+- **Files** — browse every workflow file rendered as markdown
+
+The repo stays the database: the console reads and writes the same markdown Claude Code uses. See [app/README.md](app/README.md).
+
+---
+
 ## 🔧 For Developers
 
 This repo contains the full AI Employee system as a structured skill for Claude Code. The `CLAUDE.md` file is the core — it defines the agent's persona, rules, and complete workflow instructions.

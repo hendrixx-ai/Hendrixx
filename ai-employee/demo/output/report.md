@@ -1,32 +1,32 @@
 # 📊 DAILY REPORT — End-of-Day Briefing *(DEMO OUTPUT)*
 
-*Date: Wednesday 2026-08-19 · ⚠️ Demo run*
+*Date: Tuesday 2026-08-25, 15:24 EAT · ⚠️ Demo run*
 
 ## At a Glance
 | 📥 Inbox | ✍️ Replies | 📅 Meetings | ✅ Tasks Done | 🔔 Follow-Ups Due | ⚠️ Needs Me |
 |----------|-----------|------------|--------------|------------------|------------|
-| 6 sorted | 3 drafted | 3 prepped | 7 completed | 2 | **7** |
+| 6 sorted | 4 drafted | 3 prepped | 8 done | 3 | **8** |
 
 ## What Got Done
-- 6 emails sorted → 1 🔴 urgent · 2 🟡 reply · 1 🟢 task · 1 ⚪ ignore · 1 🔴 urgent (money)
-- 3 replies drafted in your voice (Client X, Maya, Tom) — **nothing sent**
-- 3 meetings prepped (Acme pricing call, team sync, Lakeview demo) — context + talking points + outcomes
-- Research brief completed (AI meeting-notes tools) with real sources + a recommendation: pilot free tl;dv, then Fireflies
-- Research queue: topic moved to Done ✓
+- 6 emails sorted → 🔴2 urgent · 🟡2 reply · 🟢1 task · ⚪1 ignore
+- 4 replies drafted in your voice — **nothing sent**
+- 3 meetings prepped — context + talking points + outcomes
+- 8 safe tasks completed automatically
+- 3 follow-up(s) due — nudges drafted
 
 ## What Needs My Attention
-- **Maya** — go/no-go overdue 5 days (draft ready)
-- **Invoice #23** — $1,240, 14 days overdue, account-hold risk
-- **Client X deadline** — needs commitment answer by Friday
-- **Venue deposit** — Friday deadline to hold Sep 18–19
+- **Send reply to Sarah Chen (Client X)** — review the 7-point checklist before sending
+- **Send reply to Tom Okafor (Supplier)** — review the 7-point checklist before sending
+- **Send reply to Maya Kessy (Partner)** — review the 7-point checklist before sending
+- **Send reply to Accounts** — review the 7-point checklist before sending
+- **Act on: Venue availability — Q4 offsite (from Events Team)** — Decide + authorize (goes to approvals — needs my yes)
+- **Send follow-up after: Pricing call — Acme Co — Diana (sales rep)** — meeting recap + next step (voice-sample §16)
+- **Send follow-up after: Weekly team sync — Team** — meeting recap + next step (voice-sample §16)
+- **Send follow-up after: Vendor demo — Lakeview Events (venue)** — meeting recap + next step (voice-sample §16)
 
 ## Decisions Needed
-- [ ] Approve any of the 7 items in `approvals.md` (send 3 drafts, book venue, pay invoice, sign quote, send pricing, start pilot)
-
-## Notes for Tomorrow
-- 10:00 Acme call — pull volume-pricing numbers before
-- 16:00 Lakeview demo — confirm headcount at 14:00 sync
+- [ ] Approve or decline the 8 item(s) in `demo/output/approvals.md` (7-point checklist first)
 
 ---
 
-*Honest report — only what actually happened.*
+*Honest report — only what actually happened. Rules engine run: no Gmail/Calendar/web connected; inputs were pasted in (Rule 3).*

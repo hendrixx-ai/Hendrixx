@@ -1,48 +1,38 @@
-# 📧 MORNING DIGEST — Email Draft *(DEMO OUTPUT)*
-
-*Generated: Wednesday 2026-08-19, 07:00 EAT · ⚠️ Demo run — draft only, never sent automatically*
-
----
-
 **To:** Hendrixx
-**Subject:** ☀️ Morning Digest — Wednesday, Aug 19
+**Subject:** ☀️ Morning Digest — Tuesday, 2026-08-25
 
 Morning Hendrixx,
 
 Here's where things stand today.
 
 ## 📥 Inbox
-- 🔴 **Urgent:** 2 — Client X deadline (answer by Fri) · invoice #23 overdue
-- 🟡 **Reply:** 2 — supplier quote · Maya's go/no-go (5 days)
-- 🟢 **Task:** 1 — book offsite venue (deposit by Fri)
-- ⚪ **Ignore:** 1 — newsletter
+- 6 sorted · 4 drafted · 3 prepped · 8 done · 3 follow-ups · **8** need me
 
 ## 📅 Meetings Today
-- 10:00 — Pricing call with Acme (Diana) → prep in `daily/calendar.md`
-- 14:00 — Weekly team sync
-- 16:00 — Lakeview venue demo (Q4 offsite)
-
-## ✅ Already Done
-- 3 replies drafted, 3 meetings prepped, research brief done (meeting-notes tools)
+- Pricing call — Acme Co — Diana (sales rep) → prep notes in `demo/output/calendar.md`
+- Weekly team sync — Team → prep notes in `demo/output/calendar.md`
+- Vendor demo — Lakeview Events (venue) → prep notes in `demo/output/calendar.md`
 
 ## ⏸️ Needs Your Approval
-- [ ] Send reply to Client X — commit Sep 30 subject to scope freeze
-- [ ] Send go/no-go to Maya
-- [ ] Approve supplier quote (12% off)
-- [ ] Book venue — 30% deposit by Friday
-- [ ] Pay invoice #23 — $1,240
-- [ ] Send volume pricing to Acme (before 10:00)
-- [ ] Start meeting-notes pilot (free tl;dv)
+- [ ] **Send reply to Sarah Chen (Client X)** — review the 7-point checklist before sending
+- [ ] **Send reply to Tom Okafor (Supplier)** — review the 7-point checklist before sending
+- [ ] **Send reply to Maya Kessy (Partner)** — review the 7-point checklist before sending
+- [ ] **Send reply to Accounts** — review the 7-point checklist before sending
+- [ ] **Act on: Venue availability — Q4 offsite (from Events Team)** — Decide + authorize (goes to approvals — needs my yes)
+- [ ] **Send follow-up after: Pricing call — Acme Co — Diana (sales rep)** — meeting recap + next step (voice-sample §16)
+- [ ] **Send follow-up after: Weekly team sync — Team** — meeting recap + next step (voice-sample §16)
+- [ ] **Send follow-up after: Vendor demo — Lakeview Events (venue)** — meeting recap + next step (voice-sample §16)
 
 ## 🔔 Follow-Ups Due
-- Maya — 5 days, owe reply (draft ready)
-- Tom — quote decision promised Mon (draft ready)
+- Maya Kessy — 12 days since last touch
+- Tom Okafor — 8 days since last touch
+- Acme Co — 8 days since last touch
 
 ## ⚠️ Decisions Needed Today
-- [ ] Approvals list above (7 items)
+- [ ] The 8 approval(s) above
 
 Best,
 Hendrixx
 
 ---
-*Draft only — review before sending. Nothing external happens without your yes.*
+*Generated: Tuesday 2026-08-25, 15:24 EAT · Draft only — review before sending. Nothing external happens without your yes.*
