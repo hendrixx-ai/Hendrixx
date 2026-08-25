@@ -1,6 +1,6 @@
 # 📥 INBOX — Email Sort & Drafts
 
-*Generated: Tuesday 2026-08-25, 15:04 EAT · ⚠️ Demo run — rules engine, no Gmail connected (Rule 3). Drafts only — nothing sent.*
+*Generated: Tuesday 2026-08-25, 15:24 EAT · ⚠️ Demo run — rules engine, no Gmail connected (Rule 3). Drafts only — nothing sent.*
 
 ## Sorted Emails
 

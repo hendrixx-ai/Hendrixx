@@ -1,6 +1,6 @@
 # 🔔 FOLLOW-UP — Nudge Drafts
 
-*Generated: Tuesday 2026-08-25, 15:04 EAT · ⚠️ Demo run — threads pasted in, no Gmail connected. Drafts only.*
+*Generated: Tuesday 2026-08-25, 15:24 EAT · ⚠️ Demo run — threads pasted in, no Gmail connected. Drafts only.*
 
 ## Waiting to Hear From (I sent, waiting on reply)
 | Person | Last Contact | Days Since | Draft Nudge |
