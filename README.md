@@ -251,6 +251,9 @@ node brand-os/server.js     # → http://localhost:3200
 - **DMs & leads** — reply → deciding → selling → link → bought, with all 6 scripts
 - **Money & funnel** — pace vs $10k, path maths, calculator, leak diagnosis, ledger
 - **90-day plan** — phase tasks, milestones, and the eight things that kill the brand
+- **Agents** — six deterministic agents and five flows that write the artifacts:
+  offer architecture, 30 scripts + captions, a 7-day launch, the emails, a growth
+  memo. Every run is saved and downloads as a `.zip` launch kit.
 
 State is local (`brand-os/data/state.json`, gitignored). Nothing is sent or spent from
 the app. See [brand-os/README.md](brand-os/README.md).

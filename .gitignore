@@ -36,3 +36,5 @@ __pycache__/
 venv/
 # Buyable Brand OS (local state)
 brand-os/data/
+
+# Buyable Brand OS run artifacts (local)

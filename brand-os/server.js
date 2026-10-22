@@ -15,6 +15,10 @@ const path = require('path');
 
 const engine = require('./lib/engine');
 const store = require('./lib/store');
+const agents = require('./lib/agents');
+const orchestrator = require('./lib/orchestrator');
+const jobs = require('./lib/jobs');
+const kit = require('./lib/kit');
 
 const PORT = Number(process.env.PORT || 3200);
 const PUBLIC = path.join(__dirname, 'public');
@@ -277,6 +281,53 @@ function deleteItem(state, body) {
   return { error: 'Unknown delete kind' };
 }
 
+// ── agents, flows, runs ─────────────────────────────────────────────────────
+function runAndPersist(run) {
+  const meta = jobs.saveRun(run);
+  return meta;
+}
+
+function applyRun(state, runId, today) {
+  const run = jobs.getRun(runId);
+  if (!run) return { error: 'Unknown run' };
+  const adopt = run.adopt || { offers: [], content: [] };
+  let offersChanged = 0;
+  let contentChanged = 0;
+
+  for (const incoming of adopt.offers || []) {
+    const offer = (state.offers || []).find(o => o.id === incoming.id);
+    if (!offer) continue;
+    if (incoming.name) offer.name = str(incoming.name, 80);
+    if (Number.isFinite(Number(incoming.price))) offer.price = Math.max(0, Number(incoming.price));
+    if (incoming.promise) offer.promise = str(incoming.promise, 300);
+    if (incoming.format) offer.format = str(incoming.format, 300);
+    offer.status = offer.status === 'idea' ? 'building' : offer.status;
+    offersChanged += 1;
+  }
+
+  for (const incoming of adopt.content || []) {
+    const item = (state.content || []).find(c => c.id === incoming.id);
+    if (!item) continue;
+    // never overwrite words the boss wrote
+    if (!item.hook) { item.hook = str(incoming.hook, 300); contentChanged += 1; }
+    if (!item.cta) item.cta = str(incoming.cta, 160);
+  }
+
+  return { ok: true, offersChanged, contentChanged, today };
+}
+
+function buildKit(runId, today) {
+  const run = jobs.getRun(runId);
+  if (!run) throw new Error('Unknown run');
+  const files = jobs.artifactFiles(runId);
+  const state = store.load(today);
+  const payload = [
+    { name: 'README.md', content: kit.readme({ run, settings: state.settings, today }) },
+    ...files.map(f => ({ name: `${String(f.name).replace(/\.md$/, '')}.md`, content: f.content })),
+  ];
+  return { buffer: kit.zip(payload), name: `buyable-kit-${run.flowId}-${today}.zip` };
+}
+
 // ── router ──────────────────────────────────────────────────────────────────
 async function handleApi(req, res, url) {
   const route = url.pathname.replace(/\/+$/, '') || '/';
@@ -296,6 +347,48 @@ async function handleApi(req, res, url) {
     return res.end(JSON.stringify(state, null, 2));
   }
 
+  if (req.method === 'GET' && route === '/api/agents') {
+    return json(res, 200, { ok: true, agents: agents.listAgents(), flows: orchestrator.listFlows() });
+  }
+
+  if (req.method === 'GET' && route === '/api/runs') {
+    return json(res, 200, { ok: true, runs: jobs.listRuns() });
+  }
+
+  const runMatch = route.match(/^\/api\/runs\/([\w-]+)$/);
+  if (req.method === 'GET' && runMatch) {
+    const run = jobs.getRun(runMatch[1]);
+    if (!run) return fail(res, 'Unknown run', 404);
+    return json(res, 200, { ok: true, run });
+  }
+
+  if (req.method === 'GET' && /^\/api\/runs\/[\w-]+\/file$/.test(route)) {
+    const runId = route.split('/')[3];
+    const name = url.searchParams.get('name') || '';
+    try {
+      const content = jobs.readArtifact(runId, name);
+      return json(res, 200, { ok: true, name, content });
+    } catch (err) {
+      return fail(res, err.message, 404);
+    }
+  }
+
+  const kitMatch = route.match(/^\/api\/kit\/([\w-]+)\.zip$/);
+  if (req.method === 'GET' && kitMatch) {
+    try {
+      const built = buildKit(kitMatch[1], today);
+      res.writeHead(200, {
+        'Content-Type': 'application/zip',
+        'Content-Disposition': `attachment; filename="${built.name}"`,
+        'Content-Length': built.buffer.length,
+        'Cache-Control': 'no-store',
+      });
+      return res.end(built.buffer);
+    } catch (err) {
+      return fail(res, err.message, 404);
+    }
+  }
+
   if (req.method === 'GET' && route === '/api/health') {
     return json(res, 200, { ok: true, today, dataFile: store.STATE_FILE });
   }
@@ -303,6 +396,69 @@ async function handleApi(req, res, url) {
   if (req.method === 'POST') {
     let body;
     try { body = await readBody(req); } catch (err) { return fail(res, err.message); }
+
+    const agentMatch = route.match(/^\/api\/agents\/([\w-]+)\/run$/);
+    if (agentMatch) {
+      const agent = agents.BY_ID[agentMatch[1]];
+      if (!agent) return fail(res, `Unknown agent: ${agentMatch[1]}`, 404);
+      const state = store.load(today);
+      let result;
+      try {
+        result = agent.run(state, today, body.input || {}, { artifacts: {}, shared: {} });
+      } catch (err) {
+        return fail(res, `${agent.name} failed: ${err.message}`, 500);
+      }
+      const run = {
+        id: `run-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`,
+        flowId: `agent:${agent.id}`,
+        flowName: agent.name,
+        status: result.status,
+        startedAt: new Date().toISOString(),
+        today,
+        input: body.input || {},
+        steps: [{
+          agentId: agent.id, agentName: agent.name, status: result.status, ms: 0,
+          summary: result.summary, detail: result.steps || [],
+          blockers: result.blockers || [], artifacts: (result.artifacts || []).map(a => a.name),
+        }],
+        artifacts: (result.artifacts || []).map(a => ({ ...a, agentId: agent.id, agentName: agent.name })),
+        blockers: result.blockers || [],
+        notes: result.notes || [],
+        adopt: result.adopt || { offers: [], content: [] },
+        summary: result.summary,
+        durationMs: 0,
+      };
+      const meta = runAndPersist(run);
+      return json(res, 200, { ok: true, run: meta, state: engine.compute(store.load(today), today) });
+    }
+
+    const flowMatch = route.match(/^\/api\/flows\/([\w-]+)\/run$/);
+    if (flowMatch) {
+      try {
+        const state = store.load(today);
+        const run = orchestrator.runFlow(flowMatch[1], { state, today, input: body.input || {} });
+        const meta = runAndPersist(run);
+        return json(res, 200, { ok: true, run: meta, state: engine.compute(store.load(today), today) });
+      } catch (err) {
+        return fail(res, err.message);
+      }
+    }
+
+    if (route === '/api/apply') {
+      let applied = null;
+      const result = store.update(today, s => {
+        const out = applyRun(s, str(body.runId, 80), today);
+        if (out.error) return false;
+        applied = out;
+        return true;
+      });
+      if (!result.changed) return fail(res, 'Unknown run');
+      return json(res, 200, {
+        ok: true,
+        applied,
+        state: engine.compute(store.load(today), today),
+      });
+    }
 
     if (route === '/api/reset') {
       if (body.confirm !== 'reset') return fail(res, 'Send { "confirm": "reset" } to wipe the state file.');

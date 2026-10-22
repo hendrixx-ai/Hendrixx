@@ -13,6 +13,8 @@ const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
 let S = null;
 let tab = localStorage.getItem('bb.tab') || 'today';
 let calc = null;
+let AGENTS = null;
+let RUNS = [];
 let modalState = null;
 let toastTimer = null;
 
@@ -23,6 +25,7 @@ const TABS = [
   { id: 'dms', label: 'DMs & leads', icon: 'chat' },
   { id: 'money', label: 'Money & funnel', icon: 'coin' },
   { id: 'plan', label: '90-day plan', icon: 'calendar' },
+  { id: 'agents', label: 'Agents', icon: 'bot' },
 ];
 
 const TITLES = {
@@ -32,6 +35,7 @@ const TITLES = {
   dms: ['DMs & leads', 'Reel → comment → DM → checkout'],
   money: ['Money & funnel', 'The $10k math and where the funnel leaks'],
   plan: ['90-day plan', 'Phase by phase, or it stays a PDF'],
+  agents: ['Agents', 'Six agents, five flows — real artifacts, not chat'],
 };
 
 const ICONS = {
@@ -41,6 +45,7 @@ const ICONS = {
   chat: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M21 12a8 8 0 01-8 8H8l-5 3 1.4-4.6A8 8 0 1121 12z"/><path d="M8.5 11h7M8.5 14.5h4"/></svg>',
   coin: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M14.5 9.2c-.6-.8-1.5-1.2-2.5-1.2-1.4 0-2.5.8-2.5 2s1.1 1.8 2.5 2 2.5.8 2.5 2-1.1 2-2.5 2c-1 0-1.9-.4-2.5-1.2"/></svg>',
   calendar: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18M8 14h2M14 14h2M8 18h2"/></svg>',
+  bot: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="12" rx="3"/><path d="M12 4v4M9 14h.01M15 14h.01M9 17h6"/></svg>',
 };
 
 // ── helpers ─────────────────────────────────────────────────────────────────
@@ -159,7 +164,7 @@ function render() {
     <div class="bar-legend"><span>${g.progress}% of month target</span><span>${g.daysLeft}d left</span></div>
     ${g.prorated ? `<p class="rail-note" style="margin:6px 0 0">First month prorated from Day 1. Run-rate target is ${money(g.goalFull)}/mo.</p>` : ''}`;
 
-  const views = { today: viewToday, offers: viewOffers, content: viewContent, dms: viewDms, money: viewMoney, plan: viewPlan };
+  const views = { today: viewToday, offers: viewOffers, content: viewContent, dms: viewDms, money: viewMoney, plan: viewPlan, agents: viewAgents };
   $('#view').innerHTML = (views[tab] || viewToday)();
 }
 
@@ -227,6 +232,7 @@ function viewToday() {
       <div class="hero-actions">
         ${focus ? `<button class="btn btn-primary" data-act="tab" data-tab="${focus.tab}">${esc(focus.cta)} →</button>` : ''}
         ${c && !c.posted ? `<button class="btn" data-act="content-post" data-id="${c.id}">Mark today posted</button>` : ''}
+        <button class="btn btn-ghost" data-act="run-flow" data-id="daily">Write the brief</button>
         <button class="btn btn-ghost" data-act="orchestrate">Re-orchestrate</button>
       </div>
     </div>
@@ -895,6 +901,354 @@ function viewPlan() {
   </section>`;
 }
 
+
+// ── markdown (artifacts are markdown; render it properly) ──────────────────
+function mdInline(text) {
+  return esc(text)
+    .replace(/`([^`]+)`/g, '<code>$1</code>')
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/(^|[\s(])\*([^*\n]+)\*/g, '$1<em>$2</em>')
+    .replace(/\[([^\]]+)\]\((https?:[^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+}
+
+function md(src) {
+  const lines = String(src == null ? '' : src).replace(/\r/g, '').split('\n');
+  const out = [];
+  let i = 0;
+  let para = [];
+
+  const flush = () => {
+    if (para.length) { out.push(`<p>${mdInline(para.join(' '))}</p>`); para = []; }
+  };
+
+  while (i < lines.length) {
+    const line = lines[i];
+
+    if (/^```/.test(line)) {
+      flush();
+      const buf = [];
+      i++;
+      while (i < lines.length && !/^```/.test(lines[i])) { buf.push(lines[i]); i++; }
+      i++;
+      out.push(`<pre class="md-code">${esc(buf.join('\n'))}</pre>`);
+      continue;
+    }
+
+    if (!line.trim()) { flush(); i++; continue; }
+
+    const h = line.match(/^(#{1,4})\s+(.*)$/);
+    if (h) {
+      flush();
+      const level = Math.min(4, h[1].length);
+      out.push(`<h${level} class="md-h${level}">${mdInline(h[2])}</h${level}>`);
+      i++;
+      continue;
+    }
+
+    if (/^---+$/.test(line.trim())) { flush(); out.push('<hr class="md-hr" />'); i++; continue; }
+
+    if (/^\|/.test(line) && /^\|[\s:|-]+\|?\s*$/.test(lines[i + 1] || '')) {
+      flush();
+      const cells = l => l.trim().replace(/^\||\|$/g, '').split('|').map(c => c.trim());
+      const head = cells(line);
+      i += 2;
+      const rows = [];
+      while (i < lines.length && /^\|/.test(lines[i])) { rows.push(cells(lines[i])); i++; }
+      out.push(`<div class="md-table-wrap"><table class="md-table"><thead><tr>${head.map(c => `<th>${mdInline(c)}</th>`).join('')}</tr></thead><tbody>${rows.map(r => `<tr>${r.map(c => `<td>${mdInline(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`);
+      continue;
+    }
+
+    if (/^>\s?/.test(line)) {
+      flush();
+      const buf = [];
+      while (i < lines.length && /^>\s?/.test(lines[i])) { buf.push(lines[i].replace(/^>\s?/, '')); i++; }
+      out.push(`<blockquote class="md-quote">${mdInline(buf.join(' '))}</blockquote>`);
+      continue;
+    }
+
+    if (/^\s*[-*]\s+/.test(line)) {
+      flush();
+      const items = [];
+      while (i < lines.length && /^\s*[-*]\s+/.test(lines[i])) {
+        items.push(lines[i].replace(/^\s*[-*]\s+/, ''));
+        i++;
+      }
+      out.push(`<ul class="md-list">${items.map(t => `<li>${mdInline(t)}</li>`).join('')}</ul>`);
+      continue;
+    }
+
+    if (/^\s*\d+\.\s+/.test(line)) {
+      flush();
+      const items = [];
+      while (i < lines.length && /^\s*\d+\.\s+/.test(lines[i])) {
+        items.push(lines[i].replace(/^\s*\d+\.\s+/, ''));
+        i++;
+      }
+      out.push(`<ol class="md-list">${items.map(t => `<li>${mdInline(t)}</li>`).join('')}</ol>`);
+      continue;
+    }
+
+    if (/^\s*- \[[ x]\]/.test(line)) {
+      flush();
+      const items = [];
+      while (i < lines.length && /^\s*- \[[ x]\]/.test(lines[i])) {
+        const done = /\[x\]/i.test(lines[i]);
+        items.push({ done, text: lines[i].replace(/^\s*- \[[ x]\]\s*/i, '') });
+        i++;
+      }
+      out.push(`<ul class="md-list md-checks">${items.map(t => `<li>${t.done ? '✓' : '○'} ${mdInline(t.text)}</li>`).join('')}</ul>`);
+      continue;
+    }
+
+    para.push(line.trim());
+    i++;
+  }
+  flush();
+  return out.join('\n');
+}
+
+async function loadAgents() {
+  try {
+    const [a, r] = await Promise.all([api('/api/agents'), api('/api/runs')]);
+    AGENTS = a;
+    RUNS = r.runs || [];
+  } catch {
+    AGENTS = AGENTS || { agents: [], flows: [] };
+  }
+}
+
+function agentInputs(inputs, prefix) {
+  if (!inputs || !inputs.length) return '';
+  return inputs.map(f => {
+    const id = `${prefix}-${f.key}`;
+    if (f.type === 'select') {
+      return `<div class="field"><label>${esc(f.label)}</label>
+        <select name="${f.key}" id="${id}">${(f.options || []).map(o => `<option value="${esc(o.value)}">${esc(o.label)}</option>`).join('')}</select></div>`;
+    }
+    if (f.type === 'lead') {
+      const leads = S.leads.leads.filter(l => !['bought', 'lost'].includes(l.stage));
+      return `<div class="field"><label>${esc(f.label)}</label>
+        <select name="${f.key}" id="${id}">
+          ${leads.length ? leads.map(l => `<option value="${esc(l.id)}">${esc(l.name)} — ${esc(l.stageLabel)}</option>`).join('') : '<option value="">No active leads yet</option>'}
+        </select></div>`;
+    }
+    return `<div class="field"><label>${esc(f.label)}${f.required ? ' *' : ''}</label>
+      <input name="${f.key}" id="${id}" placeholder="${esc(f.placeholder || '')}" maxlength="200" /></div>`;
+  }).join('');
+}
+
+function viewAgents() {
+  const flows = (AGENTS && AGENTS.flows) || [];
+  const agentsList = (AGENTS && AGENTS.agents) || [];
+  const last = RUNS[0];
+
+  return `
+  <section class="hero card">
+    <div class="hero-main">
+      <p class="eyebrow">Execution layer</p>
+      <h2 class="hero-title">Six agents. Five flows. Real files at the end.</h2>
+      <p class="hero-sub">Each agent is a deterministic writer with one job. A flow chains them and hands the output forward — offer → content → launch → memo. Every run is saved, readable and downloadable.</p>
+      <div class="hero-actions">
+        <button class="btn btn-primary" data-act="run-flow" data-id="launch-kit">Build the launch kit</button>
+        <button class="btn" data-act="run-flow" data-id="daily">Write today’s brief</button>
+        <button class="btn btn-ghost" data-act="run-flow" data-id="win-back">Win-back shift</button>
+      </div>
+    </div>
+    <div class="hero-side">
+      <div class="mini-stats">
+        <div><b>${RUNS.length}</b><span>runs</span></div>
+        <div><b>${RUNS.reduce((t, r) => t + (r.files || []).length, 0)}</b><span>artifacts</span></div>
+        <div><b>${RUNS.reduce((t, r) => t + (r.durationMs || 0), 0) < 1000 ? '<1s' : Math.round(RUNS.reduce((t, r) => t + (r.durationMs || 0), 0) / 1000) + 's'}</b><span>total compute</span></div>
+      </div>
+      ${last ? `<button class="btn btn-sm btn-ghost" data-act="open-run" data-id="${last.id}">Last: ${esc(last.flowName)} →</button>` : ''}
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="card-head">
+      <div><p class="eyebrow">Flows</p><h2>Jobs, not prompts</h2>
+        <p class="sub">A flow runs agents in order and passes their artifacts down the line. Blocked steps stop and say why instead of inventing output.</p></div>
+    </div>
+    <div class="flow-grid">
+      ${flows.map(f => `
+        <div class="flow-card">
+          <div class="flow-top">
+            <h3>${esc(f.name)}</h3>
+            <span class="pill dim">${f.minutes} min</span>
+          </div>
+          <p class="flow-why">${esc(f.why)}</p>
+          <div class="flow-chain">${f.agents.map(a => `<span class="chain-chip">${esc(a)}</span>`).join('<i>→</i>')}</div>
+          <form data-form="flow" data-id="${f.id}">
+            ${agentInputs(f.inputs, 'flow-' + f.id)}
+            <button class="btn btn-sm ${f.id === 'launch-kit' ? 'btn-primary' : ''}" type="submit">Run ${esc(f.name.toLowerCase())}</button>
+          </form>
+        </div>`).join('')}
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="card-head">
+      <div><p class="eyebrow">The crew</p><h2>Single agents</h2>
+        <p class="sub">Use one when you only need one thing. Same artifacts, same honesty rules.</p></div>
+    </div>
+    <div class="agent-grid">
+      ${agentsList.map(a => `
+        <div class="agent-card">
+          <div class="agent-top">
+            <span class="agent-dot"></span>
+            <div><h4>${esc(a.name)}</h4><div class="tiny dim">${esc(a.tag)}</div></div>
+          </div>
+          <p class="agent-role">${esc(a.role)}</p>
+          <form data-form="agent" data-id="${a.id}">
+            ${agentInputs(a.inputs, 'agent-' + a.id)}
+            <button class="btn btn-sm" type="submit">Run</button>
+          </form>
+        </div>`).join('')}
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="card-head">
+      <div><p class="eyebrow plain">History</p><h2 style="font-size:18px">Every run, kept</h2>
+        <p class="sub">The last ${RUNS.length} runs. Each one holds its own artifacts, so an old kit still downloads.</p></div>
+      <button class="btn btn-sm btn-ghost" data-act="refresh-runs">Refresh</button>
+    </div>
+    ${RUNS.length ? `<div class="list">${RUNS.map(r => `
+      <div class="row run-row" data-act="open-run" data-id="${r.id}" role="button" tabindex="0">
+        <span class="run-status ${r.status}"></span>
+        <div class="grow">
+          <div class="r-title">${esc(r.flowName)} <span class="pill ${r.status === 'ok' ? 'green' : r.status === 'partial' ? 'gold' : 'red'}">${esc(r.status)}</span></div>
+          <div class="r-sub">${esc(r.summary)}</div>
+        </div>
+        <div class="r-meta">${(r.files || []).length} files · ${r.durationMs}ms · ${esc((r.startedAt || '').slice(11, 16))}</div>
+        <button class="btn btn-sm btn-ghost" data-act="open-run" data-id="${r.id}">Open</button>
+      </div>`).join('')}</div>` : '<div class="empty"><b>No runs yet</b>Start with “Write today’s brief” — it takes a second and shows you how the artifacts read.</div>'}
+  </section>`;
+}
+
+async function runFlow(id, input) {
+  toast('Running… agents are writing.');
+  try {
+    const data = await api(`/api/flows/${id}/run`, { input: input || {} });
+    apply(data);
+    await loadAgents();
+    render();
+    openRun(data.run.id);
+    toast(`${data.run.summary}`);
+  } catch (err) {
+    toast(err.message, true);
+  }
+}
+
+async function runAgent(id, input) {
+  toast('Running…');
+  try {
+    const data = await api(`/api/agents/${id}/run`, { input: input || {} });
+    apply(data);
+    await loadAgents();
+    render();
+    if (data.run.status === 'blocked') {
+      toast(data.run.blockers[0] || 'Blocked — the agent refused to invent output.', true);
+      openRun(data.run.id);
+      return;
+    }
+    openRun(data.run.id);
+    toast(data.run.summary);
+  } catch (err) {
+    toast(err.message, true);
+  }
+}
+
+async function openRun(runId) {
+  let run = RUNS.find(r => r.id === runId) || null;
+  if (!run) {
+    try {
+      const data = await api(`/api/runs/${runId}`);
+      run = data.run;
+    } catch (err) { toast(err.message, true); return; }
+  }
+  modalState = { type: 'run', id: runId };
+
+  const files = run.files || [];
+  modal(`
+    ${modalHead(run.flowName, `${run.summary} · ${run.durationMs}ms · ${run.today}`)}
+    <div class="tagline-row" style="margin-bottom:14px">
+      <span class="pill ${run.status === 'ok' ? 'green' : run.status === 'partial' ? 'gold' : 'red'}">${esc(run.status)}</span>
+      <span class="pill dim">${files.length} file${files.length === 1 ? '' : 's'}</span>
+      ${(run.adopt && (run.adopt.offers.length || run.adopt.content.length))
+        ? `<button class="btn btn-sm btn-primary" data-act="apply-run" data-id="${run.id}">Adopt into the app</button>` : ''}
+      <a class="btn btn-sm" href="/api/kit/${run.id}.zip" download>Download .zip</a>
+    </div>
+
+    <p class="eyebrow plain">Agent timeline</p>
+    <div class="timeline">
+      ${(run.steps || []).map((st, i) => `
+        <div class="tl-step ${st.status}">
+          <span class="tl-n">${i + 1}</span>
+          <div class="grow">
+            <div class="r-title">${esc(st.agentName)} <span class="pill ${st.status === 'ok' ? 'green' : st.status === 'partial' ? 'gold' : 'red'}">${esc(st.status)}</span>
+              <span class="r-meta">${st.ms}ms</span></div>
+            <div class="r-sub">${esc(st.summary || '')}</div>
+            ${(st.detail || []).length ? `<ul class="tl-detail">${st.detail.map(d => `<li><b>${esc(d.label)}</b> — ${esc(d.detail)}</li>`).join('')}</ul>` : ''}
+            ${(st.blockers || []).map(b => `<div class="callout red" style="margin-top:7px;font-size:11.5px">${esc(b)}</div>`).join('')}
+          </div>
+        </div>`).join('')}
+    </div>
+
+    <div class="hr"></div>
+    <p class="eyebrow plain">Artifacts — click to read</p>
+    <div class="artifact-grid">
+      ${files.map(f => `
+        <button class="artifact" data-act="open-artifact" data-run="${run.id}" data-name="${esc(f.name)}">
+          <span class="art-name">${esc(f.name)}</span>
+          <span class="art-title">${esc(f.title)}</span>
+          <span class="art-meta">${esc(f.agentName)} · ${(f.bytes / 1024).toFixed(1)}kB</span>
+        </button>`).join('')}
+    </div>
+    ${(run.notes || []).length ? `<div class="hr"></div>${run.notes.map(n => `<p class="note" style="margin:0 0 6px">${esc(n)}</p>`).join('')}` : ''}
+    <div class="modal-foot">
+      <button class="btn btn-ghost" data-act="close-modal">Close</button>
+    </div>`);
+}
+
+async function openArtifact(runId, name) {
+  try {
+    const data = await api(`/api/runs/${runId}/file?name=${encodeURIComponent(name)}`);
+    const run = RUNS.find(r => r.id === runId) || {};
+    modalState = { type: 'artifact', id: runId, name };
+    modal(`
+      <div class="modal-head">
+        <div><h2>${esc(name)}</h2><p>${esc(run.flowName || '')} · run ${esc(String(runId).slice(-6))}</p></div>
+        <button class="icon-btn" data-act="close-modal" aria-label="Close">✕</button>
+      </div>
+      <div class="tagline-row" style="margin-bottom:12px">
+        <button class="btn btn-sm" data-act="copy-md" data-run="${runId}" data-name="${esc(name)}">Copy markdown</button>
+        <button class="btn btn-sm" data-act="download-md" data-run="${runId}" data-name="${esc(name)}">Download .md</button>
+        <a class="btn btn-sm" href="/api/kit/${runId}.zip" download>Whole kit .zip</a>
+        <button class="btn btn-sm btn-ghost" data-act="open-run" data-id="${runId}">← Back to run</button>
+      </div>
+      <div class="md">${md(data.content)}</div>
+      <div class="modal-foot">
+        <button class="btn btn-ghost" data-act="close-modal">Close</button>
+      </div>`);
+    window.__lastArtifact = data.content;
+  } catch (err) {
+    toast(err.message, true);
+  }
+}
+
+function downloadText(filename, text) {
+  const blob = new Blob([text], { type: 'text/markdown;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 4000);
+}
+
 // ── modals ──────────────────────────────────────────────────────────────────
 function modal(html) {
   $('#modalRoot').innerHTML = `<div class="overlay" data-overlay><div class="modal" role="dialog" aria-modal="true">${html}</div></div>`;
@@ -1225,6 +1579,34 @@ document.addEventListener('click', async (e) => {
     if (act === 'sale-open') { openSale(el.dataset.offer, el.dataset.lead); return; }
     if (act === 'lead-open') { openLead(id || null); return; }
 
+    if (act === 'run-flow') {
+      const flow = ((AGENTS && AGENTS.flows) || []).find(f => f.id === id);
+      if (flow && (flow.inputs || []).some(i => i.required)) {
+        setTab('agents');
+        toast('This flow needs a few inputs — they are on the Agents tab.');
+        return;
+      }
+      await runFlow(id, {});
+      return;
+    }
+    if (act === 'open-run') { await openRun(id); return; }
+    if (act === 'open-artifact') { await openArtifact(el.dataset.run, el.dataset.name); return; }
+    if (act === 'refresh-runs') { await loadAgents(); render(); toast('Run history refreshed.'); return; }
+    if (act === 'apply-run') {
+      const data = await api('/api/apply', { runId: id });
+      apply(data);
+      toast(`Adopted: ${data.applied.offersChanged} offer(s), ${data.applied.contentChanged} hook(s). Your own words were left alone.`);
+      return;
+    }
+    if (act === 'copy-md') {
+      if (window.__lastArtifact) await copyText(window.__lastArtifact);
+      return;
+    }
+    if (act === 'download-md') {
+      if (window.__lastArtifact) downloadText(el.dataset.name || 'artifact.md', window.__lastArtifact);
+      return;
+    }
+
     if (act === 'copy-text') { await copyText(el.dataset.text || ''); return; }
     if (act === 'copy') {
       const target = document.getElementById(el.dataset.copyTarget);
@@ -1307,6 +1689,20 @@ document.addEventListener('submit', async (e) => {
       if (ok) openContent(form.dataset.id, true);
       return;
     }
+    if (kind === 'flow') {
+      const id = form.dataset.id;
+      const input = Object.fromEntries(fd.entries());
+      closeModal();
+      await runFlow(id, input);
+      return;
+    }
+    if (kind === 'agent') {
+      const id = form.dataset.id;
+      const input = Object.fromEntries(fd.entries());
+      closeModal();
+      await runAgent(id, input);
+      return;
+    }
     if (kind === 'checkin-note') {
       await mutate('/api/checkin', { id: 'note', done: true, note: body.note }, 'Journal saved.');
       return;
@@ -1318,6 +1714,9 @@ document.addEventListener('submit', async (e) => {
 
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeModal();
+  if (e.key === 'Enter' && e.target.classList && e.target.classList.contains('run-row')) {
+    e.target.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+  }
 });
 
 // ── boot ────────────────────────────────────────────────────────────────────
@@ -1326,6 +1725,7 @@ document.addEventListener('keydown', (e) => {
     const data = await api('/api/state');
     S = data.state;
     initCalc();
+    await loadAgents();
     render();
   } catch (err) {
     $('#view').innerHTML = `<div class="card"><h2>Cannot reach the API</h2>

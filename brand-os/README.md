@@ -10,7 +10,7 @@ node brand-os/server.js        # → http://localhost:3200
 
 Zero dependencies. No build step. No database. Your state lives in
 `brand-os/data/state.json`, which is gitignored — the app is the product, the file
-is yours.
+is yours. Runs and their artifacts live in `brand-os/data/runs/` (also gitignored).
 
 ---
 
@@ -34,6 +34,69 @@ does the thinking and the record-keeping.
 
 ---
 
+## The execution layer — six agents, five flows
+
+The screens tell you what to do. The **Agents** tab does the writing.
+
+| Agent | Job | Refuses to |
+|---|---|---|
+| **Chief of Staff** | Today's brief: one focus, ordered moves, the script, the money, the conversations | pad a quiet day with busywork |
+| **Offer Architect** | Skill + audience → three named, priced offers + the sentence that is the business | generate an offer with no skill given |
+| **Content Director** | 30 pieces: hooks, scripts, captions, pillar mix, CTA rotation | invent proof beats (they stay `[bracketed]`) |
+| **DM Closer** | The next message for a lead, plus the two moves after it | write to a lead that does not exist |
+| **Growth Analyst** | The memo: the leak, three prescriptions, what it will not claim | diagnose without data |
+| **Launch Producer** | A 7-day launch: Reels, Stories, DMs, emails, targets | fake scarcity or a deadline you do not mean |
+
+A **flow** chains agents and passes artifacts down the line:
+
+```
+daily          Chief of Staff                         → brief.md
+offer-build    Offer Architect → Content Director     → offer.md, calendar.md, scripts.md, captions.md
+content-sprint Content Director                       → calendar.md, scripts.md, captions.md
+launch-kit     CoS → Architect → Content → Launch → Analyst
+                                                      → brief, offer, calendar, scripts, captions,
+                                                        launch, emails, memo   (8 files, ~30ms)
+win-back       DM Closer (everyone due)               → win-back.md
+```
+
+Every run is **persisted and downloadable**:
+
+- `data/runs/<runId>/*.md` — the artifacts themselves
+- `data/runs/index.json` — the last 40 runs with steps, timings, status and blockers
+- `GET /api/kit/<runId>.zip` — the run packed as a real `.zip` (hand-rolled writer,
+  deflate via zlib, CRC-32 by hand — no dependencies)
+
+**Adopt into the app** is the only write-back. It fills offer names/prices/promises
+and *empty* content hooks, and it never overwrites words you have edited yourself.
+
+### Blocked is a feature
+
+Agents stop instead of guessing:
+
+```json
+{ "status": "blocked", "blockers": ["Tell the architect what you can actually do — a skill, not a niche label."] }
+```
+
+`partial` means it ran but is telling you the truth about thin data — the Growth
+Analyst on a fresh account writes an "insufficient data" memo instead of inventing
+a diagnosis. `blocked` and `partial` propagate into the flow status, so a launch kit
+built with no funnel numbers says `partial` and explains which agent hedged.
+
+### Where the words come from
+
+The agents are **deterministic writers, not an LLM**. Hooks come from template pools
+fanned out across the plan's five pillars; CTAs rotate so no two consecutive posts
+ask for the same thing; launch days follow the plan's own arc (name the enemy →
+mechanism → proof → open → objections → buyers → close). That is why the same input
+gives the same kit, why it runs in milliseconds and offline, and why you can read
+every rule that produced a sentence.
+
+If you want an LLM in the loop later, the seam is `lib/agents.js`: each agent is
+`run(state, today, input, ctx) → { status, steps, artifacts, summary, blockers }`.
+Swap the body, keep the contract, and flows, history, zip and adoption keep working.
+
+---
+
 ## The seven screens
 
 | Tab | What it holds | The plan section it comes from |
@@ -44,6 +107,7 @@ does the thinking and the record-keeping.
 | **DMs & leads** | Reply → deciding → selling → link → bought, 6 DM scripts, 7 emails | 4️⃣ Sales Funnel |
 | **Money & funnel** | MTD / pace / projection, path-to-$10k maths, calculator, funnel diagnosis, ledger | Honest math + conversion targets |
 | **90-day plan** | Phase tasks, milestone outcomes, the eight things that kill it, setup | 90-day execution + "What not to do" |
+| **Agents** | Six agents, five flows, run history, artifact reader, zip kits | All of it, as execution |
 | **Setup** | Goal, Day 1, handle, checkout links (fills every script and caption) | — |
 
 ---
@@ -92,6 +156,8 @@ This app is built to keep you honest, which means it refuses a few things:
 - **No sending.** Moving a DM card, copying a script and marking a piece posted are
   local writes. The app has no mail, Instagram or payment credentials, and no code
   path that could spend money.
+- **Agents can refuse.** A blocked run writes nothing and returns a reason; there is
+  no retry-with-made-up-inputs path.
 
 ---
 
@@ -140,6 +206,16 @@ POST /api/funnel           { views, comments, dmReplies, clicks, purchases, note
 POST /api/plan             { id, done }
 POST /api/settings         { goal, startDate, name, handle, mapLink, tripwireLink, coreLink, reviewLink }
 POST /api/reset            { "confirm": "reset" }
+
+GET  /api/agents                                  the crew + flows
+GET  /api/runs                                    last 40 runs
+GET  /api/runs/:id                                one run (steps, files, adopt payload)
+GET  /api/runs/:id/file?name=offer.md             one artifact
+GET  /api/kit/:id.zip                             the run as a downloadable zip
+
+POST /api/agents/:id/run   { input }              run one agent (persisted)
+POST /api/flows/:id/run    { input }              run a flow (persisted)
+POST /api/apply            { runId }              adopt offers/hooks into your state
 ```
 
 All POSTs return `{ ok: true, state }` with the freshly computed view, so a client
@@ -155,18 +231,25 @@ brand-os/
 ├── lib/
 │   ├── playbook.js       # the plan encoded as data: offers, calendar, scripts, plan
 │   ├── engine.js         # pure orchestrator: state + today → every view and score
+│   ├── agents.js         # six agents: deterministic writers, one artifact contract
+│   ├── orchestrator.js   # flows: agents chained, artifacts handed forward
+│   ├── jobs.js           # run history + artifact storage (allowlisted reads)
+│   ├── kit.js            # zero-dependency zip writer for download kits
 │   └── store.js          # atomic JSON persistence + schema normalisation
 ├── public/               # single-page console (no framework, no build)
 │   ├── index.html
-│   ├── app.js
+│   ├── app.js            # views + a small markdown renderer for artifacts
 │   └── style.css
-└── test/engine.test.js   # 14 tests over the rules (node --test)
+└── test/
+    ├── engine.test.js    # 14 tests over the daily rules
+    └── agents.test.js    # 16 tests over the crew, flows, zip and job history
 ```
 
 Run the tests:
 
 ```bash
-node --test brand-os/test/engine.test.js
+node --test brand-os/test/engine.test.js brand-os/test/agents.test.js
+# 30 tests, ~150ms
 ```
 
 The engine is pure: `today` is always passed in, never read from the clock inside a
