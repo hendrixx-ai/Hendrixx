@@ -235,6 +235,28 @@ The repo stays the database: the console reads and writes the same markdown Clau
 
 ---
 
+## ◆ Buyable Brand OS (the plan, orchestrated)
+
+The `BUYABLE-BRAND-BUSINESS-PLAN.md` business also ships as working software — a second
+zero-dependency app that turns the offer ladder, 30-day content engine, DM pipeline,
+funnel maths and 90-day plan into a daily runbook:
+
+```bash
+node brand-os/server.js     # → http://localhost:3200
+```
+
+- **Today** — what matters now: due leads, today's piece + script, the daily six, month pace
+- **Offers** — Free → $27 → $147 → $297 with a transparent best-seller score
+- **Content** — the 30-day calendar, per-piece scripts, pillars, keywords, bios, 20 hooks
+- **DMs & leads** — reply → deciding → selling → link → bought, with all 6 scripts
+- **Money & funnel** — pace vs $10k, path maths, calculator, leak diagnosis, ledger
+- **90-day plan** — phase tasks, milestones, and the eight things that kill the brand
+
+State is local (`brand-os/data/state.json`, gitignored). Nothing is sent or spent from
+the app. See [brand-os/README.md](brand-os/README.md).
+
+---
+
 ## 🔧 For Developers
 
 This repo contains the full AI Employee system as a structured skill for Claude Code. The `CLAUDE.md` file is the core — it defines the agent's persona, rules, and complete workflow instructions.

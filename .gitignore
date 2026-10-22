@@ -34,3 +34,5 @@ __pycache__/
 *.egg-info/
 .venv/
 venv/
+# Buyable Brand OS (local state)
+brand-os/data/
