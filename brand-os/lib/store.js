@@ -19,6 +19,10 @@ const DATA_DIR = process.env.BRAND_OS_DATA_DIR
   : path.join(__dirname, '..', 'data');
 const STATE_FILE = path.join(DATA_DIR, 'state.json');
 
+function ensureDir() {
+  fs.mkdirSync(DATA_DIR, { recursive: true });
+}
+
 function load(today) {
   ensureDir();
   let raw = null;

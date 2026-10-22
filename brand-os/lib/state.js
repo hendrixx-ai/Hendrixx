@@ -40,10 +40,6 @@ function freshState(today) {
   };
 }
 
-function ensureDir() {
-  fs.mkdirSync(DATA_DIR, { recursive: true });
-}
-
 function normalize(raw, today) {
   const base = freshState(today);
   if (!raw || typeof raw !== 'object') return base;

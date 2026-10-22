@@ -272,7 +272,7 @@
     try {
       const out = router('GET', href, null);
       if (out.blob) downloadBlob(out.blob, out.filename || 'download');
-      else if (raw => raw) window.dispatchEvent(new CustomEvent('bb:error', { detail: (out.body || {}).error || 'Download failed' }));
+      else window.dispatchEvent(new CustomEvent('bb:error', { detail: (out.body || {}).error || 'Download failed' }));
     } catch (err) {
       window.dispatchEvent(new CustomEvent('bb:error', { detail: err.message }));
     }
