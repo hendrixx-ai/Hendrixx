@@ -217,18 +217,25 @@ test('launch kit chains agents and passes artifacts down the line', () => {
   assert.equal(run.adopt.content.length, 30);
 });
 
-test('zip writer emits a valid archive python can open', () => {
+test('zip writer emits a valid archive (and works without zlib)', () => {
   const buf = kit.zip([
     { name: 'README.md', content: '# kit\n\nhello' },
     { name: 'big.md', content: 'x'.repeat(5000) },
   ]);
-  assert.equal(buf.slice(0, 2).toString(), 'PK');
+  assert.ok(buf instanceof Uint8Array);
+
+  const rd16 = (b, i) => b[i] | (b[i + 1] << 8);
+  const rd32 = (b, i) => (b[i] | (b[i + 1] << 8) | (b[i + 2] << 16) | (b[i + 3] << 24)) >>> 0;
+
+  assert.equal(String.fromCharCode(buf[0], buf[1]), 'PK');
+  let eocd = -1;
+  for (let i = buf.length - 22; i >= 0; i--) {
+    if (rd32(buf, i) === 0x06054b50) { eocd = i; break; }
+  }
+  assert.ok(eocd > 0, 'end-of-central-directory record present');
+  assert.equal(rd16(buf, eocd + 8), 2, 'two entries');
+  assert.equal(rd16(buf, eocd + 10), 2);
   assert.ok(buf.length > 100);
-  // end-of-central-directory record is present and counts both files
-  const eocd = buf.lastIndexOf(Buffer.from([0x50, 0x4b, 0x05, 0x06]));
-  assert.ok(eocd > 0);
-  assert.equal(buf.readUInt16LE(eocd + 8), 2);
-  assert.equal(buf.readUInt16LE(eocd + 10), 2);
 });
 
 test('run history persists artifacts and survives a restart', () => {

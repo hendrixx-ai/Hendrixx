@@ -7,7 +7,10 @@
 // ─────────────────────────────────────────────────────────────────────────────
 'use strict';
 
-const zlib = require('zlib');
+// zlib exists in Node; in the browser bundle there is no compressor, so the
+// writer falls back to STORE (method 0) — still a valid zip, just bigger.
+let zlib = null;
+try { zlib = require('zlib'); } catch { zlib = null; }
 
 // ── CRC-32 ──────────────────────────────────────────────────────────────────
 const CRC_TABLE = (() => {
@@ -33,9 +36,41 @@ function dosTime(date = new Date()) {
   return { time, day };
 }
 
+// ── bytes (works in Node and the browser — no Buffer dependency) ────────────
+// TextEncoder is standard in browsers and Node 11+. Some sandboxes (and older
+// jsdom) lack it, so keep a correct UTF-8 fallback rather than assume.
+const TE = typeof TextEncoder !== 'undefined' ? new TextEncoder() : null;
+function utf8(str) {
+  if (TE) return TE.encode(str);
+  const out = [];
+  for (const ch of String(str)) {
+    let cp = ch.codePointAt(0);
+    if (cp < 0x80) out.push(cp);
+    else if (cp < 0x800) out.push(0xc0 | (cp >> 6), 0x80 | (cp & 0x3f));
+    else if (cp < 0x10000) out.push(0xe0 | (cp >> 12), 0x80 | ((cp >> 6) & 0x3f), 0x80 | (cp & 0x3f));
+    else out.push(0xf0 | (cp >> 18), 0x80 | ((cp >> 12) & 0x3f), 0x80 | ((cp >> 6) & 0x3f), 0x80 | (cp & 0x3f));
+  }
+  return Uint8Array.from(out);
+}
+const toBytes = v => (typeof v === 'string' ? utf8(v) : new Uint8Array(v));
+
+function u16(n) { const b = new Uint8Array(2); b[0] = n & 0xff; b[1] = (n >>> 8) & 0xff; return b; }
+function u32(n) {
+  const b = new Uint8Array(4);
+  b[0] = n & 0xff; b[1] = (n >>> 8) & 0xff; b[2] = (n >>> 16) & 0xff; b[3] = (n >>> 24) & 0xff;
+  return b;
+}
+function concat(chunks) {
+  const total = chunks.reduce((t, c) => t + c.length, 0);
+  const out = new Uint8Array(total);
+  let at = 0;
+  for (const c of chunks) { out.set(c, at); at += c.length; }
+  return out;
+}
+
 /**
- * files: [{ name, content: string|Buffer }]
- * → Buffer (a valid .zip, deflate-compressed)
+ * files: [{ name, content: string|Uint8Array }]
+ * → Uint8Array (a valid .zip; deflate in Node, STORE in the browser)
  */
 function zip(files, date = new Date()) {
   const { time, day } = dosTime(date);
@@ -44,64 +79,38 @@ function zip(files, date = new Date()) {
   let offset = 0;
 
   for (const file of files) {
-    const nameBuf = Buffer.from(file.name, 'utf8');
-    const data = Buffer.isBuffer(file.content) ? file.content : Buffer.from(file.content, 'utf8');
-    const deflated = zlib.deflateRawSync(data, { level: 9 });
-    const useDeflate = deflated.length < data.length;
-    const body = useDeflate ? deflated : data;
+    const nameBuf = utf8(file.name);
+    const data = toBytes(file.content);
+    const deflated = zlib ? zlib.deflateRawSync(Buffer.from(data), { level: 9 }) : null;
+    const useDeflate = Boolean(deflated) && deflated.length < data.length;
+    const body = useDeflate ? new Uint8Array(deflated) : data;
     const method = useDeflate ? 8 : 0;
     const crc = crc32(data);
 
-    const local = Buffer.alloc(30);
-    local.writeUInt32LE(0x04034b50, 0);
-    local.writeUInt16LE(20, 4);          // version needed
-    local.writeUInt16LE(0x0800, 6);      // UTF-8 names
-    local.writeUInt16LE(method, 8);
-    local.writeUInt16LE(time, 10);
-    local.writeUInt16LE(day, 12);
-    local.writeUInt32LE(crc, 14);
-    local.writeUInt32LE(body.length, 18);
-    local.writeUInt32LE(data.length, 22);
-    local.writeUInt16LE(nameBuf.length, 26);
-    local.writeUInt16LE(0, 28);
+    const local = concat([
+      u32(0x04034b50), u16(20), u16(0x0800), u16(method), u16(time), u16(day),
+      u32(crc), u32(body.length), u32(data.length), u16(nameBuf.length), u16(0),
+    ]);
 
     locals.push(local, nameBuf, body);
 
-    const central = Buffer.alloc(46);
-    central.writeUInt32LE(0x02014b50, 0);
-    central.writeUInt16LE(20, 4);        // made by
-    central.writeUInt16LE(20, 6);        // needed
-    central.writeUInt16LE(0x0800, 8);
-    central.writeUInt16LE(method, 10);
-    central.writeUInt16LE(time, 12);
-    central.writeUInt16LE(day, 14);
-    central.writeUInt32LE(crc, 16);
-    central.writeUInt32LE(body.length, 20);
-    central.writeUInt32LE(data.length, 24);
-    central.writeUInt16LE(nameBuf.length, 28);
-    central.writeUInt16LE(0, 30);        // extra
-    central.writeUInt16LE(0, 32);        // comment
-    central.writeUInt16LE(0, 34);        // disk
-    central.writeUInt16LE(0, 36);        // internal attrs
-    central.writeUInt32LE(0, 38);        // external attrs
-    central.writeUInt32LE(offset, 42);
+    const central = concat([
+      u32(0x02014b50), u16(20), u16(20), u16(0x0800), u16(method), u16(time), u16(day),
+      u32(crc), u32(body.length), u32(data.length), u16(nameBuf.length),
+      u16(0), u16(0), u16(0), u16(0), u32(0), u32(offset),
+    ]);
 
     centrals.push(central, nameBuf);
     offset += local.length + nameBuf.length + body.length;
   }
 
-  const centralBuf = Buffer.concat(centrals);
-  const end = Buffer.alloc(22);
-  end.writeUInt32LE(0x06054b50, 0);
-  end.writeUInt16LE(0, 4);
-  end.writeUInt16LE(0, 6);
-  end.writeUInt16LE(files.length, 8);
-  end.writeUInt16LE(files.length, 10);
-  end.writeUInt32LE(centralBuf.length, 12);
-  end.writeUInt32LE(offset, 16);
-  end.writeUInt16LE(0, 20);
+  const centralBuf = concat(centrals);
+  const end = concat([
+    u32(0x06054b50), u16(0), u16(0), u16(files.length), u16(files.length),
+    u32(centralBuf.length), u32(offset), u16(0),
+  ]);
 
-  return Buffer.concat([...locals, centralBuf, end]);
+  return concat([...locals, centralBuf, end]);
 }
 
 // ── the kit itself ──────────────────────────────────────────────────────────
