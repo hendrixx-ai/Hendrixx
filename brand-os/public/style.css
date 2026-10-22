@@ -671,3 +671,8 @@ input[type="date"] { color-scheme: dark; }
   .rail { width: 84%; }
   .modal { padding: 18px; }
 }
+
+/* ── server-rendered shell (visible before JS boots) ───────────────────────── */
+.shell { display: flex; flex-direction: column; gap: 18px; }
+.shell .check { color: transparent; }
+.shell .check.on { color: #08120c; }

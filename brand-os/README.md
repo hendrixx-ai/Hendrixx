@@ -34,6 +34,23 @@ does the thinking and the record-keeping.
 
 ---
 
+## It cannot show a blank page
+
+Two defences, because a preview pane is a hostile environment (sandboxed iframe,
+blocked `localStorage`, JS disabled, proxy flakiness):
+
+1. **Server-rendered shell.** `/` ships a real, data-backed summary — day, phase,
+   today's focus, the daily six, the runbook — rendered in Node on every request.
+   `app.js` replaces it on boot. With JS off, or broken, you still see live data.
+2. **Storage that never throws.** `localStorage` throws a `SecurityError` in
+   sandboxed frames and private mode, and one unguarded read at module scope is
+   enough to kill the whole script. All reads/writes go through a wrapper that
+   falls back to memory.
+
+Verified by running `app.js` against the live server in three modes: normal,
+`localStorage` throwing, and `fetch` blocked (which keeps the shell and adds an
+explicit error — never a white screen).
+
 ## The execution layer — six agents, five flows
 
 The screens tell you what to do. The **Agents** tab does the writing.

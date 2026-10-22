@@ -514,6 +514,80 @@ const MIME = {
   '.webmanifest': 'application/manifest+json',
 };
 
+// ── server-rendered shell ───────────────────────────────────────────────────
+// The console is client-rendered. If the client script dies (sandboxed iframe,
+// blocked localStorage, JS disabled) an empty <main> looks like a broken app.
+// So "/" ships a real, data-backed summary that the client replaces on boot.
+function escHtml(v) {
+  return String(v == null ? '' : v)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+
+function renderShell() {
+  try {
+    const today = engine.todayStr();
+    const state = store.load(today);
+    const v = engine.compute(state, today);
+    const moneyFmt = n => '$' + Math.round(Number(n) || 0).toLocaleString('en-US');
+    const check = v.checklist.items.map(i =>
+      `<div class="row"><span class="check ${i.done ? 'on' : ''}" aria-hidden="true">${i.done ? '✓' : ''}</span>
+        <div class="grow"><div class="r-title">${escHtml(i.label)}</div><div class="r-sub">${escHtml(i.hint)}</div></div>
+      </div>`).join('');
+    const moves = v.runbook.actions.slice(0, 5).map((a, i) =>
+      `<div class="action-row ${i === 0 ? 'first' : ''}">
+        <span class="priority">${i + 1}</span>
+        <div class="grow"><div class="r-title">${escHtml(a.title)}</div>
+          <div class="r-sub">${escHtml(a.detail)}</div>
+          <div class="r-sub" style="color:var(--dim2)">${escHtml(a.why)}</div></div>
+        <div class="r-meta">${a.minutes} min</div>
+      </div>`).join('');
+
+    return `<div id="shell" class="shell">
+      <section class="hero card">
+        <div class="hero-main">
+          <p class="eyebrow">Day ${v.dayNumber} of 90 · ${escHtml(v.prettyToday)} · ${escHtml(v.phaseLabel)}</p>
+          <h2 class="hero-title">${escHtml(v.runbook.headline)}</h2>
+          <p class="hero-sub">${escHtml(v.runbook.summary)}</p>
+          ${v.runbook.focus ? `<div class="hero-focus"><span class="tag">First move · ${v.runbook.focus.minutes} min</span>
+            <p>${escHtml(v.runbook.focus.detail)}</p>
+            <p class="why">${escHtml(v.runbook.focus.why)}</p></div>` : ''}
+          <p class="tiny dim" style="margin:0">Loading the interactive console…</p>
+        </div>
+        <div class="hero-side">
+          <div class="ring" style="background:conic-gradient(var(--gold) ${Math.round(v.checklist.progress * 3.6)}deg,#23232b 0)">
+            <div class="ring-in"><b>${v.checklist.done}/${v.checklist.total}</b><span>done today</span></div>
+          </div>
+          <div class="mini-stats">
+            <div><b>${moneyFmt(v.money.mtd)}</b><span>this month</span></div>
+            <div><b>${v.money.units30}</b><span>units / 30d</span></div>
+            <div><b>${v.streak}</b><span>day streak</span></div>
+          </div>
+        </div>
+      </section>
+      <div class="grid-2">
+        <section class="card">
+          <div class="card-head"><div><p class="eyebrow plain">The daily six</p>
+            <h2 style="font-size:17px">Today’s checklist</h2></div>
+            <span class="pill gold">${v.checklist.done}/${v.checklist.total}</span></div>
+          <div class="list">${check}</div>
+        </section>
+        <section class="card">
+          <div class="card-head"><div><p class="eyebrow plain">Runbook</p>
+            <h2 style="font-size:17px">Everything, in order</h2></div>
+            <span class="pill dim">${v.runbook.actions.length} moves</span></div>
+          ${moves}
+        </section>
+      </div>
+      <p class="note">This summary is rendered by the server on every load, so it is live data — not a placeholder. The interactive tabs are enhanced by <code>app.js</code>.</p>
+    </div>`;
+  } catch (err) {
+    return `<div id="shell" class="card"><h2>Buyable Brand OS</h2>
+      <p class="muted small">The server is running but could not read its state file: ${escHtml(err.message)}</p>
+      <p class="small dim">Check that <code>brand-os/data/</code> is writable, then reload.</p></div>`;
+  }
+}
+
 function serveStatic(req, res, url) {
   let p;
   try { p = decodeURIComponent(url.pathname); } catch { p = '/'; }
@@ -523,17 +597,21 @@ function serveStatic(req, res, url) {
     res.writeHead(403);
     return res.end('Forbidden');
   }
+  const sendIndex = () => {
+    fs.readFile(path.join(PUBLIC, 'index.html'), 'utf8', (e2, idx) => {
+      if (e2) { res.writeHead(404); return res.end('Not found'); }
+      const html = String(idx).replace('<!--SHELL-->', renderShell());
+      res.writeHead(200, { 'Content-Type': MIME['.html'], 'Cache-Control': 'no-cache' });
+      res.end(html);
+    });
+  };
+
   fs.readFile(target, (err, buf) => {
-    if (err) {
-      fs.readFile(path.join(PUBLIC, 'index.html'), (e2, idx) => {
-        if (e2) { res.writeHead(404); return res.end('Not found'); }
-        res.writeHead(200, { 'Content-Type': MIME['.html'], 'Cache-Control': 'no-cache' });
-        res.end(idx);
-      });
-      return;
-    }
+    if (err) { sendIndex(); return; }
+    const ext = path.extname(target).toLowerCase();
+    if (ext === '.html') { sendIndex(); return; }
     res.writeHead(200, {
-      'Content-Type': MIME[path.extname(target).toLowerCase()] || 'application/octet-stream',
+      'Content-Type': MIME[ext] || 'application/octet-stream',
       'Cache-Control': 'no-cache',
     });
     res.end(buf);

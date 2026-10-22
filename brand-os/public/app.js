@@ -11,7 +11,21 @@ const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
 
 let S = null;
-let tab = localStorage.getItem('bb.tab') || 'today';
+// localStorage can throw in sandboxed iframes (preview panes) and private mode.
+// Never let that kill the app: fall back to an in-memory map.
+const mem = new Map();
+const storage = {
+  get(key) {
+    try { const v = window.localStorage.getItem(key); return v == null && mem.has(key) ? mem.get(key) : v; }
+    catch { return mem.has(key) ? mem.get(key) : null; }
+  },
+  set(key, value) {
+    mem.set(key, value);
+    try { window.localStorage.setItem(key, value); } catch { /* memory only */ }
+  },
+};
+
+let tab = storage.get('bb.tab') || 'today';
 let calc = null;
 let AGENTS = null;
 let RUNS = [];
@@ -126,14 +140,15 @@ function offerPrice(id, fallback) {
   return Number(o && o.price) || fallback;
 }
 function initCalc() {
-  const stored = JSON.parse(localStorage.getItem('bb.calc') || 'null');
+  let stored = null;
+  try { stored = JSON.parse(storage.get('bb.calc') || 'null'); } catch { stored = null; }
   calc = stored || {
     t20: 20, tP: offerPrice('weekend', 27),
     c40: 40, cP: offerPrice('brand', 147),
     u8: 8, uP: offerPrice('review', 297),
   };
 }
-function calcSave() { localStorage.setItem('bb.calc', JSON.stringify(calc)); }
+function calcSave() { storage.set('bb.calc', JSON.stringify(calc)); }
 function calcRevenue() {
   return (Number(calc.t20) || 0) * (Number(calc.tP) || 0) +
     (Number(calc.c40) || 0) * (Number(calc.cP) || 0) +
@@ -165,12 +180,14 @@ function render() {
     ${g.prorated ? `<p class="rail-note" style="margin:6px 0 0">First month prorated from Day 1. Run-rate target is ${money(g.goalFull)}/mo.</p>` : ''}`;
 
   const views = { today: viewToday, offers: viewOffers, content: viewContent, dms: viewDms, money: viewMoney, plan: viewPlan, agents: viewAgents };
+  const shell = document.getElementById('shell');
+  if (shell) shell.remove();
   $('#view').innerHTML = (views[tab] || viewToday)();
 }
 
 function setTab(next) {
   tab = next;
-  localStorage.setItem('bb.tab', tab);
+  storage.set('bb.tab', tab);
   document.body.classList.remove('rail-open');
   $('#rail').classList.remove('open');
   render();
@@ -1725,11 +1742,17 @@ document.addEventListener('keydown', (e) => {
     const data = await api('/api/state');
     S = data.state;
     initCalc();
-    await loadAgents();
+    try { await loadAgents(); } catch { /* agents are optional for first paint */ }
     render();
   } catch (err) {
-    $('#view').innerHTML = `<div class="card"><h2>Cannot reach the API</h2>
-      <p class="muted small">${esc(err.message)}</p>
-      <p class="small dim">Start it with <code>node brand-os/server.js</code> and reload.</p></div>`;
+    const shell = document.getElementById('shell');
+    if (shell) {
+      shell.insertAdjacentHTML('beforebegin',
+        `<div class="callout red">The console could not load its data (${esc(err.message)}). The summary above is rendered by the server and is still accurate.</div>`);
+    } else {
+      $('#view').innerHTML = `<div class="card"><h2>Cannot reach the API</h2>
+        <p class="muted small">${esc(err.message)}</p>
+        <p class="small dim">Start it with <code>node brand-os/server.js</code> and reload.</p></div>`;
+    }
   }
 })();
