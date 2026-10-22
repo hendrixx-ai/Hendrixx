@@ -354,7 +354,7 @@ const LEAD_STAGE_KEYS = LEAD_STAGES.map(s => s.key);
 
 function leadView(state, today) {
   const leads = (state.leads || []).map(l => {
-    const due = l.nextActionAt && l.nextActionAt <= today;
+    const due = Boolean(l.nextActionAt && l.nextActionAt <= today);
     return {
       ...l,
       due,

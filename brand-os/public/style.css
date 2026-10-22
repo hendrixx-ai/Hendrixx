@@ -297,6 +297,29 @@ code, .mono { font-family: var(--mono); font-size: 0.9em; }
 .grid-4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
 .span-2 { grid-column: span 2; }
 
+/* ── first-run setup ───────────────────────────────────────────────────────── */
+.setup-card {
+  border-color: rgba(233, 185, 95, 0.22);
+  background:
+    radial-gradient(620px 200px at 88% -40%, rgba(233, 185, 95, 0.1), transparent 70%),
+    linear-gradient(180deg, #15151b, #111116);
+}
+.steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.step {
+  border: 1px solid var(--line); border-radius: 12px; padding: 13px;
+  background: #121217; display: flex; flex-direction: column; gap: 7px; align-items: flex-start;
+}
+.step b { font-size: 13px; line-height: 1.35; }
+.step p { margin: 0; font-size: 11.5px; line-height: 1.5; color: var(--dim2); flex: 1; }
+.step .btn { margin-top: 2px; }
+.step.done { border-color: rgba(111, 207, 151, 0.26); background: rgba(111, 207, 151, 0.045); }
+.step-top { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+.step-n {
+  width: 20px; height: 20px; border-radius: 6px; display: grid; place-items: center;
+  font-family: var(--mono); font-size: 10.5px; color: var(--dim); border: 1px solid var(--line2);
+}
+.step.done .step-n { color: var(--green); border-color: rgba(111, 207, 151, 0.4); }
+
 /* ── lists ─────────────────────────────────────────────────────────────────── */
 .list { display: flex; flex-direction: column; }
 .row {
@@ -530,7 +553,7 @@ input[type="date"] { color-scheme: dark; }
   .kanban { grid-template-columns: repeat(6, 210px); }
 }
 @media (max-width: 720px) {
-  .grid-2, .grid-3, .grid-4, .stat-grid { grid-template-columns: minmax(0, 1fr); }
+  .grid-2, .grid-3, .grid-4, .stat-grid, .steps { grid-template-columns: minmax(0, 1fr); }
   .hero { padding: 18px; }
   .hero-title { font-size: 24px; }
   .card { padding: 16px; }

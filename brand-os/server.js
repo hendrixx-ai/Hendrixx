@@ -104,8 +104,14 @@ function addOffer(state, body) {
     return { ok: true, id: existing.id };
   }
 
+  let id = body.id ? slug(body.id) : slug(name);
+  if (state.offers.some(o => o.id === id)) {
+    let n = 2;
+    while (state.offers.some(o => o.id === `${id}-${n}`)) n++;
+    id = `${id}-${n}`;
+  }
   state.offers.push({
-    id: body.id ? slug(body.id) : slug(name),
+    id,
     name,
     price,
     layer: str(body.layer, 20) || 'core',
@@ -173,6 +179,7 @@ function upsertLead(state, body, today) {
     if (body.note != null) lead.note = str(body.note, 500);
     if (body.stage) lead.stage = stage;
     if (body.nextActionAt !== undefined) lead.nextActionAt = nextActionAt;
+    if (['bought', 'lost'].includes(lead.stage)) lead.nextActionAt = null;
     lead.lastTouch = today;
     return { ok: true, id: lead.id };
   }
@@ -185,7 +192,7 @@ function upsertLead(state, body, today) {
     source: str(body.source, 60) || 'Comment keyword',
     stage,
     note: str(body.note, 500),
-    nextActionAt,
+    nextActionAt: ['bought', 'lost'].includes(stage) ? null : nextActionAt,
     createdAt: today,
     lastTouch: today,
   };

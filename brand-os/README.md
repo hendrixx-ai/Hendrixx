@@ -38,7 +38,7 @@ does the thinking and the record-keeping.
 
 | Tab | What it holds | The plan section it comes from |
 |---|---|---|
-| **Today** | The runbook, today's piece, the daily six, today's script, month pace | Daily schedule + 90-day execution |
+| **Today** | First-run setup, the runbook, today's piece, the daily six, today's script, month pace | Daily schedule + 90-day execution |
 | **Offers** | Free → $27 → $147 → $297 → $497, best-seller leaderboard, pricing, guarantee | 1️⃣ Product Discovery + 2️⃣ Offer Creation |
 | **Content** | 30-day calendar, per-piece scripts, pillars, cadence, keywords, bios, 20 hooks | 3️⃣ Content System |
 | **DMs & leads** | Reply → deciding → selling → link → bought, 6 DM scripts, 7 emails | 4️⃣ Sales Funnel |

@@ -176,6 +176,13 @@ function setTab(next) {
 function viewToday() {
   const r = S.runbook, m = S.money, cl = S.checklist, c = S.content.today;
   const focus = r.focus;
+  const mapOffer = S.offers.find(o => o.id === 'map');
+  const setupDone = {
+    profile: Boolean(S.settings.handle && S.settings.handle !== '@yourname' && S.settings.name && S.settings.name !== '[Your name]'),
+    map: Boolean(mapOffer && mapOffer.status !== 'idea'),
+    post: S.content.stats.posted > 0,
+  };
+  const setupCount = Object.values(setupDone).filter(Boolean).length;
   const ring = `background: conic-gradient(var(--gold) ${Math.max(0, Math.min(100, cl.progress)) * 3.6}deg, #23232b 0)`;
 
   const pieceCard = c ? `
@@ -232,6 +239,35 @@ function viewToday() {
       </div>
     </div>
   </section>
+
+  ${setupCount < 3 ? `
+  <section class="card setup-card">
+    <div class="card-head">
+      <div><p class="eyebrow">First run</p><h2>${3 - setupCount} ${3 - setupCount === 1 ? 'thing' : 'things'} before the first sale</h2>
+        <p class="sub">No money, no audience, no finished course required. Do them in this order.</p></div>
+      <span class="pill gold">${setupCount}/3 done</span>
+    </div>
+    <div class="steps">
+      <div class="step ${setupDone.profile ? 'done' : ''}">
+        <div class="step-top"><span class="step-n">1</span>${setupDone.profile ? '<span class="pill green">Done</span>' : '<span class="pill dim">2 min</span>'}</div>
+        <b>Set your handle &amp; links</b>
+        <p>Every script and caption fills these in. Without them a DM ends in “link?”.</p>
+        <button class="btn btn-sm ${setupDone.profile ? 'btn-ghost' : 'btn-primary'}" data-act="settings">${setupDone.profile ? 'Review setup' : 'Open setup'}</button>
+      </div>
+      <div class="step ${setupDone.map ? 'done' : ''}">
+        <div class="step-top"><span class="step-n">2</span>${setupDone.map ? '<span class="pill green">Done</span>' : '<span class="pill dim">Weekend</span>'}</div>
+        <b>Publish the free Offer Map</b>
+        <p>Seven lines on one page. It names a stranger’s offer, which is why they reply.</p>
+        <button class="btn btn-sm ${setupDone.map ? 'btn-ghost' : 'btn-primary'}" data-act="tab" data-tab="offers">${setupDone.map ? 'See the ladder' : 'Open the ladder'}</button>
+      </div>
+      <div class="step ${setupDone.post ? 'done' : ''}">
+        <div class="step-top"><span class="step-n">3</span>${setupDone.post ? '<span class="pill green">Done</span>' : '<span class="pill dim">35 min</span>'}</div>
+        <b>Post your Day 1 piece</b>
+        <p>The build-in-public post, even at $0 revenue. The script is already written.</p>
+        <button class="btn btn-sm ${setupDone.post ? 'btn-ghost' : 'btn-primary'}" data-act="tab" data-tab="content">${setupDone.post ? 'See the calendar' : "Open today’s piece"}</button>
+      </div>
+    </div>
+  </section>` : ''}
 
   <div class="grid-3">
     ${pieceCard}
@@ -761,7 +797,7 @@ function viewMoney() {
             <td class="num">${s.units || 1}</td>
             <td class="num" style="color:var(--gold2)">${money(s.total != null ? s.total : s.price * (s.units || 1))}</td>
             <td class="hide-sm dim">${esc(s.source || '—')}</td>
-            <td style="text-align:right"><button class="btn btn-sm btn-ghost" data-act="delete" data-kind="sale" data-id="${s.id}">✕</button></td>
+            <td style="text-align:right"><button class="btn btn-sm btn-ghost" data-act="delete" data-kind="sale" data-id="${s.id}" aria-label="Delete sale">✕</button></td>
           </tr>`).join('')}
         </tbody>
       </table>` : `
@@ -1026,7 +1062,7 @@ function openLead(id, keepOpen = false) {
       <div class="field"><label>Note</label><textarea name="note" maxlength="500" placeholder="What they said. What you recommended. Never invent a detail.">${esc(l ? l.note : '')}</textarea></div>
       ${l ? `<div class="callout" style="margin-bottom:12px">Suggested script: <b>${esc((S.scripts.find(sc => sc.id === l.nextScript) || {}).title || '—')}</b></div>` : ''}
       <div class="modal-foot">
-        ${l ? `<button class="btn btn-danger btn-sm" type="button" data-act="delete" data-kind="lead" data-id="${l.id}">Delete</button>` : ''}
+        ${l ? `<button class="btn btn-danger btn-sm" type="button" data-act="delete" data-kind="lead" data-id="${l.id}" aria-label="Delete lead">Delete</button>` : ''}
         <button class="btn btn-ghost" type="button" data-act="close-modal">Cancel</button>
         <button class="btn btn-primary" type="submit">${l ? 'Save lead' : 'Add lead'}</button>
       </div>
